@@ -219,7 +219,9 @@ Attention Heatmap: 관계 트리거 역할을 하는 단어에 높은 가중치(
 | **관계 수** | 30개 |
 | **언어** | 한국어 (뉴스·위키백과 기반) |
 
-### KLUE-RE 성능
+---
+
+### 전체 파이프라인 성능 (30개 관계, 원본)
 
 | 모델 | 지표 | 점수 |
 |---|---|---|
@@ -268,9 +270,13 @@ Entity start token 위치의 hidden state를 concatenate하는 방식은 Soares 
 
 ![KLUE 전체 비교](docs/klue_final_comparison.png)
 
+OIA 대비 전반적으로 성능이 크게 낮습니다. 원인을 아래에서 분석합니다.
+
 ---
 
-### 클래스 불균형 분석 — 저성능의 핵심 원인
+### 저성능 원인 분석
+
+#### 1. 클래스 불균형 + Macro F1 구조적 붕괴
 
 ![KLUE 클래스 분포](docs/klue_class_distribution.png)
 
@@ -282,20 +288,44 @@ Entity start token 위치의 hidden state를 concatenate하는 방식은 Soares 
 
 Macro F1은 30개 관계 F1의 단순 평균입니다. 40건짜리 `per:place_of_death`의 F1이 0점이면, 9,534건의 `no_relation`을 완벽하게 맞춰도 Macro F1이 1/30 = 0.033 깎입니다. 12개 소수 클래스가 모두 0점이면 최대 달성 가능한 Macro F1은 18/30 = **0.60**이 됩니다.
 
----
+#### 2. Semantic Feature 변별력 붕괴 — OIA와의 핵심 차이
 
-### KLUE-RE 저성능 원인 상세 분석
+OIA에서 RF Feature Importance 1위를 차지한 **Semantic Feature(entity type pair)**가 KLUE에서는 거의 무력화됩니다.
 
-#### 1. 클래스 불균형 + Macro F1 붕괴
-위에서 설명한 대로, `no_relation`(29.4%) 중심 편향 예측이 다수 클래스 F1을 높여도 소수 12개 클래스의 F1=0이 전체 Macro를 끌어내립니다.
+OIA는 행정 도메인 특성상 entity type pair → 관계가 거의 1:1로 매핑됩니다:
 
-#### 2. 자연어 문장의 복잡성 — 표면 자질 붕괴
-OIA는 `[E1]서비스[/E1] [E2]30,000원[/E2]` 같은 획일적 행정 패턴이 반복됩니다. KLUE는 뉴스·위키백과에서 추출한 자연어로, 피동/도치/장문 구조가 빈번합니다. 아래 예시처럼 동일한 `PER → LOC` 타입임에도 전혀 다른 표면 패턴을 가집니다:
+```
+PROGRAM | MONEY   →  HAS_FEE          (거의 항상)
+PROGRAM | DATE    →  HAS_DEADLINE     (거의 항상)
+PROGRAM | PERSON  →  HAS_CONTACT      (거의 항상)
+```
+
+반면 KLUE는 뉴스·위키 도메인이라 동일한 entity type pair에 여러 관계가 중첩됩니다:
+
+```
+PER | ORG  →  per:employee_of        (홍길동은 삼성에 근무)
+PER | ORG  →  per:schools_attended   (홍길동은 서울대를 졸업)
+PER | ORG  →  org:top_members        (삼성의 대표는 홍길동)
+PER | ORG  →  org:founded_by         (삼성을 창업한 이병철)
+PER | ORG  →  per:title              (홍길동 삼성 부회장)
+```
+
+RF가 `PER|ORG`라는 정보를 받아도 5가지 가능성이 동시에 존재 → Semantic Feature 단독으로는 관계 결정 불가.
+
+| | OIA | KLUE |
+|---|---|---|
+| entity type pair 수 | ~8쌍 | ~15쌍 |
+| pair당 평균 관계 수 | **≈1.5** (거의 1:1) | **≈2.0+** (1:多) |
+| Semantic Feature 역할 | 관계를 거의 결정 | 관계 구분 불가 |
+| 관계 구분 핵심 단서 | 개체 타입 쌍 | 동사·트리거 어휘 |
+
+#### 3. 자연어 문장의 복잡성 — 표면 자질 붕괴
+
+OIA는 `[E1]서비스[/E1] [E2]30,000원[/E2]` 같은 획일적 행정 패턴이 반복됩니다. KLUE는 뉴스·위키백과에서 추출한 자연어로, 피동/도치/장문 구조가 빈번합니다.
 
 ```
 [per:place_of_birth] (n=166건)
 문장: 백한성(白漢成, 1899년 6월 15일 조선 충청도 공주 출생 ~ 1971년 10월 13일 서울에서 별세.)
-[E1]백한성[/E1] ... [E2]조선 충청도 공주[/E2] 출생
 → "출생" 트리거는 드물고, 피수식어 위치 파악이 필요
 
 [per:place_of_residence] (n=193건)
@@ -305,22 +335,58 @@ OIA는 `[E1]서비스[/E1] [E2]30,000원[/E2]` 같은 획일적 행정 패턴이
 
 고전 RF와 Scratch Bi-LSTM은 이런 복잡한 의존 관계를 표면 어휘만으로 구분하지 못합니다.
 
-#### 3. Scratch 임베딩의 한계
+#### 4. Scratch 임베딩의 한계
+
 32K KLUE 문장으로만 단어 임베딩을 처음부터 학습시켰습니다. `per:place_of_death`(40건)의 경우 모델이 보는 학습 문장이 극히 적어 관계 경계를 수렴시키는 것이 수학적으로 불가능합니다. BERT/RoBERTa는 수십억 토큰의 사전학습으로 "사망", "별세", "타계" 같은 단어의 의미론적 공간을 이미 형성한 상태에서 fine-tuning합니다.
 
-#### 4. SpaCy `ko_core_news_sm` 파싱 오류
+#### 5. SpaCy `ko_core_news_sm` 파싱 오류
+
 KLUE의 한자어·전문 용어가 섞인 뉴스 문장에서 의존 구문 분석 오류율이 높아집니다. 잘못된 Dependency Path 피처가 Feature-based RF와 Kernel SVM에 노이즈로 작용합니다.
+
+---
+
+### 희소 클래스 제거 후 재실험
+
+위 분석에서 저성능의 가장 직접적 원인은 **200건 미만 희소 클래스 12개가 Macro F1 구조적 상한을 0.60으로 제한**하는 것입니다. 고전 머신러닝·부트스트래핑 알고리즘이 40건짜리 클래스를 학습하는 것은 수학적으로 무리이므로, train 기준 200건 미만 클래스를 제거하고 파이프라인의 실질적 성능을 재측정했습니다.
+
+| 항목 | 원본 | 필터 후 |
+|---|---|---|
+| 관계 수 | 30개 | 18개 |
+| Train | 32,470건 | 31,061건 |
+| Validation | 7,765건 | 7,419건 |
+| 최대/최소 불균형 비율 | 238× | 31× |
+| Macro F1 구조적 상한 | 0.60 | 1.00 |
+
+제거된 클래스 12개: `org:dissolved`, `org:founded_by`, `org:number_of_employees/members`, `org:political/religious_affiliation`, `per:other_family`, `per:place_of_birth`, `per:place_of_death`, `per:place_of_residence`, `per:product`, `per:religion`, `per:schools_attended`, `per:siblings`
+
+> `klue_data_loader.filter_rare_classes(min_samples=200)` 적용.
+
+### 성능 비교 (원본 30개 관계 vs 필터 후 18개 관계)
+
+| 모델 | 지표 | 원본 (30개) | 필터 후 (18개) | 변화 |
+|---|---|---|---|---|
+| Pattern-based KMeans | V-Measure | 0.0897 | 0.0653 | ▼ |
+| Embedding-based KMeans | V-Measure | 0.1392 | 0.1306 | ▼ |
+| DIPRE (Bootstrapping) | Macro F1 | — | 0.0000 | — |
+| Snowball (Confidence Filter) | Macro F1 | — | 0.0000 | — |
+| Feature-based RF † | Macro F1 | 0.1626 | **0.2318** | ▲ +42% |
+| Kernel SVM (Composite) † | Macro F1 | 0.2222 | **0.4699** | ▲ +112% |
+| Bi-LSTM + Attention (10 Epochs) | Macro F1 | 0.0706 | **0.1434** | ▲ +103% |
+
+† `class_weight='balanced'` 적용 (RF/SVM). Bi-LSTM은 가중치 적용 시 희소 클래스 과적합으로 오히려 하락하여 미적용 버전(0.1434)이 최고 성능.
+
+Kernel SVM은 class_weight 적용으로 0.2222 → **0.4699**로 가장 큰 폭의 개선(+112%)을 보였습니다. Unsupervised는 클러스터 수(K)가 30→18로 줄었음에도 V-Measure가 소폭 하락했는데, 이는 클래스가 줄어들면서 군집 경계가 더 모호해진 영향입니다. Semi-supervised(DIPRE/Snowball)는 Precision이 iter 3 이후 0으로 붕괴했고 F1 계산 기준상 0.0000으로 산출됐습니다 — Snowball이 iter 1~3에서 0.71~0.80의 높은 Precision을 보인 것은 아래 시각화에서 확인할 수 있습니다.
 
 ---
 
 ### OIA vs KLUE 비교 인사이트
 
-| | OIA (행정 특화) | KLUE-RE (일반 자연어) |
-|---|---|---|
-| **Supervised ML** | 0.73 ~ 0.86 | 0.16 ~ 0.22 |
-| **Deep Learning** | 0.54 | 0.07 |
-| **핵심 요인** | 개체 타입 쌍으로 관계 결정 (12종) | 30종 다중 클래스 + 238× 불균형 + 복잡 문장 |
-| **결론** | Feature Engineering + Kernel SVM = 최적 | **Pre-trained PLM (BERT/RoBERTa) 필수** |
+| | OIA (행정 특화) | KLUE-RE 원본 (30개) | KLUE-RE 필터 (18개) |
+|---|---|---|---|
+| **Supervised ML** | 0.73 ~ 0.86 | 0.16 ~ 0.22 | 0.23 ~ **0.47** |
+| **Deep Learning** | 0.54 | 0.07 | 0.14 |
+| **핵심 요인** | 개체 타입 쌍으로 관계 결정 | 30종 + 238× 불균형 | 18종 + 31× 불균형 |
+| **결론** | Feature Engineering + Kernel SVM = 최적 | PLM 필수 | PLM 필수 (gap 여전히 큼) |
 
 ---
 
