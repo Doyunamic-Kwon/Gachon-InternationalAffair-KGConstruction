@@ -59,6 +59,24 @@ def build_marked_text(sentence, subj, obj):
     return marked
 
 
+def filter_rare_classes(train_df, val_df, min_samples=200):
+    """
+    train_df 기준으로 min_samples 미만 클래스를 제거합니다.
+    train과 val 모두 동일한 클래스 집합으로 필터링합니다.
+    """
+    counts = train_df['final_relation'].value_counts()
+    keep   = counts[counts >= min_samples].index.tolist()
+    t = train_df[train_df['final_relation'].isin(keep)].reset_index(drop=True)
+    v = val_df[val_df['final_relation'].isin(keep)].reset_index(drop=True)
+    removed = sorted(counts[counts < min_samples].index.tolist())
+    print(f"✅ 희소 클래스 제거 (min={min_samples}): {len(removed)}개 제거 → {len(keep)}개 유지")
+    print(f"   제거된 클래스: {removed}")
+    print(f"   Train {len(train_df)} → {len(t)}, Val {len(val_df)} → {len(v)}")
+    ratio = t['final_relation'].value_counts()
+    print(f"   잔여 불균형 비율: {ratio.max()} / {ratio.min()} = {ratio.max()//ratio.min()}×")
+    return t, v
+
+
 def load_klue_re(split='train', max_samples=None):
     """
     KLUE-RE 데이터셋을 로드하여 기존 파이프라인 호환 DataFrame으로 반환합니다.

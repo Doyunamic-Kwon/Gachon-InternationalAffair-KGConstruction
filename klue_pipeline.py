@@ -17,7 +17,7 @@ from sklearn.metrics import f1_score, confusion_matrix, v_measure_score
 from sklearn.manifold import TSNE
 from scipy.sparse import hstack
 from sentence_transformers import SentenceTransformer
-from klue_data_loader import load_klue_re
+from klue_data_loader import load_klue_re, filter_rare_classes
 
 # 기존 스크립트 함수 재사용
 from step3_feature_based_re_v2 import extract_all_features
@@ -127,7 +127,8 @@ def run_klue_feature_based(train_df, test_df):
                    vs.transform(sem_te), vd.transform(dep_te)])
 
     print("  Random Forest 학습 중...")
-    clf = RandomForestClassifier(n_estimators=100, random_state=42, n_jobs=-1)
+    clf = RandomForestClassifier(n_estimators=100, random_state=42, n_jobs=-1,
+                                 class_weight='balanced')
     clf.fit(X_tr, y_tr)
     y_pred = clf.predict(X_te)
     f1 = f1_score(y_te, y_pred, average='macro', zero_division=0)
@@ -196,7 +197,7 @@ def run_klue_kernel(train_df, test_df):
 
     idx_all = np.arange(1000)
     idx_tr, idx_te, y_tr, y_te = train_test_split(idx_all, labels_all, test_size=0.2, random_state=42)
-    clf = SVC(kernel='precomputed', C=1.0)
+    clf = SVC(kernel='precomputed', C=1.0, class_weight='balanced')
     clf.fit(K[np.ix_(idx_tr, idx_tr)], y_tr)
     y_pred = clf.predict(K[np.ix_(idx_te, idx_tr)])
     f1 = f1_score(y_te, y_pred, average='macro', zero_division=0)
@@ -390,9 +391,15 @@ def run_klue_deep_learning(train_df, test_df):
 
     model = BiLSTMAttn(len(word2idx), 128, 128, len(unique_labels)).to(device)
     opt   = optim.Adam(model.parameters(), lr=1e-3)
-    crit  = nn.CrossEntropyLoss()
 
-    for ep in range(5):
+    # 클래스 불균형 보정: sklearn balanced 공식 n_total / (n_classes × n_i)
+    from sklearn.utils.class_weight import compute_class_weight
+    cw = compute_class_weight('balanced', classes=np.array(unique_labels), y=labels_tr)
+    class_weights = torch.tensor(cw, dtype=torch.float).to(device)
+    crit  = nn.CrossEntropyLoss(weight=class_weights)
+
+    EPOCHS = 10
+    for ep in range(EPOCHS):
         model.train(); total = 0
         for seq, lbl in tr_loader:
             seq, lbl = seq.to(device), lbl.to(device)
@@ -401,7 +408,7 @@ def run_klue_deep_learning(train_df, test_df):
             loss = crit(out, lbl)
             loss.backward(); opt.step()
             total += loss.item()
-        print(f"  Epoch {ep+1}/5 | Loss: {total/len(tr_loader):.4f}")
+        print(f"  Epoch {ep+1}/{EPOCHS} | Loss: {total/len(tr_loader):.4f}")
 
     model.eval()
     preds, trues = [], []
@@ -446,11 +453,18 @@ if __name__ == "__main__":
     train_df = load_klue_re('train')
     test_df  = load_klue_re('validation')
 
+    print("\n희소 클래스 제거 중 (train 기준 200건 미만)...")
+    train_df, test_df = filter_rare_classes(train_df, test_df, min_samples=200)
+
     results = {}
 
     v_pat, v_emb             = run_klue_unsupervised(train_df)
     results['unsup_pattern']  = v_pat
     results['unsup_embed']    = v_emb
+
+    dipre_f1, snow_f1         = run_klue_semi_supervised(train_df, test_df)
+    results['semi_dipre']     = dipre_f1
+    results['semi_snowball']  = snow_f1
 
     results['feature_rf']     = run_klue_feature_based(train_df, test_df)
     results['kernel_svm']     = run_klue_kernel(train_df, test_df)
@@ -463,12 +477,12 @@ if __name__ == "__main__":
         print(f"  {k:25s}: {v:.4f}")
 
     # Summary Bar Chart
-    categories = ['Unsupervised\n(V-Measure)', 'Unsupervised\n(V-Measure)',
-                  'Supervised\n(Macro F1)', 'Supervised\n(Macro F1)', 'Deep Learning\n(Macro F1)']
-    labels_bar  = ['Pattern-based', 'Embedding-based', 'Feature RF', 'Kernel SVM', 'Bi-LSTM+Attn']
-    scores_bar  = [results['unsup_pattern'], results['unsup_embed'],
-                   results['feature_rf'],    results['kernel_svm'],  results['bilstm_attn']]
-    colors_bar  = ['#ffb3b3','#99ccff','#b3ffb3','#ffe599','#d5b3ff']
+    labels_bar = ['Pattern-based', 'Embedding-based', 'DIPRE', 'Snowball',
+                  'Feature RF', 'Kernel SVM', 'Bi-LSTM+Attn']
+    scores_bar = [results['unsup_pattern'], results['unsup_embed'],
+                  results['semi_dipre'],    results['semi_snowball'],
+                  results['feature_rf'],    results['kernel_svm'],   results['bilstm_attn']]
+    colors_bar = ['#ffb3b3','#99ccff','#ffd9b3','#ffb3e6','#b3ffb3','#ffe599','#d5b3ff']
 
     plt.figure(figsize=(12, 6))
     bars = plt.bar(labels_bar, scores_bar, color=colors_bar, width=0.6)
