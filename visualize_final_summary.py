@@ -16,11 +16,11 @@ def create_final_summary_chart(
     # Supervised: step3_feature_based_re_v2.py / visualize_kernel_ml.py 실행 결과
     sup_rf=0.7300,
     sup_kernel=0.8627,
-    # Deep Learning: step4_deep_learning_re.py 실행 결과 (10 epochs)
-    dl_bilstm=0.5669,
-    # Semi-supervised: 실측값 (step3b 실행 결과 2025-05-19)
-    semi_dipre=0.1590,
-    semi_snowball=0.2507,
+    # Deep Learning: 10 epochs, Macro F1 실측값
+    dl_bilstm=0.5418,
+    # Semi-supervised: 10-seed + HTML 정제 후 실측값 (2026-05-19)
+    semi_dipre=0.1215,
+    semi_snowball=0.3010,
 ):
     if semi_dipre is None or semi_snowball is None:
         print("Semi-supervised F1 실측 계산 중 (step3b)...")

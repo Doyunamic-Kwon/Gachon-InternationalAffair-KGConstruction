@@ -1,0 +1,108 @@
+{
+  "per:place_of_residence": [
+    {
+      "sentence": "이어 “6월 항쟁의 미완성을 통해 민주주의 후퇴를 겪었다. 국민들이 촛불혁명으로 탄생시킨 문재인 정부는 반드시 성공시켜야 한다”며 “정치혁신을 통해 대한민국의 변화를 꿈꿨던 국민들의 바램, 광주의 꿈을 반드시 이룰 ",
+      "marked_text": "이어 “6월 항쟁의 미완성을 통해 민주주의 후퇴를 겪었다. 국민들이 촛불혁명으로 탄생시킨 [E1]문재인[/E1] 정부는 반드시 성공시켜야 한다”며 “정치혁신을 통해 [E2]대한민국[/E2]의 변화를 꿈꿨던 국민들의 ",
+      "head_type": "PER",
+      "tail_type": "LOC",
+      "relation": "per:place_of_residence",
+      "count": 193
+    },
+    {
+      "sentence": "다만 역법의 시작을 이슬람력과 동일하게 무함마드 및 그의 추종자들이 메카에서 메디나로 피난을 간 양력 622년을 1년으로 계산하였다.",
+      "marked_text": "다만 역법의 시작을 이슬람력과 동일하게 [E1]무함마드[/E1] 및 그의 추종자들이 메카에서 [E2]메디나[/E2]로 피난을 간 양력 622년을 1년으로 계산하였다.",
+      "head_type": "PER",
+      "tail_type": "LOC",
+      "relation": "per:place_of_residence",
+      "count": 193
+    }
+  ],
+  "per:other_family": [
+    {
+      "sentence": "그러나 빅토리아가 태어난 지 1년 만에 에드워드는 사망했고 그녀는 말도 통하지 않는 곳에 홀로 남겨지게 되었지만 자신의 딸이 윌리엄 4세 국왕 사후에 영국의 여왕으로 즉위하는 것이 거의 확정적인 분위기였다.",
+      "marked_text": "그러나 [E2]빅토리아[/E2]가 태어난 지 1년 만에 에드워드는 사망했고 그녀는 말도 통하지 않는 곳에 홀로 남겨지게 되었지만 자신의 딸이 [E1]윌리엄 4세[/E1] 국왕 사후에 영국의 여왕으로 즉위하는 것이 거",
+      "head_type": "PER",
+      "tail_type": "PER",
+      "relation": "per:other_family",
+      "count": 190
+    },
+    {
+      "sentence": "기젤라의 언니 마틸다 폰 슈바벤은 케른텐 공작 콘라트 1세와 결혼하여 후일 콘라트 2세 황제와 대적한 그의 사촌동생 콘라트 2세의 어머니가 되었다.",
+      "marked_text": "[E2]기젤라[/E2]의 언니 마틸다 폰 슈바벤은 케른텐 공작 콘라트 1세와 결혼하여 후일 콘라트 2세 황제와 대적한 그의 사촌동생 [E1]콘라트 2세[/E1]의 어머니가 되었다.",
+      "head_type": "PER",
+      "tail_type": "PER",
+      "relation": "per:other_family",
+      "count": 190
+    }
+  ],
+  "per:place_of_birth": [
+    {
+      "sentence": "백한성(白漢成, 水原鶴人, 1899년 6월 15일 조선 충청도 공주 출생 ~ 1971년 10월 13일 대한민국 서울에서 별세.)은 대한민국의 정치가이며 법조인이다.",
+      "marked_text": "[E1]백한성[/E1](白漢成, 水原鶴人, 1899년 6월 15일 [E2]조선 충청도 공주[/E2] 출생 ~ 1971년 10월 13일 대한민국 서울에서 별세.)은 대한민국의 정치가이며 법조인이다.",
+      "head_type": "PER",
+      "tail_type": "LOC",
+      "relation": "per:place_of_birth",
+      "count": 166
+    },
+    {
+      "sentence": "코치시 졸탄(1952년 5월 30일 ~ 2016년 11월 6일)은 헝가리 태생의 피아니스트이자 지휘자이다.",
+      "marked_text": "[E1]코치시 졸탄[/E1](1952년 5월 30일 ~ 2016년 11월 6일)은 [E2]헝가리[/E2] 태생의 피아니스트이자 지휘자이다.",
+      "head_type": "PER",
+      "tail_type": "LOC",
+      "relation": "per:place_of_birth",
+      "count": 166
+    }
+  ],
+  "org:founded_by": [
+    {
+      "sentence": "로버트 조지 (바비) 실(Robert George (Bobby)(Bobby) Seale, 1936년 10월 22일 ~ )은 아프리카계 미국인 인권 운동가이자, 휴이 뉴튼과 함께 흑표당의 창립자이다.",
+      "marked_text": "로버트 조지 (바비) 실(Robert George (Bobby)(Bobby) Seale, 1936년 10월 22일 ~ )은 아프리카계 미국인 인권 운동가이자, [E2]휴이 뉴튼[/E2]과 함께 [E1]흑표당[/E1]",
+      "head_type": "ORG",
+      "tail_type": "PER",
+      "relation": "org:founded_by",
+      "count": 155
+    },
+    {
+      "sentence": "커널 샌더스(Colonel Sanders)로 널리 알려져 있는 할랜드 데이비드 샌더스(1890년 9월 9일 ~ 1980년 12월 16일)는 KFC를 창업한 미국의 기업인으로, KFC를 상징하는 마스코트이기도 하다.",
+      "marked_text": "[E2]커널 샌더스[/E2](Colonel Sanders)로 널리 알려져 있는 할랜드 데이비드 샌더스(1890년 9월 9일 ~ 1980년 12월 16일)는 [E1]KFC[/E1]를 창업한 미국의 기업인으로, KFC를",
+      "head_type": "ORG",
+      "tail_type": "PER",
+      "relation": "org:founded_by",
+      "count": 155
+    }
+  ],
+  "per:product": [
+    {
+      "sentence": "밴드는 마이클 잭슨의 《Thriller》 음반 제작을 돕고 같은 해 시카고의 컴백 음반 《Chicago 16》에 대한 공동작업을 하기 위해 음반 발매 후 순회공연을 연기했다.",
+      "marked_text": "밴드는 [E1]마이클 잭슨[/E1]의 《[E2]Thriller[/E2]》 음반 제작을 돕고 같은 해 시카고의 컴백 음반 《Chicago 16》에 대한 공동작업을 하기 위해 음반 발매 후 순회공연을 연기했다.",
+      "head_type": "PER",
+      "tail_type": "POH",
+      "relation": "per:product",
+      "count": 139
+    },
+    {
+      "sentence": "《스페이스워!》는 1962년 미국 MIT 학생이었던 스티브 러셀이 만든 세계 최초의 디지털 방식의 컴퓨터 게임이다.",
+      "marked_text": "《[E2]스페이스워![/E2]》는 1962년 미국 MIT 학생이었던 [E1]스티브 러셀[/E1]이 만든 세계 최초의 디지털 방식의 컴퓨터 게임이다.",
+      "head_type": "PER",
+      "tail_type": "POH",
+      "relation": "per:product",
+      "count": 139
+    }
+  ],
+  "no_relation": [
+    {
+      "sentence": "〈Something〉는 조지 해리슨이 쓰고 비틀즈가 1969년 앨범 《Abbey Road》에 담은 노래다.",
+      "head_type": "ORG",
+      "tail_type": "PER",
+      "relation": "no_relation",
+      "count": 9534
+    },
+    {
+      "sentence": "호남이 기반인 바른미래당·대안신당·민주평화당이 우여곡절 끝에 합당해 민생당(가칭)으로 재탄생한다.",
+      "head_type": "ORG",
+      "tail_type": "ORG",
+      "relation": "no_relation",
+      "count": 9534
+    }
+  ]
+}
