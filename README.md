@@ -83,6 +83,36 @@ OIA 데이터의 특성상 부트스트래핑이 **2홉부터 붕괴**하는 구
 좌: HAS_FEE 관계에 대한 5-iteration precision 추이 — DIPRE는 iter 1부터 낮은 정밀도로 시작하여 빠르게 붕괴. Snowball은 iter 1-2에서 1.0 정밀도를 유지.  
 우: 12개 관계 전체 Macro F1 비교 — Snowball(0.3010)이 DIPRE(0.1215) 대비 **+148% 향상**.
 
+### Snowball이 3홉에서 완만한 곡선 없이 급락하는 이유 — Pool 고갈
+
+그래프를 보면 Snowball의 precision이 서서히 떨어지는 것이 아니라 **iter 3부터 n=0**으로 갑자기 끊깁니다. 이것은 Semantic Drift(패턴 열화)가 아니라 **Pool Exhaustion(pool 고갈)** 현상입니다.
+
+```
+Iter 1: Snowball prec=1.000  n=7   ← 7건 매칭, 전부 정답, pool에서 제거
+Iter 2: Snowball prec=1.000  n=1   ← 1건 매칭, 정답, pool에서 제거
+Iter 3: Snowball prec=0.000  n=0   ← 매칭 자체 없음 → precision 계산 불가
+Iter 4: Snowball prec=0.000  n=0
+Iter 5: Snowball prec=0.000  n=0
+```
+
+Snowball의 매칭 조건은 두 가지를 **동시에** 만족해야 합니다:
+
+```
+매칭 = 패턴 포함  AND  head_type ∈ seed_head_types  AND  tail_type ∈ seed_tail_types
+```
+
+Silver pool 전체는 1,205건이고 12개 관계에 분산되어 있으므로, HAS_FEE에 해당하는 Silver 샘플은 많아야 수십 건입니다. 그중 패턴 + 개체 타입 조건을 **동시에** 만족하는 건이 8개(7+1)뿐이었고, Iter 1-2에서 모두 소진한 결과입니다.
+
+| | Snowball 원설계 (Agichtein & Gravano, 2000) | 이번 실험 |
+|---|---|---|
+| **Pool 크기** | 웹 전체 (수백만 문서) | Silver 1,205건 |
+| **관계당 가용 샘플** | 사실상 무한 | 평균 ~100건 |
+| **예상 동작** | 수십 iteration 완만한 증식 | 2홉 후 pool 고갈 |
+
+DIPRE가 "점진적으로 악화되는" 그래프를 그리는 것은 조건이 패턴 하나뿐이라 pool이 쉽게 고갈되지 않기 때문입니다. 반면 Snowball은 더 엄격한 조건 덕분에 정밀도 1.0을 유지하지만, 그 엄격함이 recall을 빠르게 0으로 만듭니다.
+
+> **결론**: Snowball의 3홉 급락은 알고리즘 결함이 아니라 코퍼스 규모 미스매치(corpus scale mismatch)입니다. 부트스트래핑 알고리즘은 대규모 비레이블 코퍼스를 전제로 설계되었으며, 소규모 도메인 데이터에서는 재현율 한계가 먼저 도달합니다.
+
 ### 평가 방식
 
 각 관계별로 Gold 10-seed에서 패턴을 추출 → Silver pool 전체(1,205건)에 대해 binary F1(해당 관계 vs OTHER) 계산 → 관계별 F1의 macro 평균.
@@ -196,8 +226,47 @@ Attention Heatmap: 관계 트리거 역할을 하는 단어에 높은 가중치(
 | Pattern-based KMeans | V-Measure | 0.0897 |
 | Embedding-based KMeans | V-Measure | 0.1392 |
 | Feature-based RF | Macro F1 | 0.1626 |
-| Kernel SVM (Composite) | Macro F1 | **0.2222** |
-| Bi-LSTM + Attention | Macro F1 | 0.0706 |
+| Kernel SVM (Composite) | Macro F1 | 0.2222 |
+| Bi-LSTM + Attention (Scratch) | Macro F1 | 0.0706 |
+| **klue/roberta-base (Fine-tuned)** | **Macro F1** | **TBD** |
+
+---
+
+### 6. PLM Fine-tuning — klue/roberta-base
+
+고전 기법과 Scratch 딥러닝의 성능 한계는 **사전학습 언어 모델(Pre-trained Language Model)** 부재에서 기인합니다. `klue/roberta-base`를 KLUE-RE에 fine-tuning하여 그 차이를 정량화합니다.
+
+#### 아키텍처
+
+```
+marked_text → klue/roberta-base tokenizer
+  → [CLS] [E1] subject [/E1] context [E2] object [/E2] [SEP]
+  → RoBERTa encoder (12 layers, hidden=768)
+  → hidden([E1] pos) ‖ hidden([E2] pos)   ← entity start 표현
+  → Linear(768×2 → 768) → GELU → Dropout → Linear(768 → 30)
+  → Softmax
+```
+
+Entity start token 위치의 hidden state를 concatenate하는 방식은 Soares et al. (2019, ACL) *"Matching the Blanks: Distributional Similarity for RE"*에서 제안된 접근법입니다. [CLS]만 사용하는 것보다 두 개체의 위치 정보를 모델에 명시적으로 전달합니다.
+
+#### 학습 설정
+
+| 항목 | 값 |
+|---|---|
+| Base model | `klue/roberta-base` |
+| Max seq length | 128 |
+| Batch size | 32 |
+| Learning rate | 2e-5 (encoder), 1e-4 (classifier head) |
+| Epochs | 5 |
+| Loss | CrossEntropyLoss (class-weighted, 불균형 보정) |
+| Warmup | 10% linear warmup + linear decay |
+| Special tokens | `[E1]` `[/E1]` `[E2]` `[/E2]` 추가 |
+
+![PLM 학습 곡선](docs/klue_plm_training.png)
+
+![PLM Confusion Matrix](docs/klue_plm_confusion_matrix.png)
+
+![KLUE 전체 비교](docs/klue_final_comparison.png)
 
 ---
 
