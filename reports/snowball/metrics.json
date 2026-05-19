@@ -1,0 +1,6 @@
+{
+  "pattern_count": 843,
+  "micro_f1": 0.4794520547945205,
+  "macro_f1": 0.1098945242539607,
+  "classification_report": "                              precision    recall  f1-score   support\n\n               CONTACT_EMAIL       0.00      0.00      0.00        12\n               CONTACT_PHONE       0.00      0.00      0.00         3\n                     HAS_FEE       0.00      0.00      0.00         1\n               HAS_MENU_ITEM       0.12      0.01      0.01       168\n                 HAS_SECTION       0.00      0.00      0.00        18\n                    LINKS_TO       0.66      0.95      0.78       134\n               MENTIONS_DATE       0.00      0.00      0.00         3\n         MENTIONS_EXAM_LEVEL       0.00      0.00      0.00         3\n           MENTIONS_LOCATION       0.00      0.00      0.00         3\n                 NO_RELATION       0.38      0.89      0.53       131\n       REFERENCES_ATTACHMENT       0.00      0.00      0.00         2\nREFERENCES_EXTERNAL_RESOURCE       0.00      0.00      0.00        33\n\n                    accuracy                           0.48       511\n                   macro avg       0.10      0.15      0.11       511\n                weighted avg       0.31      0.48      0.34       511\n"
+}

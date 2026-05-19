@@ -1,0 +1,20 @@
+{
+  "cluster_count": 12,
+  "cluster_to_label": {
+    "7": "LINKS_TO",
+    "10": "HAS_MENU_ITEM",
+    "6": "HAS_MENU_ITEM",
+    "4": "HAS_MENU_ITEM",
+    "5": "LINKS_TO",
+    "3": "LINKS_TO",
+    "9": "LINKS_TO",
+    "0": "LINKS_TO",
+    "1": "HAS_MENU_ITEM",
+    "8": "LINKS_TO",
+    "11": "LINKS_TO",
+    "2": "LINKS_TO"
+  },
+  "micro_f1": 0.5792563600782779,
+  "macro_f1": 0.1230657100280576,
+  "classification_report": "                              precision    recall  f1-score   support\n\n               CONTACT_EMAIL       0.00      0.00      0.00        12\n               CONTACT_PHONE       0.00      0.00      0.00         3\n                     HAS_FEE       0.00      0.00      0.00         1\n               HAS_MENU_ITEM       0.79      0.96      0.87       168\n                 HAS_SECTION       0.00      0.00      0.00        18\n                    LINKS_TO       0.44      1.00      0.61       134\n               MENTIONS_DATE       0.00      0.00      0.00         3\n         MENTIONS_EXAM_LEVEL       0.00      0.00      0.00         3\n           MENTIONS_LOCATION       0.00      0.00      0.00         3\n                 NO_RELATION       0.00      0.00      0.00       131\n       REFERENCES_ATTACHMENT       0.00      0.00      0.00         2\nREFERENCES_EXTERNAL_RESOURCE       0.00      0.00      0.00        33\n\n                    accuracy                           0.58       511\n                   macro avg       0.10      0.16      0.12       511\n                weighted avg       0.37      0.58      0.44       511\n"
+}
