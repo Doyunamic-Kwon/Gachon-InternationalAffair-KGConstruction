@@ -1,0 +1,1807 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no, address=no">
+	<meta name="title" content="가천대학교">
+	<meta name="description" content="가천대학교 인재양성 통합관리시스템">
+	<meta name="copyrigt" content="가천대학교">
+	<meta name="keywords" content="가천대학교, 역량관리, 상담, 대학, 대학생, 역량관리시스템, 경력관리">
+	<title>가천대학교 국제교류처</title>
+
+	<!-- [pp] favicon -->
+	<link rel="apple-touch-icon" href="//oia.gachon.ac.kr/contents/images/favicon.png">
+	<link rel="shortcut icon" href="//oia.gachon.ac.kr/contents/images/favicon.ico">
+	<!-- [pp] //favicon -->
+
+	<!-- [pp] css -->
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/plugin/magnific-popup/css/magnific-popup.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/plugin/swiper/css/swiper.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/plugin/mCustomscrollbar/css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/plugin/select2/css/select2.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/plugin/fullcalendar-5.2.0/lib/main.css">
+
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/dl_global.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/normalize.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/grid.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/common.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/formstyle.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/table.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/popup.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/ui.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/ui_foreign.css">
+	
+		
+		
+	
+	
+
+	<link rel="stylesheet" type="text/css" href="//oia.gachon.ac.kr/contents/css/jquery-ui.css"/>
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/table.css">
+
+	<!-- [pp] //css -->
+
+	<!--[pp] js -->
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/jquery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/magnific-popup/js/jquery.magnific-popup.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/swiper/js/swiper.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/mCustomscrollbar/js/jquery.mCustomScrollbar.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/select2/js/select2.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/fullcalendar-5.2.0/lib/main.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/bluebird/bluebird.min.js"></script>
+
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/js/client/pp_common.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/js/dp_common.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/cookie/jquery.cookie.js"></script>
+
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/i18n/i18nextXHRBackend.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/i18n/i18next.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/i18n/jquery-i18next.js"></script>
+
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/js/client/lang.js"></script>
+
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/js/jquery.form.js"></script>
+
+	<!-- summernote -->
+	<script src="//oia.gachon.ac.kr/contents/js/summernote/summernote-lite.js"></script>
+	<script src="//oia.gachon.ac.kr/contents/js/summernote/lang/summernote-ko-KR.js"></script>
+
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/summernote/summernote-lite.css">
+	<!--[pp] //js -->
+
+	<!--[if lt IE 10]>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/jquery/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/html5shiv/html5shiv.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/IE9/IE9.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/respond/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+		function fnCloseLoadingImage() {
+			setTimeout(function() {
+				$("#loading").hide();
+				}, 300);
+		}
+
+		$(function() {
+			sessionStorage.setItem("contextRootPath", "//oia.gachon.ac.kr");
+			sessionStorage.setItem("sessionUserId", "");
+		});
+	</script>
+</head>
+
+<body onload="fnCloseLoadingImage()">
+<!--[pp] ie 하위버젼 접속시 알림 -->
+   <!--[if lt IE 10]>
+	<div id="browser">
+	본 사이트는 익스플로러 버전 10 이상, 크롬, 파이어폭스, 사파리, 오페라 최신 버전에 최적화 되어있습니다. <a href="https://browsehappy.com/?locale=en" target="_blank">여기를 눌러 최신 브라우저로 업데이트 하세요.</a>
+	<button type="button" class="upgradeinfo_close">닫기</button>
+	</div>
+	<![endif]-->
+   <!--[pp] // ie 하위버젼 접속시 알림 -->
+
+   <!-- [pp] 로딩중 화면 -->
+   <div id="loading" style="display: none;">
+       <p id="loading_image">
+           <img src="//oia.gachon.ac.kr/contents/images/loading.gif" alt="Loading..."><br>
+           <span>Loading</span>
+       </p>
+   </div>
+   <!-- [pp] //로딩중 화면 -->
+
+   <!-- [pp] 푸터를 제외한 전체페이지 -->
+   <div class="page_wrap foreign_wrapper">
+       <!-- [pp] header -->
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- [pp] header -->
+<!-- [pp] header -->
+<header class="header_wrap">
+	<div class="header_top grid_content">
+		<h1 class="header_logo">
+			<a href="//oia.gachon.ac.kr/clientMain/a/t/internationalMain.do"><img src="//oia.gachon.ac.kr/contents/images/client/common/header_logo_emblem.svg" alt="가천대학교 로고 이미지"></a>
+			<a href="//oia.gachon.ac.kr/clientMain/a/t/internationalMain.do"><img src="//oia.gachon.ac.kr/contents/images/client/common/header_logo_foreign.svg" alt="가천대학교 외국인학생 로고 이미지"></a>
+		</h1>
+		<div class="select_lang" >
+			<strong><!-- 언어선택 --></strong>
+			<ul>
+				<li data-lang="kr" class="lang_select" id="langValue01">KOR</li>
+				<li data-lang="us" class="lang_select" id="langValue02">ENG</li>
+				<li data-lang="cn" class="lang_select" id="langValue03">CHN</li>
+			</ul>
+		</div>
+		<button type="button" class="btn_mobilemenu">
+			<span></span><span></span><span></span>
+		</button>
+	</div>
+	<div class="gnb_wrap">
+		
+			
+			
+			
+		<div class="grid_content">
+			<div class="select_link">
+				<strong>바로가기</strong>
+				<ul>
+					<li><a href="//oia.gachon.ac.kr/clientMain/a/t/oiaMain.do">국제교류처</a></li>
+					<li><a href="//oia.gachon.ac.kr/clientMain/a/t/internationalMain.do" class="selected">외국인학생</a></li>
+					<li><a href="//oia.gachon.ac.kr/clientMain/a/t/domesticMain.do">내국인학생</a></li>
+				</ul>
+			</div>
+			<nav>
+				<ul class="top_menu">
+					<li class="col_xl_2 col_md_12">
+						<a href="javascript:void(0);"><span>외국인 입학</span></a>
+						<ul class="sub_menu_2depth">
+							
+							<li><a href="javascript:void(0);">학부/대학원/한국어교육센터 입학</a>
+								<ul class="sub_menu_3depth">
+
+									<li><a href="//oia.gachon.ac.kr/international/a/m/graduateInfo.do">모집요강 / 공지사항</a></li>
+								</ul></li>
+						</ul></li>
+					<li class="col_xl_2 col_md_12">
+						<a href="javascript:void(0);"><span>한국어 교육센터</span></a>
+						<ul class="sub_menu_2depth">
+							<li><a href="//oia.gachon.ac.kr/international/a/m/klecInfo.do">소개</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/krCenterApply.do">지원방법</a></li>
+
+							<li><a href="//oia.gachon.ac.kr/international/a/m/krCenterScholarship.do">등록금 및 장학금</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/krCenterRecruitment.do">강사 상시모집</a></li>
+						</ul>
+					</li>
+					<li class="col_xl_2 col_md_12">
+						<a href="javascript:void(0);" data-i18n="[html]header.txt9"><span>외국인 교환학생</span></a>
+						<ul class="sub_menu_2depth">
+							<li><a href="javascript:void(0);">G-STEP</a>
+								<ul class="sub_menu_3depth">
+									<li><a href="//oia.gachon.ac.kr/international/a/m/gStepIntro.do">G-STEP 소개</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/gStepSchedule.do">시간표 & 수업소개</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/gStepApply.do">지원방법</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/gStepTuition.do">등록비</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/gStepPhotoAndVideo.do">G-STEP 갤러리</a></li>
+								</ul></li>
+							<li>
+								<a href="//oia.gachon.ac.kr/international/a/m/exchangeStudent.do">외국인 교환학생</a>
+							</li>
+						</ul>
+					</li>
+					<li class="col_xl_2 col_md_12">
+					<a href="javascript:void(0);"><span>유학생 지원</span></a>
+						<ul class="sub_menu_2depth">
+							<li><a href="javascript:void(0);">신입생 가이드</a>
+								<ul class="sub_menu_3depth">
+									<li><a href="//oia.gachon.ac.kr/international/a/m/guideNewStudent.do">처음 왔을 때</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/guideDomitory.do">기숙사</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/guideInsurance.do">보험</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/guideFacilities.do">학교시설</a></li>
+								</ul>
+							</li>
+							<li><a href="javascript:void(0);">비자 및 체류</a>
+								<ul class="sub_menu_3depth">
+									<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationApply.do">출입국·외국인청 찾기</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationApp.do">외국인등록증 신청 및 재발급</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationExtention.do">비자 변경 및 연장</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationSupport.do">아르바이트 규정 및 취업지원</a></li>
+								</ul>
+							</li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/topikList.do">TOPIK</a>
+							</li>
+							<li><a href="javascript:void(0);">유학생 지원</a>
+								<ul class="sub_menu_3depth">
+									<li><a href="//oia.gachon.ac.kr/international/a/m/culturePro.do">문화체험 프로그램</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/counselingPro.do">1:1 상담 신청</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="col_xl_2 col_md_12"><a href="javascript:void(0);"><span>외국인 동문</span></a>
+						<ul class="sub_menu_2depth">
+							<li><a href="//oia.gachon.ac.kr/international/a/m/overseasAlumni.do">가천대학교 동문</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/gachonArchives.do">가천 아카이브</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/alumniStory.do">동문소식</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/supportGu.do">발전기금</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/findAlumni.do">동문찾기</a></li>
+						</ul>
+					</li>
+					<li class="col_xl_2 col_md_12"><a href="javascript:void(0);"><span>커뮤니티</span></a>
+						<ul class="sub_menu_2depth">
+							<li><a href="//oia.gachon.ac.kr/international/a/m/foreignNoticeList.do">공지사항</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/enquiriesList.do">문의 게시판</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+			
+		
+	</div>
+	<div class="bg_mobilemenu"></div>
+</header>
+<!-- [pp] //header -->
+<form id="menuMoveForm" method="post">
+	<input type="hidden" name="menuId">
+	<input type="hidden" name="menuUrlGubun">
+</form>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.lang_select').each(function(){
+		$(this).removeClass('selected');
+	});
+	console.log("확인 : ");
+	if('C' ==''){
+		$('#langValue03').addClass('selected');
+		$('.select_lang > strong').text('CHN');
+	}else if('U' ==''){
+		$('#langValue02').addClass('selected');
+		$('.select_lang > strong').text('ENG');
+	}else{
+		$('#langValue01').addClass('selected');
+		$('.select_lang > strong').text('KOR');
+	}
+});
+function fnGoMoveMenu(contentsUrl, menuId) {
+	var _url = "//oia.gachon.ac.kr" + contentsUrl;
+	$("#menuMoveForm input[name=menuId]").val(menuId);
+	$("#menuMoveForm input[name=menuUrlGubun]").val("CLIENT_SUB");
+	$("#menuMoveForm").attr("action", _url).submit();
+}
+
+
+$("#goAdminBtn").on("click", function(e) {
+	document.location.href = "//oia.gachon.ac.kr/adminMain/a/t/main.do";
+});
+
+
+$("#clientLogOutBtn").on("click", function(e) {
+	if(!confirm("로그아웃 하시겠습니까?")) return false;
+	location.href = "//oia.gachon.ac.kr/login/a/n/logOut.do?loginType=CLIENT";
+});
+
+function fnOpenSiteMapPopUp() {
+	var popupDivId = "#layerPopup";
+	var popupUrl = "//oia.gachon.ac.kr/clientMain/a/n/openSiteMapPopUp.do";
+	var popupParams = {
+	};
+	clientLoadPopup(popupDivId, popupUrl, popupParams);
+
+}
+
+
+
+</script>
+       <!-- [pp] //header -->
+
+       <!-- [pp] subpage visual -->
+       <!-- [pp] //subpage visual -->
+       <!-- [pp] 메인컨텐츠 영역 -->
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- [pp] subpage visual -->
+<figure class="sub_visual visual2">
+	<div class="grid_content">
+		<nav class="page_navi">
+			<ul>
+				<li>Home</li>
+				<li data-i18n="[html]sideBar.txt1"><!-- 한국어 교육센터 --></li>
+				<li data-i18n="[html]sideBar.txt2"><!-- 소개 --></li>
+			</ul>
+		</nav>
+	</div>
+</figure>
+<!-- [pp] //subpage visual -->
+
+<!-- [pp] 메인컨텐츠 영역 -->
+<div id="container_skip" class="subpage_wrapper grid_content" tabindex="0">
+	<!-- [pp] side navigation bar -->
+	<div class="snb_wrap">
+		<h3 class="snb_tit">
+			<span data-i18n="[html]sideBar.txt1"><!-- 한국어 교육센터 --></span>
+		</h3>
+		<nav>
+			<ul class="snb_list">
+				<li class="on"><a href="//oia.gachon.ac.kr/international/a/m/klecInfo.do" data-i18n="[html]sideBar.txt2"><!-- 소개  --></a></li>
+				<li><a href="//oia.gachon.ac.kr/international/a/m/krCenterApply.do" data-i18n="[html]sideBar.txt3"><!-- 지원방법 --></a></li>
+
+				<li><a href="//oia.gachon.ac.kr/international/a/m/krCenterScholarship.do" data-i18n="[html]sideBar.txt5"><!--  등록금 및 장학금 --></a></li>
+				<li><a href="//oia.gachon.ac.kr/international/a/m/krCenterRecruitment.do" data-i18n="[html]introduction.txt88"><!-- 강사 상시모집 --></a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- [pp] //side navigation bar -->
+
+	<!-- [pp] subpage contents -->
+	<main class="subcontent_wrap">
+	<h3 class="subpage_tit" data-i18n="[html]sideBar.txt2"><!-- 소개 --></h3>
+	<section class="section_toparea section_area">
+		<h3 class="section_tit_lg" data-i18n="[html]introduction.txt1">
+			<!-- 한국어 교육센터 소개 -->
+		</h3>
+		<p class="introtxt_box section_area"
+			data-i18n="[html]introduction.txt2">
+			<!-- 가천대학교 국제교류처 한국어교육센터는 2004년 국제어학원 한국어과정으로 시작하여, 한국어 세계화의 전문적인 기관이라는 목표로 2012년 국제교류처 한국어교육센터로 확대 개편되었습니다.<br /><br />
+					 한국어 정규과정은 국내 대학 진학을 목적으로 하는 외국인 유학생과 한국어를 배우고자 하는 외국인, 교포 자녀들을 위한 교육 프로그램입니다. 우수한 강사진을 바탕으로 학습자 중심의 교육 방식을 통하여 언어 학습의 효율성을 높이고자 12명 내외의 소규모 인원 편성으로 수준별 학습이 이루어지고 있습니다. 또한 이러한 목표를 원활하게 이루기 위해 외국인 학습자들의 한국 생활 적응 및 고민에 대해 상담해 주는 가천인터내셔널센터를 두어 학습자들을 지원하고 있습니다.<br /><br />
+					가천대학교 국제교류처 한국어교육센터에서는 외국어로서의 한국어교육 전문가들이 여러분의 한국어 실력 향상을 위해 최선을 다하고 있습니다.<br /><br />
+					 한국어의 첫 걸음, 가천대학교 국제교류처 한국어교육센터에서 시작하세요. -->
+		</p>
+		<div class="section_area tab_js">
+			<!-- <ul class="tab_list2 tab_list_js tab_of_lg"> -->
+			<ul class="tab_list2 tab_list_js tab_of_md">
+				<li><a href="#tab1" class="on" data-i18n="[html]introduction.txt3">
+						<!-- 정규과정 안내 -->
+				</a></li>
+				<li><a href="#tab2" data-i18n="[html]introduction.txt4">
+						<!-- 교과과정 안내 -->
+				</a></li>
+				<li><a href="#tab3" data-i18n="[html]introduction.txt5">
+						<!-- 교재 소개 -->
+				</a></li>
+				<li><a href="#tab4" data-i18n="[html]introduction.txt6">
+						<!-- 교양 한국어 안내 -->
+				</a></li>
+				<!-- <li><a href="#tab5" data-i18n="[html]introduction.txt7">
+						가천 토픽 센터
+				</a></li> -->
+				<li><a href="#tab6" data-i18n="[html]introduction.txt8">
+						<!-- 교수진 소개 -->
+				</a></li>
+			</ul>
+			<div class="tab_cnt_js">
+				<div id="tab1">
+					<section class="section_area">
+						<h4 class="section_tit_md" data-i18n="[html]introduction.txt9">
+							<!-- 정규과정 안내 -->
+						</h4>
+						<p data-i18n="[html]introduction.txt10">
+							<!-- 가천대학교 한국어교육센터 한국어과정은 수강생의 한국어 구사능력 테스트 결과에 따라 &lt; 초급 1, 2 &gt;, &lt; 중급 1, 2 &gt;, &lt; 고급 1, 2 &gt;으로 이루어지며, 각 반은 주 5일 × 10주의 수업 일정으로 진행됩니다. 초급반부터 시작하여 최종단계인 고급반까지의 총 교육기간은 1년 6개월이 되지만, 중급반 과정을 마치는 1년 과정의 교육으로도 충분한 의사소통능력을 갖출 수 있습니다. -->
+						</p>
+					</section>
+					<section class="section_area">
+						<h4 class="section_tit_md" data-i18n="[html]introduction.txt11">
+							<!-- 수업 편성 안내 -->
+						</h4>
+						<div class="tbl tbl_row scrollx_tbl_md">
+							<table>
+								<caption>수업 편성 안내</caption>
+								<colgroup>
+									<col style="width: 16.666%">
+									<col style="width: 16.666%">
+									<col style="width: 16.666%">
+									<col style="width: 16.666%">
+									<col style="width: 16.666%">
+									<col style="width: 16.666%">
+								</colgroup>
+								<thead>
+									<tr data-i18n="[html]introduction.txt12">
+										<!-- <th></th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th> -->
+									</tr>
+								</thead>
+								<tbody>
+									<tr data-i18n="[html]introduction.txt13">
+										<!-- <th scope="row" class="ta_c">1 ~ 2 교시</th>
+												<td class="ta_c">어휘&middot;문법</td>
+												<td class="ta_c">듣고 말하기</td>
+												<td class="ta_c">어휘&middot;문법</td>
+												<td class="ta_c">듣고 말하기</td>
+												<td class="ta_c">쓰고 말하기</td> -->
+									</tr>
+									<tr data-i18n="[html]introduction.txt14">
+										<!-- <th scope="row" class="ta_c">3 ~ 4 교시</th>
+												<td class="ta_c">말하기</td>
+												<td class="ta_c">읽고 말하기</td>
+												<td class="ta_c">말하기</td>
+												<td class="ta_c">읽고 말하기</td>
+												<td class="ta_c">한국 문화</td> -->
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p class="mg_t5" data-i18n="[html]introduction.txt15">
+							<!-- ※ 한국어 수업 이외에도 학습자의 요구를 반영한 다양한 한국의 문화를 접할 수 있습니다. 한국 요리 배우기, 유적지나 고궁 견학, 도자기 체험 등 학생들이 흥미를 느낄 수 있는 여러 가지 문화 체험 프로그램이 진행되며 별도의 참가비가 있을 수 있습니다. -->
+						</p>
+					</section>
+					<section class="section_area">
+						<h4 class="section_tit_md" data-i18n="[html]introduction.txt16">
+							<!-- 오전반 -->
+						</h4>
+						<div class="grid_row">
+							<div class="grid_col col_xl_4 col_sm_12 tbl tbl_row">
+								<table>
+									<caption>오전반 목록</caption>
+									<colgroup>
+										<col style="width: 40%">
+										<col style="width: 60%">
+									</colgroup>
+									<tbody>
+										<tr data-i18n="[html]introduction.txt17">
+											<!-- <th scope="row">1교시</th>
+													<td class="ta_c">09:00 ~ 09:50</td> -->
+										</tr>
+										<tr data-i18n="[html]introduction.txt18">
+											<!-- <th scope="row">2교시</th>
+													<td class="ta_c">10:00 ~ 10:50</td> -->
+										</tr>
+										<tr data-i18n="[html]introduction.txt19">
+											<!-- <th scope="row">3교시</th>
+													<td class="ta_c">11:10 ~ 12:00</td> -->
+										</tr>
+										<tr data-i18n="[html]introduction.txt20">
+											<!-- <th scope="row">4교시</th>
+													<td class="ta_c">12:10 ~ 13:00</td> -->
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="grid_col col_xl_8 col_sm_12">
+								<div class="infolist_box">
+									<ul class="list_dot_sm" data-i18n="[html]introduction.txt21">
+										<!-- <li>한 학기는 10주, 총 200시간 수업으로 구성됩니다.</li>
+												<li>수업은 월요일부터 금요일까지, 하루에 4시간씩 진행됩니다.</li>
+												<li>한 반은 12명 내외의 정원으로 이루어집니다.</li>
+												<li>학생들은 다양한 문화 체험과 선택 반에 참가할 수 있습니다.</li>
+												<li>오전반은 오전 9시부터 오후 1시까지 수업이 진행됩니다.</li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h4 class="section_tit_md" data-i18n="[html]introduction.txt22">
+							<!-- 오후반 -->
+						</h4>
+						<div class="grid_row">
+							<div class="grid_col col_xl_4 col_sm_12 tbl tbl_row">
+								<table>
+									<caption>오전반 목록</caption>
+									<colgroup>
+										<col style="width: 40%">
+										<col style="width: 60%">
+									</colgroup>
+									<tbody>
+										<tr data-i18n="[html]introduction.txt23">
+											<!-- <th scope="row">1교시</th>
+														<td class="ta_c">14:00 ~ 14:50</td> -->
+										</tr>
+										<tr data-i18n="[html]introduction.txt24">
+											<!-- <th scope="row">2교시</th>
+														<td class="ta_c">15:00 ~ 15:50</td> -->
+										</tr>
+										<tr data-i18n="[html]introduction.txt25">
+											<!-- <th scope="row">3교시</th>
+														<td class="ta_c">16:10 ~ 16:00</td> -->
+										</tr>
+										<tr data-i18n="[html]introduction.txt26">
+											<!-- <th scope="row">4교시</th>
+														<td class="ta_c">17:10 ~ 17:00</td> -->
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="grid_col col_xl_8 col_sm_12">
+								<div class="infolist_box">
+									<ul class="list_dot_sm" data-i18n="[html]introduction.txt27">
+										<!-- <li>오후반은 오전반과 동일한 프로그램으로 운영합니다.</li>
+													<li>오후반 수강생들에게도 비자 발급이 가능합니다.</li>
+													<li>한 반은 12명 내외의 정원으로 이루어집니다.</li>
+													<li>학생들은 다양한 문화 체험과 선택 반에 참가할 수 있습니다.</li>
+													<li>오후반은 오후 2시부터 오후 6시까지 수업이 진행됩니다.</li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+				<div id="tab2">
+					<section class="section_area">
+						<h4 class="section_tit_md" data-i18n="[html]introduction.txt28">
+							<!-- 교과과정 안내 -->
+						</h4>
+						<div class="section_sarea tbl tbl_row">
+							<table>
+								<caption>교과과정 목록</caption>
+								<colgroup>
+									<col style="width: 25%">
+									<col style="width: 25%">
+									<col style="width: 25%">
+									<col style="width: 25%">
+								</colgroup>
+								<thead>
+									<tr data-i18n="[html]introduction.txt29">
+										<!-- <th scope="col">초급</th>
+                                                    <th scope="col">중급</th>
+                                                    <th scope="col">고급</th>
+                                                    <th scope="col">최고급</th> -->
+									</tr>
+								</thead>
+								<tbody>
+									<tr data-i18n="[html]introduction.txt30">
+										<!-- <td class="ta_c">
+                                                        1 - 2 과정 &#40;TOPIK 1, 2급 수준&#41;
+                                                    </td>
+                                                    <td class="ta_c">
+                                                        1 - 2 과정 &#40;TOPIK 3, 4급 수준&#41;
+                                                    </td>
+                                                    <td class="ta_c">
+                                                        1 - 2 과정 &#40;TOPIK 5, 6급 수준&#41;
+                                                    </td>
+                                                    <td class="ta_c">
+                                                        6급 이상 과정
+                                                    </td> -->
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tbl tbl_row scrollx_tbl_xs">
+							<table>
+								<caption>교과과정 목록 상세</caption>
+								<colgroup>
+									<col style="width: 20%">
+									<col style="width: 20%">
+									<col style="width: 60%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="2"
+											data-i18n="[html]introduction.txt31">
+											<!-- 초급 1 과정 &#40;TOPIK 1급&#41; -->
+										</th>
+										<td class="ta_c" data-i18n="[html]introduction.txt32">
+											<!-- 교육목표 -->
+										</td>
+										<td>
+											<ul class="list_dot_sm" data-i18n="[html]introduction.txt33">
+												<!--  <li>
+                                                                한글 자모의 맞춤법과 음가, 음절 구조의 특성을 익힌다.
+                                                            </li>
+                                                            <li>
+                                                                한국어 문자&#40;한글&#41;의 발음을 배워 정확하게 읽을 수 있다.
+                                                            </li>
+                                                            <li>
+                                                                한국어의 기본 구조를 익혀서 짧은 문장을 이해하고 사용할 수 있다.
+                                                            </li>
+                                                            <li>
+                                                                일상생활을 하는 데 필요한 기초적인 의사소통능력을 키운다.
+                                                            </li> -->
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="ta_c" data-i18n="[html]introduction.txt34">
+											<!-- 교육내용 -->
+										</td>
+										<td>
+											<ul class="list_dot_sm" data-i18n="[html]introduction.txt35">
+												<!-- <li>
+                                                                기초 어휘, 기본 조사 및 어미의 활용, 시제, 기본 문장 구조 알기
+                                                            </li>
+                                                            <li>
+                                                                인사하기, 자기 소개하기, 음식 시키기, 물건 사기, 전화하기, 대중교통 타기, 은행 이용하기 등 일상생활에 필요한 한국어 익히기
+                                                            </li>
+                                                            <li>
+                                                                식사, 전화 등 일상생활에 필요한 기본적인 한국 문화 이해하기
+                                                            </li> -->
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="2"
+											data-i18n="[html]introduction.txt36">
+											<!-- 초급 2 과정 &#40;TOPIK 2급&#41; -->
+										</th>
+										<td class="ta_c" data-i18n="[html]introduction.txt37">
+											<!-- 교육목표 -->
+										</td>
+										<td>
+											<ul class="list_dot_sm" data-i18n="[html]introduction.txt38">
+												<!--  <li>
+                                                                200시간의 한국어교육을 받았거나 그에 준하는 한국어 능력을 가진 성인 학습자를 대상으로 하여 일상생활에 필요한 기본적인 의사소통능력을 기르게 한다.
+                                                            </li>
+                                                            <li>
+                                                                한글의 음운 규칙을 익혀 좀 더 자연스럽게 문장을 읽고 말할 수 있다.
+                                                            </li>
+                                                            <li>
+                                                                짧은 문장들이 연결, 확장된 비교적 긴 문장들을 이해하고 사용할 수 있다.
+                                                            </li> -->
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="ta_c" data-i18n="[html]introduction.txt39">
+											<!-- 교육내용 -->
+										</td>
+										<td>
+											<ul class="list_dot_sm" data-i18n="[html]introduction.txt40">
+												<!-- <li>
+                                                                가족, 취미, 운동, 계절, 여행, 경험 등 친숙한 주제들에 대해 묻고 대답하기
+                                                            </li>
+                                                            <li>
+                                                                반말, 높임말, 간접화법 등을 배워 담화 상황에 맞게 구사하기
+                                                            </li>
+                                                            <li>
+                                                                설날 음식, 사물놀이 등 체험을 통해 한국 문화 이해하기
+                                                            </li> -->
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="2"
+											data-i18n="[html]introduction.txt41">
+											<!-- 중급 1 과정 &#40;TOPIK 3급&#41; -->
+										</th>
+										<td class="ta_c" data-i18n="[html]introduction.txt42">
+											<!-- 교육목표 -->
+										</td>
+										<td>
+											<ul class="list_dot_sm" data-i18n="[html]introduction.txt43">
+												<!-- <li>
+                                                                400시간의 한국어교육을 받았거나 그에 준하는 한국어 능력을 가진 성인 학습자를 대상으로 하여 일상적인 사회 활동에 필요한 의사소통능력을 기르고 한국 문화를 접할 수 있게 한다.
+                                                            </li>
+                                                            <li>
+                                                                자신의 관심사에 대해 대화를 나눌 수 있고 부분적인 업무 처리 능력을 키울 수 있다.
+                                                            </li>
+                                                            <li>
+                                                                충분한 생활 어휘, 한자어, 관용 표현을 배워서 일상 회화를 자유롭게 할 수 있다.
+                                                            </li> -->
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="ta_c" data-i18n="[html]introduction.txt44">
+											<!-- 교육내용 -->
+										</td>
+										<td>
+											<ul class="list_dot_sm" data-i18n="[html]introduction.txt45">
+												<!-- <li>
+                                                                다양한 보조사 및 어미의 활용 등을 포함한 한국어 제반의 문법 요소를 이용하여 표현하기.
+                                                            </li>
+                                                            <li>
+                                                                방 구하기, 이사하기, 텔레비전 고장 수리하기, 휴일 계획하기, 공원 이용하기, 여행 가기, 연극하기 등 다양한 주제에 대해 표현하기
+                                                            </li>
+                                                            <li>
+                                                                한국 요리 실습, 문화 시설 견학, 시 감상 등을 통해 한국 문화를 이해하기
+                                                            </li> -->
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="2"
+											data-i18n="[html]introduction.txt46">
+											<!-- 중급 2 과정 &#40;TOPIK 4급&#41; -->
+										</th>
+										<td class="ta_c" data-i18n="[html]introduction.txt47">
+											<!-- 교육목표 -->
+										</td>
+										<td>
+											<ul class="list_dot_sm" data-i18n="[html]introduction.txt48">
+												<!--  <li>
+                                                                600시간의 한국어교육을 받았거나 그에 준하는 한국어 능력을 가진 성인 학습자를 대상으로 하여 다양한 사회 활동에 필요한 의사소통능력을 기르고 한국의 전통 문화를 체험하게 한다.
+                                                            </li>
+                                                            <li>
+                                                                학업과 직업 활동에 필요한 언어 능력을 키울 수 있다.
+                                                            </li>
+                                                            <li>
+                                                                비교적 길게 자신의 생각을 논리적으로 표현할 수 있는 능력을 키울 수 있다.
+                                                            </li>
+                                                            <li>
+                                                                전반적인 한국의 사회, 문화에 대한 이해의 폭을 넓힌다.
+                                                            </li> -->
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="ta_c" data-i18n="[html]introduction.txt49">
+											<!-- 교육내용 -->
+										</td>
+										<td>
+											<ul class="list_dot_sm" data-i18n="[html]introduction.txt50">
+												<!-- <li>
+                                                                부탁, 상담, 약속 등과 같은 표현법, 사용 빈도가 높은 추상어, 관용어 표현 익히기
+                                                            </li>
+                                                            <li>
+                                                                사회, 문화, 역사, 소설 등 다양한 주제에 대한 글을 읽고 이야기하기
+                                                            </li>
+                                                            <li>
+                                                                현장 체험 학습을 가거나 한국 신화, 전래 동화, 전통 노래를 배워서 한국 문화 이해하기
+                                                            </li> -->
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="2"
+											data-i18n="[html]introduction.txt51">
+											<!-- 고급 1 과정 &#40;TOPIK 5급&#41; -->
+										</th>
+										<td class="ta_c" data-i18n="[html]introduction.txt52">
+											<!-- 교육목표 -->
+										</td>
+										<td>
+											<ul class="list_dot_sm" data-i18n="[html]introduction.txt53">
+												<!-- <li>
+                                                                800시간의 한국어교육을 받았거나 그에 준하는 한국어 능력을 가진 성인 학습자를 대상으로 하여 언어생활에서 불편 없이 의사소통할 수 있는 능력을 갖추고 한국의 역사와 문화에 대하여 폭넓은 지식을 가지게 한다.
+                                                            </li>
+                                                            <li>
+                                                                추상적이고 시사적인 문제의 처리 능력을 키운다.
+                                                            </li>
+                                                            <li>
+                                                                다양한 주제에 대한 의사소통능력을 향상시키고, 전면적인 업무 처리 능력을 배양한다.
+                                                            </li> -->
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="ta_c" data-i18n="[html]introduction.txt54"><!-- 교육내용 --></td>
+										<td>
+											<ul class="list_dot_sm" data-i18n="[html]introduction.txt55">
+												<!-- <li>정치, 사회, 경제, 문화 주제에 대한 다양한 토론 학습</li>
+												<li>다양한 주제 연구와 논문 형식의 발표를 통한 전문적 지식 탐구와 토론 학습</li>
+												<li>다양한 발화 상황에 맞는 정확한 언어 표현 학습</li> -->
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="2" data-i18n="[html]introduction.txt56"><!-- 고급 2과정 &#40;TOPIK 6급&#41; --></th>
+										<td class="ta_c" data-i18n="[html]introduction.txt57"><!-- 교육목표 --></td>
+										<td>
+											<ul class="list_dot_sm" data-i18n="[html]introduction.txt58">
+												<!-- <li>1,000시간의 한국어교육을 받았거나 그에 준하는 한국어 능력을 가진 성인 학습자를 대상으로
+													하여 사회생활에 필요한 한국어를 유창하게 구사할 수 있게 하고 한국의 역사, 문화에 대하여 깊이 있는
+													지식을 가지게 한다.</li>
+												<li>신문, TV, 뉴스, 문학 작품 등을 통한 구체적인 한국 사회의 이해를 도모한다.</li>
+												<li>대학 강의 참여, 토론, 발표 등 공식적인 상황에서 자신의 의사를 논리적으로 표현할 수 있는
+													능력을 키울 수 있다.</li> -->
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="ta_c" data-i18n="[html]introduction.txt59"><!-- 교육내용 --></td>
+										<td>
+											<ul class="list_dot_sm" data-i18n="[html]introduction.txt60">
+												<!-- <li>신문, 방송 등 실제 자료를 이용한 듣기/읽기/토론 연습하기</li>
+												<li>방송 다큐멘터리 등을 활용하여 한국 역사 배우기</li>
+												<li>신문 만들기를 통한 통합적 언어 훈련, 인터넷을 이용한 정보 검색, 글 올리기 실습</li>
+												<li>다양한 시사 자료 및 문학 작품, 문화 활동을 통한 표현 이해</li> -->
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="2" data-i18n="[html]introduction.txt61"><!-- 최고급 과정 &#40;6급 이상&#41; --></th>
+										<td class="ta_c" data-i18n="[html]introduction.txt62"><!-- 교육목표 --></td>
+										<td>
+											<ul class="list_dot_sm" data-i18n="[html]introduction.txt63">
+											<!-- 	<li>1,200시간&#40;정규반 6급수준 이상&#41;의 한국어교육을 받았거나 그에 준하는
+													한국어 능력을 가진 성인 학습자를 대상으로 하여 학업 수행 및 취업 시 필요한 한국어 능력을 갖추고 한국
+													사회 및 문화에 대한 이해의 폭을 넓힐 수 있게 한다.</li>
+												<li>대학 및 대학원 수업, 직장 생활에 필요한 언어 능력을 키울 수 있다.</li>
+												<li>대학 및 대학원 수업에 필요한 보고서 쓰기 및 다양한 글쓰기를 배울 수 있다.</li> -->
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="ta_c" data-i18n="[html]introduction.txt64"><!-- 교육내용 --></td>
+										<td>
+											<ul class="list_dot_sm" data-i18n="[html]introduction.txt65">
+												<!-- <li>저서, 논문, 인터넷 등을 이용하여 학술 과제 수행에 필요한 자료를 찾아내기</li>
+												<li>직장 생활에 필요한 여러 가지 문화적 배경을 이해하고 관련된 한국어 표현을 익히기</li>
+												<li>다양한 글 읽기를 통해 글 전체를 비판적으로 이해하고 이에 대한 의견 발표 및 토론하기</li>
+												<li>주요한 사회적 이슈를 다룬 신문, 방송 자료 등을 이해하고 해당 주제에 대해 유창하고
+													정확하게 자신의 의견을 표현하는 연습하기</li> -->
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
+				</div>
+				<div id="tab3">
+					<section class="section_area">
+						<h4 class="section_tit_md" data-i18n="[html]introduction.txt66"><!-- 가천 한국어 교재 시리즈 소개 --></h4>
+						<ul class="bookintro_list">
+							<li class="col_xl_4 col_sm_6 col_xs_12"><img src="//oia.gachon.ac.kr/contents/images/client/foreign_student/sub/img_bookcover.jpg"alt="가천 한국어 교재 예제 이미지">
+							</li>
+							<li class="col_xl_4 col_sm_6 col_xs_12">
+								<img src="//oia.gachon.ac.kr/contents/images/client/foreign_student/sub/img_bookcover2.jpg" alt="가천 한국어 교재 예제 이미지">
+							</li>
+							<li class="col_xl_4 col_sm_6 col_xs_12">
+								<img src="//oia.gachon.ac.kr/contents/images/client/foreign_student/sub/img_bookcover3.jpg" alt="가천 한국어 교재 예제 이미지">
+							</li>
+							<li class="col_xl_4 col_sm_6 col_xs_12">
+								<img src="//oia.gachon.ac.kr/contents/images/client/foreign_student/sub/img_bookcover4.jpg" alt="가천 한국어 교재 예제 이미지">
+							</li>
+							<li class="col_xl_4 col_sm_6 col_xs_12">
+								<img src="//oia.gachon.ac.kr/contents/images/client/foreign_student/sub/img_bookcover5.jpg" alt="가천 한국어 교재 예제 이미지">
+							</li>
+							<li class="col_xl_4 col_sm_6 col_xs_12">
+								<img src="//oia.gachon.ac.kr/contents/images/client/foreign_student/sub/img_bookcover6.jpg" alt="가천 한국어 교재 예제 이미지">
+							</li>
+							<li class="col_xl_4 col_sm_6 col_xs_12">
+								<img src="//oia.gachon.ac.kr/contents/images/client/foreign_student/sub/img_bookcover7.jpg" alt="가천 한국어 교재 예제 이미지">
+							</li>
+							<li class="col_xl_4 col_sm_6 col_xs_12"><img
+								src="//oia.gachon.ac.kr/contents/images/client/foreign_student/sub/img_bookcover8.jpg"
+								alt="가천 한국어 교재 예제 이미지"> </li>
+							<li class="col_xl_4 col_sm_6 col_xs_12"><img
+								src="//oia.gachon.ac.kr/contents/images/client/foreign_student/sub/img_bookcover9.jpg"
+								alt="가천 한국어 교재 예제 이미지"> </li>
+							<li class="col_xl_4 col_sm_6 col_xs_12">
+								<p class="txt" data-i18n="[html]introduction.txt76">
+							<!-- 		<strong>가천 한국어 5B</strong> <span>&lt;2020년 발간 예정&gt;</span> -->
+								</p>
+							</li>
+							<li class="col_xl_4 col_sm_6 col_xs_12">
+								<p class="txt" data-i18n="[html]introduction.txt77">
+									<!-- <strong>가천 한국어 6A</strong> <span>&lt;2020년 발간 예정&gt;</span> -->
+								</p>
+							</li>
+							<li class="col_xl_4 col_sm_6 col_xs_12">
+								<p class="txt" data-i18n="[html]introduction.txt78">
+									<!-- <strong>가천 한국어 6B</strong> <span>&lt;2020년 발간 예정&gt;</span> -->
+								</p>
+							</li>
+						</ul>
+					</section>
+				</div>
+				<div id="tab4">
+					<section class="section_area">
+						<h4 class="section_tit_md" data-i18n="[html]introduction.txt79"><!-- 교양 한국어 안내 --></h4>
+						<ul class="list_dot_sm" data-i18n="[html]introduction.txt80">
+							<!-- <li>대학&#40;원&#41;교 유학생은 한국어능력시험&#40;TOPIK&#41; 3급 이상이어야 입학이
+								가능하며, 4급 이상이어야 졸업이 가능합니다.</li>
+							<li>입학 후 1차 학기부터 2차 학기까지 유학생들은 다른 교과목에 우선하여 한국어교육센터에 개설되어 있는
+								한국어교과목&#40;교양한국어&#41;을 수준별, 단계별로 집중 수강해야 합니다.</li>
+							<li>교육 방법은 '어휘&middot;문법 → 말하기/듣기 → 읽기 → 쓰기'의 통합교과과정으로
+								진행됩니다.</li>
+							<li>수준별로 편성하여, 한국어의 유창성과 정확성을 향상시켜 전공교과 수강을 수월하게 할 수 있도록
+								합니다.</li>
+							<li>우수한 강사진으로 구성되어 유학생들이 한국 학생들과 함께 전공과 교양 강좌 수강을 하는데 불편함이
+								없도록 합니다.</li> -->
+						</ul>
+						<div class="tbl tbl_rect scrollx_tbl_md">
+                                        <table>
+                                            <caption>교양 한국어 교육 절차 상세</caption>
+                                            <colgroup>
+												<col style="width:14.285%">
+												<col style="width:14.285%">
+												<col style="width:14.285%">
+												<col style="width:14.285%">
+												<col style="width:14.285%">
+												<col style="width:14.285%">
+												<col style="width:14.285%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr data-i18n="[html]introduction.txt81">
+                                                    <!-- <th scope="col" class="tbl_empty">
+														<span>영역</span>
+														<span>입학 구분</span>
+                                                    </th>
+                                                    <th scope="col">
+                                                        듣기<br/>
+                                                        &#40;2학점 - 3시수&#41;
+                                                    </th>
+                                                    <th scope="col">
+                                                        읽기<br/>
+                                                        &#40;2학점 - 3시수&#41;
+                                                    </th>
+                                                    <th scope="col">
+                                                        문법<br/>
+                                                        &#40;2학점 - 3시수&#41;
+													</th>
+													<th scope="col">
+														쓰기<br/>
+														&#40;2학점 - 3시수&#41;
+													</th>
+                                                    <th scope="col">
+                                                        말하기<br/>
+														&#40;2학점 - 3시수&#41;
+                                                    </th>
+                                                    <th scope="col">
+														심화영역 &#40;2학년 이상&#41;<br/>
+														&#40;2학점 - 2시수&#41;
+                                                    </th> -->
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr data-i18n="[html]introduction.txt82">
+                                                    <!-- <th scope="row">
+                                                        1차 학기
+                                                    </th>
+                                                    <td>
+                                                        우리말의 이해
+                                                    </td>
+                                                    <td>
+                                                        우리글의 이해
+                                                    </td>
+                                                    <td>
+                                                        한국어문법의 이해
+                                                    </td>
+                                                    <td>
+                                                        주제발표와<br/>
+                                                        보고서 쓰기
+                                                    </td>
+                                                    <td>
+                                                    	화법의 이해
+													</td>
+													<td>
+														영상매체와 한국어<br/>
+														한국 문화 콘텐츠의 이해
+													</td> -->
+                                                </tr>
+                                                <tr data-i18n="[html]introduction.txt83">
+                                                    <!-- <th scope="row">
+                                                        2차 학기
+                                                    </th>
+                                                    <td>
+                                                        논리적 사고와 말하기
+                                                    </td>
+                                                    <td>
+                                                        논리적 사고와 글쓰기
+                                                    </td>
+                                                    <td>
+                                                        한국어문법의 활용
+                                                    </td>
+                                                    <td>
+                                                        실용작문
+                                                    </td>
+                                                    <td>
+                                                       독서와 논술
+													</td>
+													<td>
+														과제 기반 한국어<br/>
+														한국어 시사 토론
+													</td> -->
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+					</section>
+				</div>
+				<!-- <div id="tab5">
+					<section class="section_area">
+						<div class="infotop_box section_sarea" data-i18n="[html]introduction.txt84">공인토픽 3급으로 입학한 학생들이 빠른
+							시일 내에 4급을 취득하기 위해서는 시험 환경 적응, 꾸준한 반복 훈련이 필요합니다.</div>
+						<h4 class="section_tit_md" data-i18n="[html]introduction.txt85">가천 토픽 센터</h4>
+						<ul class="list_dot_sm" data-i18n="[html]introduction.txt86">
+							<li>토픽 유형에 맞춘 모의시험을 반복적으로 치름으로써 시험에 대한 부담감을 해소하고 시간 배분 등
+								전반적인 응시 요령을 익힐 수 있습니다.</li>
+							<li>응시 장소 : 글로벌센터 511호&#40;가천모의토픽센터&#41;</li>
+							<li>접수처 : 국제교류처 행정실&#40;글로벌센터 613호&#41;
+								<ul class="list_line">
+									<li class="font_orange">담당자 : 국제교류처 &#40;연락처 :
+										031-750-&#41;</li>
+								</ul>
+							</li>
+							<li>매주 월요일부터 금요일까지 오전에 접수를 받아, 오후 2시부터 수업 및 시험을 진행합니다.</li>
+							<li>한국어교육센터 연구원을 중심으로 한국어전담강사들이 매회 출제되는 한국어능력시험 기출 문제를 분석하여
+								출제 경향을 파악하고 예상 문제를 출제합니다.</li>
+							<li>시험 결과는 매주 월요일 가천토픽센터 게시판에 공지하며, 시험결과에 대한 자세한 분석은 개별적으로
+								안내합니다.</li>
+							<li>한국어능력시험&#40;TOPIK&#41; 4급 취득대비반 운영
+								<ul class="list_line">
+									<li class="font_blue">공인토픽 4급 이상 취득을 위한 60시간의 특별 과정으로 수강생
+										15명 이상 시 개설됩니다.</li>
+									<li class="font_blue">선발 대상 : 공인토픽 4급 취득을 희망하는 가천대학교에 재학
+										중인 유학생&#40;가천 모의토픽 3급, 4급 합격자으로 다음 회 토픽응시자)</li>
+									<li class="font_blue">모집인원 : 반별 15명 내외</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</div> -->
+				<div id="tab6">
+					<section class="section_area">
+						<h4 class="section_tit_md" data-i18n="[html]introduction.txt87"><!-- 교수진 소개 --></h4>
+						<div class="tbl tbl_col scrollx_tbl_md">
+							<table>
+								<caption>교수진 리스트</caption>
+								<colgroup>
+									<col style="width: 9%">
+									<col style="width: 13%">
+									<col style="width: 18%">
+									<col style="width: 10%">
+									<col style="width: 6%">
+									<col style="width: 10%">
+									<col style="width: 14%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" data-i18n="[html]introduction.txt89"><!-- 부서 --></th>
+										<th scope="col" data-i18n="[html]introduction.txt90"><!-- 직위 --></th>
+										<th scope="col" data-i18n="[html]introduction.txt91"><!-- 학위 --></th>
+										<th scope="col" data-i18n="[html]introduction.txt92"><!-- 전공 --></th>
+										<th scope="col" data-i18n="[html]introduction.txt93"><!-- 성명 --></th>
+										<th scope="col" data-i18n="[html]introduction.txt94"><!-- 연락처 --></th>
+										<th scope="col" data-i18n="[html]introduction.txt95"><!-- 이메일 --></th>
+									</tr>
+								</thead>
+								<tbody>
+									
+									<tr>
+										
+											
+											
+										<th scope="row" rowspan="18">한국어 교육센터</th>
+											
+										
+										<td>주임 교수</td>
+										<td>가천대학교 일반대학원 문학박사</td>
+										<td>한국어학</td>
+										<td>이태환</td>
+										<td>031-750-5870</td>
+										<td>dogbeef@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>객원 교수</td>
+										<td>북경사범대학교 문학석사</td>
+										<td>언어학 및 응용언어학</td>
+										<td>김선희</td>
+										<td>031-750-5623</td>
+										<td>sunny@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>객원 교수</td>
+										<td>세명대학교 교육대학원 교육학석사</td>
+										<td>국어교육학</td>
+										<td>이수연</td>
+										<td>031-750-5842</td>
+										<td>toto79love2@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>객원 교수</td>
+										<td>연세대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>민유경</td>
+										<td>031-750-5842</td>
+										<td>nuri8189@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>객원 교수</td>
+										<td>가천대학교 교육대학원 교육학석사</td>
+										<td>중국어교육학</td>
+										<td>이혜진</td>
+										<td>031-750-5842</td>
+										<td>lihuizhen7180@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>객원 교수</td>
+										<td>연세대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>공민정</td>
+										<td>031-750-5623</td>
+										<td>mjkong@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>TOPIK 팀장</td>
+										<td>단국대학교 일반대학원 문학석사</td>
+										<td>한국어교육학</td>
+										<td>박선규</td>
+										<td>031-750-5842</td>
+										<td>sklucia@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>6급 팀장</td>
+										<td>경희대학교 교육대학원 교육학석사</td>
+										<td>국어교육학</td>
+										<td>류선지</td>
+										<td>031-750-5623</td>
+										<td>mujjet@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>4급 팀장</td>
+										<td>이화여자대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>이윤지</td>
+										<td>031-750-5623</td>
+										<td>dbswlsgbs@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>3급 팀장</td>
+										<td>이화여자대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>유병희</td>
+										<td>031-750-5623</td>
+										<td>yhbcool@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>2급 팀장</td>
+										<td>단국대학교 교육대학원 교육학석사</td>
+										<td>국어교육학</td>
+										<td>최지현</td>
+										<td>031-750-5623</td>
+										<td>ch1219@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>1급 팀장</td>
+										<td>이화여자대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>이채은</td>
+										<td>031-750-5842</td>
+										<td>arisu314@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>강사</td>
+										<td>이화여자대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>박미영</td>
+										<td>031-750-5623</td>
+										<td>pmy2394@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>강사</td>
+										<td>한국외국어대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>이환희</td>
+										<td>031-750-5842</td>
+										<td>hwanhee614@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>강사</td>
+										<td>이화여자대학교 외국어교육특수대학원 한국어교육학석사</td>
+										<td>한국어교육학</td>
+										<td>권주희</td>
+										<td>031-750-5623</td>
+										<td>jh891213@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>강사</td>
+										<td>이화여자대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>노미연</td>
+										<td>031-750-5842</td>
+										<td>myshyw56@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>강사</td>
+										<td>이화여자대학교 외국어교육특수대학원 한국어교육학석사</td>
+										<td>한국어교육학</td>
+										<td>강리나</td>
+										<td>031-750-5842</td>
+										<td>krn0126@gachon.ac.kr</td>
+									</tr>
+									
+									<tr>
+										
+											
+										<th scope="row" class="hidden" rowspan="1"></th>
+											
+											
+										
+										<td>강사</td>
+										<td>숙명여자대학교 일반대학원 문학석사</td>
+										<td>국제한국어교육학</td>
+										<td>임다정</td>
+										<td>031-750-5842</td>
+										<td>95libra@gachon.ac.kr</td>
+									</tr>
+									
+									<!-- <tr>
+										<th scope="row" rowspan="31">한국어교육센터<br /> <a
+											href="mailto: gkli@gachon.ac.kr" class="link">gkli@gachon.ac.kr</a>
+										</th>
+										<td>한국어교육센터 주임교수<br /> 가천리버럴아츠칼리지 조교수
+										</td>
+										<td>가천대학교 대학원 문학박사</td>
+										<td>한국어학</td>
+										<td>이태환</td>
+										<td><a href="tel:031-750-5870" class="link">031-750-5870</a>
+										</td>
+										<td><a href="mailto:dogbeef@gachon.ac.kr" class="link">dogbeef@gachon.ac.kr</a>
+										</td>
+									</tr>
+									<tr>
+										<td>가천리버럴아츠칼리지 조교수</td>
+										<td>가천대학교 대학원 문학박사</td>
+										<td>현대문학(현대소설)</td>
+										<td>한명섭</td>
+										<td><a href="tel:031-724-4437" class="link">031-724-4437</a>
+										</td>
+										<td><a href="mailto:montyhan@gachon.ac.kr" class="link">montyhan@gachon.ac.kr</a>
+										</td>
+									</tr>
+									<tr>
+										<td>가천리버럴아츠칼리지 조교수</td>
+										<td>가천대학교 대학원 문학박사</td>
+										<td>현대문학(현대시)</td>
+										<td>유문학</td>
+										<td><a href="tel:031-724-4438" class="link">031-724-4438</a>
+										</td>
+										<td><a href="mailto:you6y@gachon.ac.kr" class="link">you6y@gachon.ac.kr</a>
+										</td>
+									</tr>
+									<tr>
+										<td>한국어교육센터 객원교수</td>
+										<td>북경사범대학교 문학석사</td>
+										<td>언어학 및 응용언어학</td>
+										<td>김선희</td>
+										<td><a href="tel:031-750-5623" class="link">031-750-5623</a>
+										</td>
+										<td><a href="mailto:@gachon.ac.kr" class="link">sunny@gachon.ac.kr</a>
+										</td>
+									</tr>
+									<tr>
+										<td>한국어교육센터 객원교수</td>
+										<td>세명대학교 교육대학원 교육학석사</td>
+										<td>국어교육학</td>
+										<td>이수연</td>
+										<td><a href="tel:031-750-5842" class="link">031-750-5842</a>
+										</td>
+										<td><a href="mailto:toto79love2@gachon.ac.kr"
+											class="link">toto79love2@gachon.ac.kr</a></td>
+									</tr>
+									<tr>
+										<td>한국어교육센터 객원교수</td>
+										<td>연세대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>민유경</td>
+										<td><a href="tel:031-750-5842" class="link">031-750-5842
+										</a></td>
+										<td><a href="mailto:nuri8189@gachon.ac.kr" class="link">nuri8189@gachon.ac.kr</a>
+										</td>
+									</tr>
+									<tr>
+										<td>한국어교육센터 객원교수</td>
+										<td>가천대학교 교육대학원 교육학석사</td>
+										<td>중국어교육학</td>
+										<td>이혜진</td>
+										<td><a href="tel:031-750-5842" class="link">031-750-5842
+										</a></td>
+										<td><a href="mailto:lihuizhen7180@gachon.ac.kr"
+											class="link">lihuizhen7180@gachon.ac.kr</a></td>
+									</tr>
+									<tr>
+										<td>한국어교육센터 객원교수</td>
+										<td>연세대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>공민정</td>
+										<td><a href="tel:031-750-5623" class="link">031-750-5623
+										</a></td>
+										<td><a href="mailto:mjkong@gachon.ac.kr" class="link">mjkong@gachon.ac.kr</a>
+										</td>
+									</tr>
+									<tr>
+										<td>정규과정 5급 팀장</td>
+										<td>서강대학교 교육대학원 교육학석사</td>
+										<td>국어교육학</td>
+										<td>김희정</td>
+										<td><a href="tel:031-750-5623" class="link">031-750-5623
+										</a></td>
+										<td><a href="mailto:nayaa20@hanmail.net" class="link">nayaa20@hanmail.net</a>
+										</td>
+									</tr>
+									<tr>
+										<td>한국어교육센터 TOPIK 팀장</td>
+										<td>단국대학교 대학원 문학석사</td>
+										<td>한국어교육학</td>
+										<td>박선규</td>
+										<td><a href="tel:031-750-5842" class="link">031-750-5842
+										</a></td>
+										<td><a href="mailto:319mini@hanmail.net" class="link">319mini@hanmail.net</a>
+										</td>
+									</tr>
+									<tr>
+										<td>정규과정 6급 팀장</td>
+										<td>경희대학교 교육대학원 교육학석사</td>
+										<td>국어교육학</td>
+										<td>류선지</td>
+										<td><a href="tel:031-750-5623" class="link">031-750-5623
+										</a></td>
+										<td><a href="mailto:mujjet@naver.com" class="link">mujjet@naver.com
+										</a></td>
+									</tr>
+									<tr>
+										<td>정규과정 3급 팀장</td>
+										<td>이화여자대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>유병희</td>
+										<td><a href="tel:031-750-5623" class="link">031-750-5623
+										</a></td>
+										<td><a href="mailto:ybhcool@naver.com" class="link">ybhcool@naver.com
+										</a></td>
+									</tr>
+									<tr>
+										<td>정규과정 4급 팀장</td>
+										<td>가천대학교 교육대학원 교육학석사</td>
+										<td>국어교육학</td>
+										<td>한미라</td>
+										<td><a href="tel:031-750-5623" class="link">031-750-5623
+										</a></td>
+										<td><a href="mailto:mythmi@hanmail.net" class="link">mythmi@hanmail.net
+										</a></td>
+									</tr>
+									<tr>
+										<td>정규과정 2급 팀장</td>
+										<td>이화여자대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>박민지</td>
+										<td><a href="tel:031-750-5842" class="link">031-750-5842
+										</a></td>
+										<td><a href="mailto:minji5369@naver.com" class="link">minji5369@naver.com
+										</a></td>
+									</tr>
+									<tr>
+										<td>정규과정 1급 팀장</td>
+										<td>이화여자대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>이채은</td>
+										<td><a href="tel:031-750-5842" class="link">031-750-5842
+										</a></td>
+										<td><a href="mailto:arisu314@naver.com" class="link">arisu314@naver.com
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>상명대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>조경임</td>
+										<td><a href="tel:031-750-5623" class="link">031-750-5623
+										</a></td>
+										<td><a href="mailto:lifeisky@naver.com" class="link">lifeisky@naver.com
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>단국대학교 교육대학원 교육학석사</td>
+										<td>국어교육학</td>
+										<td>최지현</td>
+										<td><a href="tel:031-750-5623" class="link">031-750-5623
+										</a></td>
+										<td><a href="mailto:ch980@naver.com" class="link">ch980@naver.com
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>건국대학교 대학원 문학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>김자혜</td>
+										<td><a href="tel:031-750-5842" class="link">031-750-5842
+										</a></td>
+										<td><a href="mailto:rpr216@nate.com" class="link">rpr216@nate.com
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>이화여자대학교 외국어교육특수대학원 한국어교육학석사</td>
+										<td>한국어교육학</td>
+										<td>양고운</td>
+										<td><a href="tel:031-750-5623" class="link">031-750-5623
+										</a></td>
+										<td><a href="mailto:rhdns020@gmail.com" class="link">rhdns020@gmail.com
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>이화여자대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>이윤지</td>
+										<td><a href="tel:031-750-5623" class="link">031-750-5623
+										</a></td>
+										<td><a href="mailto:dbswlsgbs@hanmail.net" class="link">dbswlsgbs@hanmail.net
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>한양대학교 교육대학원 교육학석사</td>
+										<td>국어교육학</td>
+										<td>홍의정</td>
+										<td><a href="tel:031-750-5623" class="link">031-750-5623
+										</a></td>
+										<td><a href="mailto:iej00@naver.com" class="link">iej00@naver.com
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>이화여자대학교 외국어교육특수대학원 한국어교육학석사</td>
+										<td>한국어교육학</td>
+										<td>권주희</td>
+										<td><a href="tel:031-750-5623" class="link">031-750-5623
+										</a></td>
+										<td><a href="mailto:momojuhee@naver.com" class="link">momojuhee@naver.com
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>동국대학교 교육대학원 교육학석사</td>
+										<td>중국어교육학</td>
+										<td>김고운</td>
+										<td><a href="tel:031-750-5842" class="link">031-750-5842
+										</a></td>
+										<td><a href="mailto:girlls83@hanmail.net" class="link">girlls83@hanmail.net
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>이화여자대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>노미연</td>
+										<td><a href="tel:031-750-5842" class="link">031-750-5842
+										</a></td>
+										<td><a href="mailto:mysoon96@naver.com" class="link">mysoon96@naver.com
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>이화여자대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>박미영</td>
+										<td><a href="tel:031-750-5623" class="link">031-750-5623
+										</a></td>
+										<td><a href="mailto:pmy2875@naver.com" class="link">pmy2875@naver.com
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>한국외국어대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>이환희</td>
+										<td><a href="tel:031-750-5842" class="link">031-750-5842
+										</a></td>
+										<td><a href="mailto:hwanhee1578@hanmail.net" class="link">hwanhee1578@hanmail.net
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>이화여자대학교 국제대학원 한국학석사</td>
+										<td>한국어교육학</td>
+										<td>여희민</td>
+										<td><a href="tel:031-750-5842" class="link">031-750-5842
+										</a></td>
+										<td><a href="mailto:minnieyeo@naver.com" class="link">minnieyeo@naver.com
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>경희대학교 교육대학원 교육학석사</td>
+										<td>외국어로서의 한국어교육학</td>
+										<td>하민규</td>
+										<td><a href="tel:031-750-5842" class="link">031-750-5842
+										</a></td>
+										<td><a href="mailto:seicento9002@gmail.com" class="link">seicento9002@gmail.com
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>경희대학교 일반대학원 문학석사</td>
+										<td>한국어교육학</td>
+										<td>황지영</td>
+										<td><a href="tel:031-750-5842" class="link">031-750-5842
+										</a></td>
+										<td><a href="mailto:jiyoung78@khu.ac.kr" class="link">jiyoung78@khu.ac.kr
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>이화여자대학교 외국어교육특수대학원 한국어교육학석사</td>
+										<td>한국어교육학</td>
+										<td>강리나</td>
+										<td><a href="tel:031-750-5842" class="link">031-750-5842
+										</a></td>
+										<td><a href="mailto:krn0126@naver.com" class="link">krn0126@naver.com
+										</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>숙명여자대학교 일반대학원 문학석사</td>
+										<td>국제한국어교육학</td>
+										<td>임다정</td>
+										<td><a href="tel:031-750-5842" class="link">031-750-5842
+										</a></td>
+										<td><a href="mailto:95libra@hanmail.net" class="link">95libra@hanmail.net
+										</a></td>
+									</tr> -->
+								</tbody>
+							</table>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
+	</main>
+	<!-- [pp] subpage contents -->
+</div>
+<!-- [pp] //메인컨텐츠 영역 -->
+<script type="text/javascript">
+
+</script>
+       <!-- [pp] //메인컨텐츠 영역 -->
+   </div>
+   <!-- [pp] //푸터를 제외한 전체페이지 -->
+   <!-- [pp] footer -->
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- [pp] footer -->
+<footer class="footer_wrap">
+	<div class="footer_inner">
+		<h2 class="footer_logo"><a target="_blank" href="https://www.gachon.ac.kr"><img src="//oia.gachon.ac.kr/contents/images/client/common/footer_logo.svg" alt="가천대학교 로고 이미지"></a></h2>
+		<div class="footer_infolink">
+			<ul>
+				<li><a href="mailto:giet@gachon.ac.kr" class="mail">mail</a></li>
+				<li><a href="https://www.facebook.com/gachoninternational" target="_blank" class="facebook">Facebook</a></li>
+				<li><a href="javascript:void(0);" class="wechat">WeChat</a></li>
+				<li><a href="https://www.youtube.com/user/GachonUniversitypr" target="_blank" class="youtube">Youtube</a></li>
+			</ul>
+			<ul>
+				<li><a href="https://www.instagram.com/gachon_international/" target="_blank" class="instagram">Instagram</a></li>
+				<li><a href="https://weibo.com/u/7467634605?refer_flag=1001030103_" target="_blank" class="weibo">Weibo</a></li>
+				<li><a href="https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2" target="_blank" class="youku">Youku</a></li>
+				<li><a href="https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2" target="_blank" class="bilibili">bilibili</a></li>
+			</ul>
+		</div>
+		<strong>Office of International affairs, Gachon University</strong>
+		<ul class="footer_infotxt">
+			<li>1342, Seongnam-daero, Sujeong-gu, Seongnam-si, Gyeonggi-do, Republic of Korea</li>
+			
+		</ul>
+		<p class="copyright">COPYRIGHT 2020 BY GACHON UNIVERSITY ALL RIGHT RESERVED</p>
+	</div>
+</footer>
+<!-- [pp] //footer -->
+   <div id="layerPopup" class="white-popup mfp-hide"></div>
+   <!-- [pp] //footer -->
+</body>
+
+</html>

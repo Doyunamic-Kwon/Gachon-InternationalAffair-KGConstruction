@@ -1,0 +1,774 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no, address=no">
+	<meta name="title" content="가천대학교">
+	<meta name="description" content="가천대학교 인재양성 통합관리시스템">
+	<meta name="copyrigt" content="가천대학교">
+	<meta name="keywords" content="가천대학교, 역량관리, 상담, 대학, 대학생, 역량관리시스템, 경력관리">
+	<title>가천대학교 국제교류처</title>
+
+	<!-- [pp] favicon -->
+	<link rel="apple-touch-icon" href="//oia.gachon.ac.kr/contents/images/favicon.png">
+	<link rel="shortcut icon" href="//oia.gachon.ac.kr/contents/images/favicon.ico">
+	<!-- [pp] //favicon -->
+
+	<!-- [pp] css -->
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/plugin/magnific-popup/css/magnific-popup.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/plugin/swiper/css/swiper.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/plugin/mCustomscrollbar/css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/plugin/select2/css/select2.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/plugin/fullcalendar-5.2.0/lib/main.css">
+
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/dl_global.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/normalize.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/grid.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/common.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/formstyle.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/table.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/popup.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/ui.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/ui_foreign.css">
+	
+		
+		
+	
+	
+
+	<link rel="stylesheet" type="text/css" href="//oia.gachon.ac.kr/contents/css/jquery-ui.css"/>
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/table.css">
+
+	<!-- [pp] //css -->
+
+	<!--[pp] js -->
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/jquery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/magnific-popup/js/jquery.magnific-popup.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/swiper/js/swiper.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/mCustomscrollbar/js/jquery.mCustomScrollbar.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/select2/js/select2.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/fullcalendar-5.2.0/lib/main.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/bluebird/bluebird.min.js"></script>
+
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/js/client/pp_common.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/js/dp_common.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/cookie/jquery.cookie.js"></script>
+
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/i18n/i18nextXHRBackend.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/i18n/i18next.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/i18n/jquery-i18next.js"></script>
+
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/js/client/lang.js"></script>
+
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/js/jquery.form.js"></script>
+
+	<!-- summernote -->
+	<script src="//oia.gachon.ac.kr/contents/js/summernote/summernote-lite.js"></script>
+	<script src="//oia.gachon.ac.kr/contents/js/summernote/lang/summernote-ko-KR.js"></script>
+
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/summernote/summernote-lite.css">
+	<!--[pp] //js -->
+
+	<!--[if lt IE 10]>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/jquery/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/html5shiv/html5shiv.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/IE9/IE9.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/respond/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+		function fnCloseLoadingImage() {
+			setTimeout(function() {
+				$("#loading").hide();
+				}, 300);
+		}
+
+		$(function() {
+			sessionStorage.setItem("contextRootPath", "//oia.gachon.ac.kr");
+			sessionStorage.setItem("sessionUserId", "");
+		});
+	</script>
+</head>
+
+<body onload="fnCloseLoadingImage()">
+<!--[pp] ie 하위버젼 접속시 알림 -->
+   <!--[if lt IE 10]>
+	<div id="browser">
+	본 사이트는 익스플로러 버전 10 이상, 크롬, 파이어폭스, 사파리, 오페라 최신 버전에 최적화 되어있습니다. <a href="https://browsehappy.com/?locale=en" target="_blank">여기를 눌러 최신 브라우저로 업데이트 하세요.</a>
+	<button type="button" class="upgradeinfo_close">닫기</button>
+	</div>
+	<![endif]-->
+   <!--[pp] // ie 하위버젼 접속시 알림 -->
+
+   <!-- [pp] 로딩중 화면 -->
+   <div id="loading" style="display: none;">
+       <p id="loading_image">
+           <img src="//oia.gachon.ac.kr/contents/images/loading.gif" alt="Loading..."><br>
+           <span>Loading</span>
+       </p>
+   </div>
+   <!-- [pp] //로딩중 화면 -->
+
+   <!-- [pp] 푸터를 제외한 전체페이지 -->
+   <div class="page_wrap foreign_wrapper">
+       <!-- [pp] header -->
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- [pp] header -->
+<!-- [pp] header -->
+<header class="header_wrap">
+	<div class="header_top grid_content">
+		<h1 class="header_logo">
+			<a href="//oia.gachon.ac.kr/clientMain/a/t/internationalMain.do"><img src="//oia.gachon.ac.kr/contents/images/client/common/header_logo_emblem.svg" alt="가천대학교 로고 이미지"></a>
+			<a href="//oia.gachon.ac.kr/clientMain/a/t/internationalMain.do"><img src="//oia.gachon.ac.kr/contents/images/client/common/header_logo_foreign.svg" alt="가천대학교 외국인학생 로고 이미지"></a>
+		</h1>
+		<div class="select_lang" >
+			<strong><!-- 언어선택 --></strong>
+			<ul>
+				<li data-lang="kr" class="lang_select" id="langValue01">KOR</li>
+				<li data-lang="us" class="lang_select" id="langValue02">ENG</li>
+				<li data-lang="cn" class="lang_select" id="langValue03">CHN</li>
+			</ul>
+		</div>
+		<button type="button" class="btn_mobilemenu">
+			<span></span><span></span><span></span>
+		</button>
+	</div>
+	<div class="gnb_wrap">
+		
+			
+			
+			
+		<div class="grid_content">
+			<div class="select_link">
+				<strong>바로가기</strong>
+				<ul>
+					<li><a href="//oia.gachon.ac.kr/clientMain/a/t/oiaMain.do">국제교류처</a></li>
+					<li><a href="//oia.gachon.ac.kr/clientMain/a/t/internationalMain.do" class="selected">외국인학생</a></li>
+					<li><a href="//oia.gachon.ac.kr/clientMain/a/t/domesticMain.do">내국인학생</a></li>
+				</ul>
+			</div>
+			<nav>
+				<ul class="top_menu">
+					<li class="col_xl_2 col_md_12">
+						<a href="javascript:void(0);"><span>외국인 입학</span></a>
+						<ul class="sub_menu_2depth">
+							
+							<li><a href="javascript:void(0);">학부/대학원/한국어교육센터 입학</a>
+								<ul class="sub_menu_3depth">
+
+									<li><a href="//oia.gachon.ac.kr/international/a/m/graduateInfo.do">모집요강 / 공지사항</a></li>
+								</ul></li>
+						</ul></li>
+					<li class="col_xl_2 col_md_12">
+						<a href="javascript:void(0);"><span>한국어 교육센터</span></a>
+						<ul class="sub_menu_2depth">
+							<li><a href="//oia.gachon.ac.kr/international/a/m/klecInfo.do">소개</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/krCenterApply.do">지원방법</a></li>
+
+							<li><a href="//oia.gachon.ac.kr/international/a/m/krCenterScholarship.do">등록금 및 장학금</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/krCenterRecruitment.do">강사 상시모집</a></li>
+						</ul>
+					</li>
+					<li class="col_xl_2 col_md_12">
+						<a href="javascript:void(0);" data-i18n="[html]header.txt9"><span>외국인 교환학생</span></a>
+						<ul class="sub_menu_2depth">
+							<li><a href="javascript:void(0);">G-STEP</a>
+								<ul class="sub_menu_3depth">
+									<li><a href="//oia.gachon.ac.kr/international/a/m/gStepIntro.do">G-STEP 소개</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/gStepSchedule.do">시간표 & 수업소개</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/gStepApply.do">지원방법</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/gStepTuition.do">등록비</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/gStepPhotoAndVideo.do">G-STEP 갤러리</a></li>
+								</ul></li>
+							<li>
+								<a href="//oia.gachon.ac.kr/international/a/m/exchangeStudent.do">외국인 교환학생</a>
+							</li>
+						</ul>
+					</li>
+					<li class="col_xl_2 col_md_12">
+					<a href="javascript:void(0);"><span>유학생 지원</span></a>
+						<ul class="sub_menu_2depth">
+							<li><a href="javascript:void(0);">신입생 가이드</a>
+								<ul class="sub_menu_3depth">
+									<li><a href="//oia.gachon.ac.kr/international/a/m/guideNewStudent.do">처음 왔을 때</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/guideDomitory.do">기숙사</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/guideInsurance.do">보험</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/guideFacilities.do">학교시설</a></li>
+								</ul>
+							</li>
+							<li><a href="javascript:void(0);">비자 및 체류</a>
+								<ul class="sub_menu_3depth">
+									<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationApply.do">출입국·외국인청 찾기</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationApp.do">외국인등록증 신청 및 재발급</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationExtention.do">비자 변경 및 연장</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationSupport.do">아르바이트 규정 및 취업지원</a></li>
+								</ul>
+							</li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/topikList.do">TOPIK</a>
+							</li>
+							<li><a href="javascript:void(0);">유학생 지원</a>
+								<ul class="sub_menu_3depth">
+									<li><a href="//oia.gachon.ac.kr/international/a/m/culturePro.do">문화체험 프로그램</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/counselingPro.do">1:1 상담 신청</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="col_xl_2 col_md_12"><a href="javascript:void(0);"><span>외국인 동문</span></a>
+						<ul class="sub_menu_2depth">
+							<li><a href="//oia.gachon.ac.kr/international/a/m/overseasAlumni.do">가천대학교 동문</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/gachonArchives.do">가천 아카이브</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/alumniStory.do">동문소식</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/supportGu.do">발전기금</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/findAlumni.do">동문찾기</a></li>
+						</ul>
+					</li>
+					<li class="col_xl_2 col_md_12"><a href="javascript:void(0);"><span>커뮤니티</span></a>
+						<ul class="sub_menu_2depth">
+							<li><a href="//oia.gachon.ac.kr/international/a/m/foreignNoticeList.do">공지사항</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/enquiriesList.do">문의 게시판</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+			
+		
+	</div>
+	<div class="bg_mobilemenu"></div>
+</header>
+<!-- [pp] //header -->
+<form id="menuMoveForm" method="post">
+	<input type="hidden" name="menuId">
+	<input type="hidden" name="menuUrlGubun">
+</form>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.lang_select').each(function(){
+		$(this).removeClass('selected');
+	});
+	console.log("확인 : ");
+	if('C' ==''){
+		$('#langValue03').addClass('selected');
+		$('.select_lang > strong').text('CHN');
+	}else if('U' ==''){
+		$('#langValue02').addClass('selected');
+		$('.select_lang > strong').text('ENG');
+	}else{
+		$('#langValue01').addClass('selected');
+		$('.select_lang > strong').text('KOR');
+	}
+});
+function fnGoMoveMenu(contentsUrl, menuId) {
+	var _url = "//oia.gachon.ac.kr" + contentsUrl;
+	$("#menuMoveForm input[name=menuId]").val(menuId);
+	$("#menuMoveForm input[name=menuUrlGubun]").val("CLIENT_SUB");
+	$("#menuMoveForm").attr("action", _url).submit();
+}
+
+
+$("#goAdminBtn").on("click", function(e) {
+	document.location.href = "//oia.gachon.ac.kr/adminMain/a/t/main.do";
+});
+
+
+$("#clientLogOutBtn").on("click", function(e) {
+	if(!confirm("로그아웃 하시겠습니까?")) return false;
+	location.href = "//oia.gachon.ac.kr/login/a/n/logOut.do?loginType=CLIENT";
+});
+
+function fnOpenSiteMapPopUp() {
+	var popupDivId = "#layerPopup";
+	var popupUrl = "//oia.gachon.ac.kr/clientMain/a/n/openSiteMapPopUp.do";
+	var popupParams = {
+	};
+	clientLoadPopup(popupDivId, popupUrl, popupParams);
+
+}
+
+
+
+</script>
+       <!-- [pp] //header -->
+
+       <!-- [pp] subpage visual -->
+       <!-- [pp] //subpage visual -->
+       <!-- [pp] 메인컨텐츠 영역 -->
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- [pp] subpage visual -->
+<figure class="sub_visual visual5">
+	<div class="grid_content">
+		<nav class="page_navi">
+			<ul>
+				<li>Home</li>
+				<li data-i18n="[html]sideBar.txt1"><!-- 외국인 동문  --></li>
+				<li  data-i18n="[html]sideBar.txt2"><!-- 가천 아카이브 --></li>
+			</ul>
+		</nav>
+	</div>
+</figure>
+<!-- [pp] //subpage visual -->
+
+<!-- [pp] 메인컨텐츠 영역 -->
+<div id="container_skip" class="subpage_wrapper grid_content" tabindex="0">
+	<!-- [pp] side navigation bar -->
+	<div class="snb_wrap">
+		<h3 class="snb_tit"><span data-i18n="[html]sideBar.txt1"><!-- 외국인 동문  --></span></h3>
+		<nav>
+			<ul class="snb_list">
+				<li>
+					<a href="//oia.gachon.ac.kr/international/a/m/overseasAlumni.do" data-i18n="[html]sideBar.txt6"><!-- 외국인 동문 --></a>
+				</li>
+				<li class="on">
+					<a href="//oia.gachon.ac.kr/international/a/m/gachonArchives.do" data-i18n="[html]sideBar.txt2"><!-- 가천 아카이브 --></a>
+				</li>
+				<li>
+					<a href="//oia.gachon.ac.kr/international/a/m/alumniStory.do" data-i18n="[html]sideBar.txt3"><!-- 동문 소식 --></a>
+				</li>
+				<li>
+					<a href="//oia.gachon.ac.kr/international/a/m/supportGu.do" data-i18n="[html]sideBar.txt4"><!-- 발전기금 --></a>
+				</li>
+				<li>
+					<a href="//oia.gachon.ac.kr/international/a/m/findAlumni.do" data-i18n="[html]sideBar.txt5"><!-- 동문찾기 --></a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<!-- [pp] //side navigation bar -->
+
+	<!-- [pp] subpage contents -->
+	<main class="subcontent_wrap">
+		<h3 class="subpage_tit" data-i18n="[html]sideBar.txt2"><!-- 가천 아카이브 --></h3>
+		<div class="infotop_box section_toparea ta_c768" data-i18n="[html]gachonArchives.txt1"><!-- 가천인에 의한 가천대학교의 아름다운 발자취 --></div>
+		<div class="section_toparea tab_js">
+			<ul class="tab_list2 tab_list_js tab_of_xs">
+				<li><a href="#tap3" class="on">1939 &#126; 2011</a></li>
+				<li><a href="#tap2">2012 &#126; 2016</a></li>
+				<li><a href="#tap1" data-i18n="[html]gachonArchives.txt32"><!-- 2017 &#126; 현재 --></a></li>
+			</ul>
+			<div class="tab_cnt_js">
+				<div id="tap1">
+					<section class="section_toparea">
+						<ul class="archives_ul cf">
+							
+							<li>
+								<div class="archives_text">
+									<strong>2019.11</strong>
+									<p data-i18n="[html]gachonArchives.txt2"><!-- 가천대, POST IPP &#40;일학습병행제&#41; 사업선정 --></p>
+								</div>
+							</li>
+							<li class="archives_photo archives_photo0">
+								<div class="archives_text">
+									<strong>2019.05</strong>
+									<p data-i18n="[html]gachonArchives.txt31"><!-- 외국유학생 축제 제 2회 'Gachon International Fair' 개최 --></p>
+								</div>
+								<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('16')">상세 이미지 보기</a>
+							</li>
+							<li>
+								<div class="archives_text">
+									<strong>2019.05</strong>
+									<p data-i18n="[html]gachonArchives.txt3"><!-- 가천대, 중소벤처기업부 메이커스페이스 사업 선정 --></p>
+								</div>
+							</li>
+							<li>
+								<div class="archives_text">
+									<strong>2018.11</strong>
+									<p data-i18n="[html]gachonArchives.txt4"><!-- 가천대, 이데일리 주최 '좋은 일자리 대상' 취업지원 부문 일&middot;학습병행제 우수대학 선정 --></p>
+								</div>
+							</li>
+							<li class="archives_photo archives_photo1">
+								<div class="archives_text">
+									<strong>2018.10</strong>
+									<p data-i18n="[html]gachonArchives.txt5"><!-- 가천대, KT '5G 기반 스마트 캠퍼스 조성을 위한 업무협약&#40;MOU&#41; 체결 --></p>
+								</div>
+								<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('15')">상세 이미지 보기</a>
+							</li>
+							<li class="archives_photo archives_photo2">
+								<div class="archives_text">
+									<strong>2017.12</strong>
+										<p data-i18n="[html]gachonArchives.txt6"><!-- 제 4회 자랑스러운 가천동문 &#40;Gachon Pride Alumni&#41; 의 밤 개최 --></p>
+								</div>
+								<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('14')">상세 이미지 보기</a>
+							</li>
+							<li class="archives_photo archives_photo3">
+								<div class="archives_text">
+									<strong>2017.10</strong>
+									<p data-i18n="[html]gachonArchives.txt7"><!-- 외국유학생 축제 'Gachon International Fair' 개최 --></p>
+								</div>
+								<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('13')">상세 이미지 보기</a>
+							</li>
+							<li class="archives_photo archives_photo4">
+								<div class="archives_text">
+									<strong>2017.09</strong>
+									<p data-i18n="[html]gachonArchives.txt8"><!-- 가천대 산학협력단 주도 '지능형 뇌과학 연구센터' 개소 --></p>
+								</div>
+								<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('12')">상세 이미지 보기</a>
+							</li>
+						</ul>
+					</section>
+				</div>
+				<div id="tap2">
+					<section class="section_toparea">
+						<h3 class="section_tit_lg">2016</h3>
+						<ul class="archives_ul cf">
+							<li class="archives_photo archives_photo5">
+								<div class="archives_text">
+									<strong>2016.10</strong>
+									<p data-i18n="[html]gachonArchives.txt9"><!-- 외국인 유학생 가천 글로벌 리더십 프로그램 --></p>
+								</div>
+								<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('11')">상세 이미지 보기</a>
+							</li>
+							<li class="archives_photo archives_photo6">
+								<div class="archives_text">
+									<strong>2016.09</strong>
+									<p data-i18n="[html]gachonArchives.txt10"><!-- 제 3회 자랑스러운 가천동문 &#40;Gachon Pride Alumni&#41; 의 밤 개최 --></p>
+								</div>
+								<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('10')">상세 이미지 보기</a>
+							</li>
+							<li class="archives_photo archives_photo7">
+								<div class="archives_text">
+									<strong>2016.04</strong>
+									<p data-i18n="[html]gachonArchives.txt11"><!-- 제 2회 가천 한국어 골든벨 대회 개최 --></p>
+								</div>
+								<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('9')">상세 이미지 보기</a>
+							</li>
+						</ul>
+					</section>
+					<section class="section_sarea mg_t20">
+						<h3 class="section_tit_lg">2015</h3>
+						<ul class="archives_ul cf">
+							<li class="archives_photo archives_photo8">
+								<div class="archives_text">
+									<strong>2015.10</strong>
+									<p data-i18n="[html]gachonArchives.txt12"><!-- 제 2회 자랑스러운 가천동문 &#40;Gachon Pride Alumni&#41; 의 밤 개최 --></p>
+								</div>
+								<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('8')">상세 이미지 보기</a>
+							</li>
+							<li class="archives_photo archives_photo9">
+								<div class="archives_text">
+									<strong>2015.09</strong>
+									<p data-i18n="[html]gachonArchives.txt13"><!-- 제 1회 가천 한국어 골든벨 대회 개최 --></p>
+								</div>
+								<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('7')">상세 이미지 보기</a>
+							</li>
+							<li>
+								<div class="archives_text">
+									<strong>2015.08</strong>
+									<p data-i18n="[html]gachonArchives.txt14"><!-- 교육부 1주기 대학구 조개혁평가 최우수 A등급 선정 --></p>
+								</div>
+							</li>
+							<li>
+								<div class="archives_text">
+									<strong>2015.07</strong>
+									<p data-i18n="[html]gachonArchives.txt15"><!-- 교육부·한국대학교육협의회 주관, 학부교육 선도대학 육성사업 &#40;ACE, Advancement of College Education·잘 가르치는 대학&#41; 선정, 4년 연속 사업 경기&middot;인천지역 유일 선정 --></p>
+								</div>
+							</li>
+							<li>
+								<div class="archives_text">
+									<strong>2015.05</strong>
+									<p data-i18n="[html]gachonArchives.txt16"><!-- 교육부 2016 대학특성화 사업 재선정 – 수도권 공동 1위 --></p>
+								</div>
+							</li>
+						</ul>
+					</section>
+					<section class="section_sarea mg_t20">
+						<h3 class="section_tit_lg">2014</h3>
+						<ul class="archives_ul cf">
+							<li class="archives_photo archives_photo10">
+								<div class="archives_text">
+									<strong>2014.09</strong>
+									<p data-i18n="[html]gachonArchives.txt17"><!-- 제 1회 자랑스러운 가천동문 &#40;Gachon Pride Alumni&#41;의 밤 개최 --></p>
+								</div>
+								<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('6')">상세 이미지 보기</a>
+							</li>
+							<li>
+								<div class="archives_text">
+									<strong>2014.07</strong>
+									<p data-i18n="[html]gachonArchives.txt18"><!-- 교육부 2014 대학특성화 사업 &#40;CK-Ⅱ&#41; | 수도권 공동 1위 &#60;6개 사업단 연간 40억 - 5년간 200억원 지원&#62; --></p>
+								</div>
+							</li>
+						</ul>
+					</section>
+					<section class="section_sarea mg_t20">
+						<h3 class="section_tit_lg">2013</h3>
+						<ul class="archives_ul cf">
+							<li>
+								<div class="archives_text">
+									<strong>2013.11</strong>
+									<p data-i18n="[html]gachonArchives.txt19"><!-- 공인 한국어능력시험 &#40;Standard-TOPIK&#41; 국내 시행기관 지정 --></p>
+								</div>
+							</li>
+						</ul>
+					</section>
+					<section class="section_sarea mg_t20">
+						<h3 class="section_tit_lg">2012</h3>
+						<ul class="archives_ul cf">
+							<li class="archives_photo archives_photo11">
+								<div class="archives_text">
+									<strong>2012.12</strong>
+									<p data-i18n="[html]gachonArchives.txt20"><!-- 외국인 유학생 지원을 위한 가천인터내셔널 센터 개소 --></p>
+								</div>
+								<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('5')">상세 이미지 보기</a>
+							</li>
+							<li class="archives_photo archives_photo12">
+								<div class="archives_text">
+									<strong>2012.11</strong>
+									<p data-i18n="[html]gachonArchives.txt21"><!-- 2012 대한민국 외국인 유학생 문화 대축전 --></p>
+								</div>
+								<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('4')">상세 이미지 보기</a>
+							</li>
+							<li class="archives_photo archives_photo13">
+								<div class="archives_text">
+									<strong>2012.03</strong>
+									<p data-i18n="[html]gachonArchives.txt22"><!-- 이길여 총장 뉴스위크 ‘세계를 움직이는 여성 150인’ 선정 --></p>
+								</div>
+								<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('3')">상세 이미지 보기</a>
+							</li>
+							<li class="archives_photo archives_photo14">
+								<div class="archives_text">
+									<strong>2012.03</strong>
+									<p data-i18n="[html]gachonArchives.txt23"><!-- 통합 가천대학교 출범 &#40;글로벌캠퍼스-성남 | 11개 단과대학 64개 학과, 메디컬캠퍼스-인천 | 3개 단과대학 8개 학과&#41; --></p>
+								</div>
+							</li>
+							<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('2')">상세 이미지 보기</a>
+						</ul>
+					</section>
+				</div>
+				<div id="tap3">
+					<section class="section_toparea">
+						<ul class="archives_ul cf">
+							<li class="archives_photo archives_photo15">
+								<div class="archives_text">
+									<strong>2011.02</strong>
+									<p data-i18n="[html]gachonArchives.txt24"><!-- 하와이가천글로벌센터 개원 --></p>
+								</div>
+								<a href="javascript:void(0);" class="archives_popup" onclick="archivesPopup('1')">상세 이미지 보기</a>
+							</li>
+							<li>
+								<div class="archives_text">
+									<strong>2006.10</strong>
+									<p data-i18n="[html]gachonArchives.txt25"><!-- 경원대학교 &#40;경원대학교 &#43; 경원전문대&#41;통합승인 --></p>
+								</div>
+							</li>
+							<li>
+								<div class="archives_text">
+									<strong>2005.01</strong>
+									<p data-i18n="[html]gachonArchives.txt26"><!-- 가천의과학대학교 &#40;가천의과대학교 &#43; 가천길대학&#41;통합승인 --></p>
+								</div>
+							</li>
+							<li>
+								<div class="archives_text">
+									<strong>1997.12</strong>
+									<p data-i18n="[html]gachonArchives.txt27"><!-- 가천의과대학 설립인가 – 가천의과대학 --></p>
+								</div>
+							</li>
+							<li>
+								<div class="archives_text">
+									<strong>1978.07</strong>
+									<p data-i18n="[html]gachonArchives.txt28"><!-- 학교법인 경원학원 설립 – 경원대학교 --></p>
+								</div>
+							</li>
+							<li>
+								<div class="archives_text">
+									<strong>1978.05</strong>
+									<p data-i18n="[html]gachonArchives.txt29"><!-- 경원공업전문대학 설립계획 승인 – 경원전문대학 --></p>
+								</div>
+							</li>
+							<li>
+								<div class="archives_text">
+									<strong>1939.05</strong>
+									<p data-i18n="[html]gachonArchives.txt30"><!-- 경기도립 인천병원 부설 간호원 설립 – 가천길대학 --></p>
+								</div>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- [pp] subpage contents -->
+</div>
+<!-- [pp] //메인컨텐츠 영역 -->
+<script type="text/javascript">
+
+function archivesPopup(_divNum, _key) {
+	var popupDivId = "#layerPopup";
+	var popupUrl = "//oia.gachon.ac.kr/international/a/n/gachonArchivesPopUp.do";
+	var popupParams = {
+			divNum : _divNum
+			, gamKeyId : _key
+	};
+	clientLoadPopup(popupDivId, popupUrl, popupParams);
+}
+
+</script>
+
+
+       <!-- [pp] //메인컨텐츠 영역 -->
+   </div>
+   <!-- [pp] //푸터를 제외한 전체페이지 -->
+   <!-- [pp] footer -->
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- [pp] footer -->
+<footer class="footer_wrap">
+	<div class="footer_inner">
+		<h2 class="footer_logo"><a target="_blank" href="https://www.gachon.ac.kr"><img src="//oia.gachon.ac.kr/contents/images/client/common/footer_logo.svg" alt="가천대학교 로고 이미지"></a></h2>
+		<div class="footer_infolink">
+			<ul>
+				<li><a href="mailto:giet@gachon.ac.kr" class="mail">mail</a></li>
+				<li><a href="https://www.facebook.com/gachoninternational" target="_blank" class="facebook">Facebook</a></li>
+				<li><a href="javascript:void(0);" class="wechat">WeChat</a></li>
+				<li><a href="https://www.youtube.com/user/GachonUniversitypr" target="_blank" class="youtube">Youtube</a></li>
+			</ul>
+			<ul>
+				<li><a href="https://www.instagram.com/gachon_international/" target="_blank" class="instagram">Instagram</a></li>
+				<li><a href="https://weibo.com/u/7467634605?refer_flag=1001030103_" target="_blank" class="weibo">Weibo</a></li>
+				<li><a href="https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2" target="_blank" class="youku">Youku</a></li>
+				<li><a href="https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2" target="_blank" class="bilibili">bilibili</a></li>
+			</ul>
+		</div>
+		<strong>Office of International affairs, Gachon University</strong>
+		<ul class="footer_infotxt">
+			<li>1342, Seongnam-daero, Sujeong-gu, Seongnam-si, Gyeonggi-do, Republic of Korea</li>
+			
+		</ul>
+		<p class="copyright">COPYRIGHT 2020 BY GACHON UNIVERSITY ALL RIGHT RESERVED</p>
+	</div>
+</footer>
+<!-- [pp] //footer -->
+   <div id="layerPopup" class="white-popup mfp-hide"></div>
+   <!-- [pp] //footer -->
+</body>
+
+</html>

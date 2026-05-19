@@ -1,0 +1,11 @@
+{
+  "positive_count": 1282,
+  "negative_count": 448,
+  "total_count": 1730,
+  "labeling_csv": "data/re_fixed_v6/labeling_sample.csv",
+  "splits": {
+    "train": 1205,
+    "dev": 250,
+    "test": 275
+  }
+}

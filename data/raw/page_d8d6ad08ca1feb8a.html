@@ -1,0 +1,1096 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no, address=no">
+	<meta name="title" content="가천대학교">
+	<meta name="description" content="가천대학교 인재양성 통합관리시스템">
+	<meta name="copyrigt" content="가천대학교">
+	<meta name="keywords" content="가천대학교, 역량관리, 상담, 대학, 대학생, 역량관리시스템, 경력관리">
+	<title>가천대학교 국제교류처</title>
+
+	<!-- [pp] favicon -->
+	<link rel="apple-touch-icon" href="//oia.gachon.ac.kr/contents/images/favicon.png">
+	<link rel="shortcut icon" href="//oia.gachon.ac.kr/contents/images/favicon.ico">
+	<!-- [pp] //favicon -->
+
+	<!-- [pp] css -->
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/plugin/magnific-popup/css/magnific-popup.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/plugin/swiper/css/swiper.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/plugin/mCustomscrollbar/css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/plugin/select2/css/select2.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/plugin/fullcalendar-5.2.0/lib/main.css">
+
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/dl_global.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/normalize.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/grid.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/common.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/formstyle.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/table.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/popup.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/ui.css">
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/ui_foreign.css">
+	
+		
+		
+	
+	
+
+	<link rel="stylesheet" type="text/css" href="//oia.gachon.ac.kr/contents/css/jquery-ui.css"/>
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/client/table.css">
+
+	<!-- [pp] //css -->
+
+	<!--[pp] js -->
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/jquery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/magnific-popup/js/jquery.magnific-popup.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/swiper/js/swiper.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/mCustomscrollbar/js/jquery.mCustomScrollbar.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/select2/js/select2.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/fullcalendar-5.2.0/lib/main.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/bluebird/bluebird.min.js"></script>
+
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/js/client/pp_common.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/js/dp_common.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/cookie/jquery.cookie.js"></script>
+
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/i18n/i18nextXHRBackend.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/i18n/i18next.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/i18n/jquery-i18next.js"></script>
+
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/js/client/lang.js"></script>
+
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/js/jquery.form.js"></script>
+
+	<!-- summernote -->
+	<script src="//oia.gachon.ac.kr/contents/js/summernote/summernote-lite.js"></script>
+	<script src="//oia.gachon.ac.kr/contents/js/summernote/lang/summernote-ko-KR.js"></script>
+
+	<link rel="stylesheet" href="//oia.gachon.ac.kr/contents/css/summernote/summernote-lite.css">
+	<!--[pp] //js -->
+
+	<!--[if lt IE 10]>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/jquery/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/html5shiv/html5shiv.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/IE9/IE9.js"></script>
+	<script type="text/javascript" src="//oia.gachon.ac.kr/contents/plugin/respond/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+		function fnCloseLoadingImage() {
+			setTimeout(function() {
+				$("#loading").hide();
+				}, 300);
+		}
+
+		$(function() {
+			sessionStorage.setItem("contextRootPath", "//oia.gachon.ac.kr");
+			sessionStorage.setItem("sessionUserId", "");
+		});
+	</script>
+</head>
+
+<body onload="fnCloseLoadingImage()">
+<!--[pp] ie 하위버젼 접속시 알림 -->
+   <!--[if lt IE 10]>
+	<div id="browser">
+	본 사이트는 익스플로러 버전 10 이상, 크롬, 파이어폭스, 사파리, 오페라 최신 버전에 최적화 되어있습니다. <a href="https://browsehappy.com/?locale=en" target="_blank">여기를 눌러 최신 브라우저로 업데이트 하세요.</a>
+	<button type="button" class="upgradeinfo_close">닫기</button>
+	</div>
+	<![endif]-->
+   <!--[pp] // ie 하위버젼 접속시 알림 -->
+
+   <!-- [pp] 로딩중 화면 -->
+   <div id="loading" style="display: none;">
+       <p id="loading_image">
+           <img src="//oia.gachon.ac.kr/contents/images/loading.gif" alt="Loading..."><br>
+           <span>Loading</span>
+       </p>
+   </div>
+   <!-- [pp] //로딩중 화면 -->
+
+   <!-- [pp] 푸터를 제외한 전체페이지 -->
+   <div class="page_wrap foreign_wrapper">
+       <!-- [pp] header -->
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- [pp] header -->
+<!-- [pp] header -->
+<header class="header_wrap">
+	<div class="header_top grid_content">
+		<h1 class="header_logo">
+			<a href="//oia.gachon.ac.kr/clientMain/a/t/internationalMain.do"><img src="//oia.gachon.ac.kr/contents/images/client/common/header_logo_emblem.svg" alt="가천대학교 로고 이미지"></a>
+			<a href="//oia.gachon.ac.kr/clientMain/a/t/internationalMain.do"><img src="//oia.gachon.ac.kr/contents/images/client/common/header_logo_foreign.svg" alt="가천대학교 외국인학생 로고 이미지"></a>
+		</h1>
+		<div class="select_lang" >
+			<strong><!-- 언어선택 --></strong>
+			<ul>
+				<li data-lang="kr" class="lang_select" id="langValue01">KOR</li>
+				<li data-lang="us" class="lang_select" id="langValue02">ENG</li>
+				<li data-lang="cn" class="lang_select" id="langValue03">CHN</li>
+			</ul>
+		</div>
+		<button type="button" class="btn_mobilemenu">
+			<span></span><span></span><span></span>
+		</button>
+	</div>
+	<div class="gnb_wrap">
+		
+			
+			
+			
+		<div class="grid_content">
+			<div class="select_link">
+				<strong>바로가기</strong>
+				<ul>
+					<li><a href="//oia.gachon.ac.kr/clientMain/a/t/oiaMain.do">국제교류처</a></li>
+					<li><a href="//oia.gachon.ac.kr/clientMain/a/t/internationalMain.do" class="selected">외국인학생</a></li>
+					<li><a href="//oia.gachon.ac.kr/clientMain/a/t/domesticMain.do">내국인학생</a></li>
+				</ul>
+			</div>
+			<nav>
+				<ul class="top_menu">
+					<li class="col_xl_2 col_md_12">
+						<a href="javascript:void(0);"><span>외국인 입학</span></a>
+						<ul class="sub_menu_2depth">
+							
+							<li><a href="javascript:void(0);">학부/대학원/한국어교육센터 입학</a>
+								<ul class="sub_menu_3depth">
+
+									<li><a href="//oia.gachon.ac.kr/international/a/m/graduateInfo.do">모집요강 / 공지사항</a></li>
+								</ul></li>
+						</ul></li>
+					<li class="col_xl_2 col_md_12">
+						<a href="javascript:void(0);"><span>한국어 교육센터</span></a>
+						<ul class="sub_menu_2depth">
+							<li><a href="//oia.gachon.ac.kr/international/a/m/klecInfo.do">소개</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/krCenterApply.do">지원방법</a></li>
+
+							<li><a href="//oia.gachon.ac.kr/international/a/m/krCenterScholarship.do">등록금 및 장학금</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/krCenterRecruitment.do">강사 상시모집</a></li>
+						</ul>
+					</li>
+					<li class="col_xl_2 col_md_12">
+						<a href="javascript:void(0);" data-i18n="[html]header.txt9"><span>외국인 교환학생</span></a>
+						<ul class="sub_menu_2depth">
+							<li><a href="javascript:void(0);">G-STEP</a>
+								<ul class="sub_menu_3depth">
+									<li><a href="//oia.gachon.ac.kr/international/a/m/gStepIntro.do">G-STEP 소개</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/gStepSchedule.do">시간표 & 수업소개</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/gStepApply.do">지원방법</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/gStepTuition.do">등록비</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/gStepPhotoAndVideo.do">G-STEP 갤러리</a></li>
+								</ul></li>
+							<li>
+								<a href="//oia.gachon.ac.kr/international/a/m/exchangeStudent.do">외국인 교환학생</a>
+							</li>
+						</ul>
+					</li>
+					<li class="col_xl_2 col_md_12">
+					<a href="javascript:void(0);"><span>유학생 지원</span></a>
+						<ul class="sub_menu_2depth">
+							<li><a href="javascript:void(0);">신입생 가이드</a>
+								<ul class="sub_menu_3depth">
+									<li><a href="//oia.gachon.ac.kr/international/a/m/guideNewStudent.do">처음 왔을 때</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/guideDomitory.do">기숙사</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/guideInsurance.do">보험</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/guideFacilities.do">학교시설</a></li>
+								</ul>
+							</li>
+							<li><a href="javascript:void(0);">비자 및 체류</a>
+								<ul class="sub_menu_3depth">
+									<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationApply.do">출입국·외국인청 찾기</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationApp.do">외국인등록증 신청 및 재발급</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationExtention.do">비자 변경 및 연장</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationSupport.do">아르바이트 규정 및 취업지원</a></li>
+								</ul>
+							</li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/topikList.do">TOPIK</a>
+							</li>
+							<li><a href="javascript:void(0);">유학생 지원</a>
+								<ul class="sub_menu_3depth">
+									<li><a href="//oia.gachon.ac.kr/international/a/m/culturePro.do">문화체험 프로그램</a></li>
+									<li><a href="//oia.gachon.ac.kr/international/a/m/counselingPro.do">1:1 상담 신청</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="col_xl_2 col_md_12"><a href="javascript:void(0);"><span>외국인 동문</span></a>
+						<ul class="sub_menu_2depth">
+							<li><a href="//oia.gachon.ac.kr/international/a/m/overseasAlumni.do">가천대학교 동문</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/gachonArchives.do">가천 아카이브</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/alumniStory.do">동문소식</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/supportGu.do">발전기금</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/findAlumni.do">동문찾기</a></li>
+						</ul>
+					</li>
+					<li class="col_xl_2 col_md_12"><a href="javascript:void(0);"><span>커뮤니티</span></a>
+						<ul class="sub_menu_2depth">
+							<li><a href="//oia.gachon.ac.kr/international/a/m/foreignNoticeList.do">공지사항</a></li>
+							<li><a href="//oia.gachon.ac.kr/international/a/m/enquiriesList.do">문의 게시판</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+			
+		
+	</div>
+	<div class="bg_mobilemenu"></div>
+</header>
+<!-- [pp] //header -->
+<form id="menuMoveForm" method="post">
+	<input type="hidden" name="menuId">
+	<input type="hidden" name="menuUrlGubun">
+</form>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.lang_select').each(function(){
+		$(this).removeClass('selected');
+	});
+	console.log("확인 : ");
+	if('C' ==''){
+		$('#langValue03').addClass('selected');
+		$('.select_lang > strong').text('CHN');
+	}else if('U' ==''){
+		$('#langValue02').addClass('selected');
+		$('.select_lang > strong').text('ENG');
+	}else{
+		$('#langValue01').addClass('selected');
+		$('.select_lang > strong').text('KOR');
+	}
+});
+function fnGoMoveMenu(contentsUrl, menuId) {
+	var _url = "//oia.gachon.ac.kr" + contentsUrl;
+	$("#menuMoveForm input[name=menuId]").val(menuId);
+	$("#menuMoveForm input[name=menuUrlGubun]").val("CLIENT_SUB");
+	$("#menuMoveForm").attr("action", _url).submit();
+}
+
+
+$("#goAdminBtn").on("click", function(e) {
+	document.location.href = "//oia.gachon.ac.kr/adminMain/a/t/main.do";
+});
+
+
+$("#clientLogOutBtn").on("click", function(e) {
+	if(!confirm("로그아웃 하시겠습니까?")) return false;
+	location.href = "//oia.gachon.ac.kr/login/a/n/logOut.do?loginType=CLIENT";
+});
+
+function fnOpenSiteMapPopUp() {
+	var popupDivId = "#layerPopup";
+	var popupUrl = "//oia.gachon.ac.kr/clientMain/a/n/openSiteMapPopUp.do";
+	var popupParams = {
+	};
+	clientLoadPopup(popupDivId, popupUrl, popupParams);
+
+}
+
+
+
+</script>
+       <!-- [pp] //header -->
+
+       <!-- [pp] subpage visual -->
+       <!-- [pp] //subpage visual -->
+       <!-- [pp] 메인컨텐츠 영역 -->
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- [pp] subpage visual -->
+<figure class="sub_visual visual4">
+	<div class="grid_content">
+		<nav class="page_navi">
+			<ul>
+				<li>Home</li>
+				<li data-i18n="[html]sideBar.txt1"><!-- 유학생 지원 --></li>
+				<li data-i18n="[html]sideBar.txt2"><!-- 신입생 가이드 --></li>
+				<li data-i18n="[html]sideBar.txt6"><!-- 학교시설 --></li>
+			</ul>
+		</nav>
+	</div>
+</figure>
+<!-- [pp] //subpage visual -->
+
+<!-- [pp] 메인컨텐츠 영역 -->
+<div id="container_skip" class="subpage_wrapper grid_content" tabindex="0">
+
+	<!-- [pp] side navigation bar -->
+	<div class="snb_wrap">
+		<h3 class="snb_tit">
+			<span data-i18n="[html]sideBar.txt1"><!-- 유학생 지원 --></span>
+		</h3>
+		<nav>
+			<ul class="snb_list">
+				<li class="on"><a href="javascript:void(0);" data-i18n="[html]sideBar.txt2"><!-- 신입생 가이드 --></a>
+					<ul class="snbsub_list">
+						<li><a href="//oia.gachon.ac.kr/international/a/m/guideNewStudent.do" data-i18n="[html]sideBar.txt3"><!-- 처음 왔을 때 --></a></li>
+						<li><a href="//oia.gachon.ac.kr/international/a/m/guideDomitory.do" data-i18n="[html]sideBar.txt4"><!-- 기숙사 --></a></li>
+						<li><a href="//oia.gachon.ac.kr/international/a/m/guideInsurance.do" data-i18n="[html]sideBar.txt5"><!-- 보험 --></a></li>
+						<li class="on"><a href="//oia.gachon.ac.kr/international/a/m/guideFacilities.do" data-i18n="[html]sideBar.txt6"><!-- 학교시설 --></a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:void(0);" data-i18n="[html]sideBar.txt7"><!-- 비자 및 체류 --></a>
+					<ul class="snbsub_list">
+						<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationApply.do" data-i18n="[html]sideBar.txt8"><!-- 출입국·외국인청 찾기 --></a></li>
+						<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationApp.do" data-i18n="[html]sideBar.txt9"><!-- 외국인등록증 신청 및 재발급 --></a></li>
+						<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationExtention.do" data-i18n="[html]sideBar.txt10"><!-- 비자 변경 및 연장 --></a></li>
+						<li><a href="//oia.gachon.ac.kr/international/a/m/immigrationSupport.do" data-i18n="[html]sideBar.txt11"><!-- 아르바이트 규정 및 취업지원 --></a></li>
+					</ul>
+				</li>
+				<li><a href="//oia.gachon.ac.kr/international/a/m/topikList.do">TOPIK</a></li>
+				<li><a href="javascript:void(0);" data-i18n="[html]sideBar.txt1"><!-- 유학생 지원 --></a>
+					<ul class="snbsub_list">
+						<li><a href="//oia.gachon.ac.kr/international/a/m/culturePro.do" data-i18n="[html]sideBar.txt12"><!-- 문화체험 프로그램 --></a></li>
+						<li><a href="//oia.gachon.ac.kr/international/a/m/counselingPro.do" data-i18n="[html]sideBar.txt13"><!-- 1:1 상담 신청 --></a></li>
+					</ul></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- [pp] //side navigation bar -->
+
+	<!-- [pp] subpage contents -->
+	<main class="subcontent_wrap">
+	<h3 class="subpage_tit" data-i18n="[html]sideBar.txt6"><!-- 학교시설 --></h3>
+	<div class="section_toparea tab_js">
+		<ul class="tab_list2 tab_list_js tab_of_lg">
+			<li><a href="#tap1" class="on" data-i18n="[html]introduction_3.txt1"><!-- 글로벌 캠퍼스 --></a></li>
+			<li><a href="#tap2" data-i18n="[html]introduction_3.txt2"><!-- 메디컬캠퍼스 --></a></li>
+		</ul>
+		<div class="tab_cnt_js">
+			<div id="tap1">
+				<div class="img_wrap gallery_pop">
+					<a href="//oia.gachon.ac.kr/contents/images/client/foreign_student/sub/bg_facilities.jpg">
+					<img src="//oia.gachon.ac.kr/contents/images/client/foreign_student/sub/bg_facilities.jpg" lt="글로벌 캠퍼스 이미지" class="mg_b30 campus_img"></a>
+				</div>
+				<ul class="fac_ul1 fac_ul tab_switch_js cf">
+					<li onclick="chgFacilities('globalCd01');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt147" class="on" ><!-- <span>1</span>가천관 --></a></li>
+					<li onclick="chgFacilities('globalCd02');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt148"><!-- <span>2</span>비전타워 --></a></li>
+					<li onclick="chgFacilities('globalCd03');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt149"><!-- <span>3</span>법과대학 --></a></li>
+					<li onclick="chgFacilities('globalCd04');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt150"><!-- <span>4</span>공과대학1 --></a></li>
+					<li onclick="chgFacilities('globalCd05');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt151"><!-- <span>5</span>공과대학2 --></a></li>
+					<li onclick="chgFacilities('globalCd06');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt152"><!-- <span>6</span>바이오나노 대학 --></a></li>
+					<li onclick="chgFacilities('globalCd07');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt153"><!-- <span>7</span>IT 대학 --></a></li>
+					<li onclick="chgFacilities('globalCd08');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt154"><!-- <span>8</span>한의과대학 --></a></li>
+					<li onclick="chgFacilities('globalCd09');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt155"><!-- <span>9</span>예술&middot;체육대학1 --></a></li>
+					<li onclick="chgFacilities('globalCd10');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt156"><!-- <span>10</span>예술&middot;체육대학2 --></a></li>
+					<li onclick="chgFacilities('globalCd11');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt157"><!-- <span>11</span>글로벌센터 --></a></li>
+					<li onclick="chgFacilities('globalCd12');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt158"><!-- <span>12</span>중앙도서관 --></a></li>
+					<li onclick="chgFacilities('globalCd13');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt159"><!-- <span>13</span>전자정보도서관 --></a></li>
+					<li onclick="chgFacilities('globalCd14');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt160"><!-- <span>14</span>대학원 --></a></li>
+					<li onclick="chgFacilities('globalCd15');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt161"><!-- <span>15</span>교육대학원 --></a></li>
+					<li onclick="chgFacilities('globalCd16');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt162"><!-- <span>16</span>산학협력관 --></a></li>
+					<li onclick="chgFacilities('globalCd17');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt163"><!-- <span>17</span>바이오나노연구원 --></a></li>
+					<li onclick="chgFacilities('globalCd18');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt164"><!-- <span>18</span>학생회관 --></a></li>
+					<li onclick="chgFacilities('globalCd19');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt165"><!-- <span>19</span>학생샐활관&#40;기숙사&#41; --></a></li>
+					<li onclick="chgFacilities('globalCd20');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt166"><!-- <span>20</span>학군단 --></a></li>
+					<li onclick="chgFacilities('globalCd0A');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt167"><!-- <span>A</span>대운동장 --></a></li>
+					<li onclick="chgFacilities('globalCd0B');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt168"><!-- <span>B</span>스타덤광장 --></a></li>
+					<li onclick="chgFacilities('globalCd0C');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt169"><!-- <span>C</span>프리덤광장 --></a></li>
+					<li onclick="chgFacilities('globalCd0D');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt170"><!-- <span>D</span>바람개비동산 --></a></li>
+					<li onclick="chgFacilities('globalCd0E');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt171"><!-- <span>E</span>잔디광장 --></a></li>
+				</ul>
+				<div class="tbl tbl_row mg_t20">
+					<span class="font_red fr" data-i18n="[html]introduction_3.txt174"><!-- ※ 메디컬 캠퍼스 내선번호 032-820-**** --></span>
+					<table>
+						<caption>보험 보상 내용</caption>
+						<colgroup>
+							<col style="width: 10%">
+							<col style="width: 25%">
+							<col style="width: 35%">
+							<col style="width: 15%">
+							<col style="width: 15%">
+						</colgroup>
+						<thead data-i18n="[html]introduction_3.txt3">
+							<!-- <th scope="col">건물번호</th>
+							<th scope="col">건물이름</th>
+							<th scope="col">학과</th>
+							<th scope="col">위치</th>
+							<th scope="col">내선번호</th> -->
+						</thead>
+						<tbody>
+							<tr class="globalFacilities globalCd01">
+								<td class="ta_c" rowspan="12" scope="row">1</td>
+								<td class="ta_c" rowspan="12" scope="row" data-i18n="[html]introduction_3.txt4"><!-- 가천관 Gachon Hall --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt5"><!-- 경영학부 &#40;경영학 전공, 글로벌경영학 전공&#41; --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt6"><!-- 716호 --></td>
+								<td class="ta_c">5539</td>
+							</tr>
+							<tr class="globalFacilities globalCd01" >
+								<td class="ta_c" data-i18n="[html]introduction_3.txt7"><!-- 금융수학과 --></td>
+								<td class="ta_c"   data-i18n="[html]introduction_3.txt8"><!-- 716호 --></td>
+								<td class="ta_c">5394</td>
+							</tr>
+							<tr class="globalFacilities globalCd01">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt9"><!-- 미디어커뮤니케이션학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt10"><!-- 516-B호 --></td>
+								<td class="ta_c">5262</td>
+							</tr>
+							<tr class="globalFacilities globalCd01">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt11"><!-- 관광경영학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt12"><!-- 516-B호 --></td>
+								<td class="ta_c">5214</td>
+							</tr>
+							<tr class="globalFacilities globalCd01">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt13"><!-- 심리학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt14"><!-- 516-B호 --></td>
+								<td class="ta_c">2664</td>
+							</tr>
+							<tr class="globalFacilities globalCd01">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt15"><!-- 경제학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt16"><!-- 516-A호 --></td>
+								<td class="ta_c">5204</td>
+							</tr>
+							<tr class="globalFacilities globalCd01">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt17"><!-- 의료경영학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt18"><!-- 516-A호 --></td>
+								<td class="ta_c">5372</td>
+							</tr>
+							<tr class="globalFacilities globalCd01">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt19"><!-- 응용통계학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt20"><!-- 516-A호 --></td>
+								<td class="ta_c">5393</td>
+							</tr>
+							<tr class="globalFacilities globalCd01">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt21"><!-- 한국어문학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt22"><!-- 417호 --></td>
+								<td class="ta_c">5124</td>
+							</tr>
+							<tr class="globalFacilities globalCd01">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt23"><!-- 동양어문학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt24"><!-- 417호 --></td>
+								<td class="ta_c">5164</td>
+							</tr>
+							<tr class="globalFacilities globalCd01">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt25"><!-- 영미어문학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt26"><!-- 417호 --></td>
+								<td class="ta_c">5134</td>
+							</tr>
+							<tr class="globalFacilities globalCd01">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt27"><!-- 유럽어문학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt28"><!-- 417호 --></td>
+								<td class="ta_c">5154</td>
+							</tr>
+							<tr class="globalFacilities globalCd02">
+								<td class="ta_c" scope="row" rowspan="2">2</td>
+								<td class="ta_c" scope="row" rowspan="2" data-i18n="[html]introduction_3.txt29"><!-- 비전타워 Vision Tower --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt30"><!-- 자유전공학부 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt31"><!-- 311호 --></td>
+								<td class="ta_c">5555</td>
+							</tr>
+							<tr class="globalFacilities globalCd02">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt32"><!-- 학생서비스센터 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt33"><!-- B구역 1층 --></td>
+								<td></td>
+							</tr>
+							<tr class="globalFacilities globalCd03">
+								<td class="ta_c" scope="row" rowspan="3">3</td>
+								<td class="ta_c" scope="row" rowspan="3" data-i18n="[html]introduction_3.txt34"><!-- 법과대학 College of Law --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt35"><!-- 법학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt36"><!-- 601호 --></td>
+								<td class="ta_c">5243</td>
+							</tr>
+							<tr class="globalFacilities globalCd03">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt37"><!-- 경찰&middot;안보학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt38"><!-- 601호 --></td>
+								<td class="ta_c">8810</td>
+							</tr>
+							<tr class="globalFacilities globalCd03">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt39"><!-- 행정학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt40"><!-- 601호 --></td>
+								<td class="ta_c">5254</td>
+							</tr>
+							<tr class="globalFacilities globalCd04">
+								<td class="ta_c" scope="row">4</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt41"><!-- 공과대학1<br> College of Engineering 1 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt42"><!-- 도시계획&middot;조경학부 &#40;도시계획학전공&#41; --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt43"><!-- 321-A호 --></td>
+								<td class="ta_c">5284</td>
+							</tr>
+							<tr class="globalFacilities globalCd05">
+								<td class="ta_c" scope="row" rowspan="4">5</td>
+								<td class="ta_c" scope="row" rowspan="4" data-i18n="[html]introduction_3.txt44"><!-- 공과대학2<br>College of Engineering 2 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt45"><!-- 전기공학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt46"><!-- 309호 --></td>
+								<td class="ta_c">5354</td>
+							</tr>
+							<tr class="globalFacilities globalCd05">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt47"><!-- 기계공학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt48"><!-- 109-A호 --></td>
+								<td class="ta_c">5532</td>
+							</tr>
+							<tr class="globalFacilities globalCd05">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt49"><!-- 산업경영공학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt50"><!-- 501-B호 --></td>
+								<td class="ta_c">5374</td>
+							</tr>
+							<tr class="globalFacilities globalCd05">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt51"><!-- 신소재공학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt52"><!-- 416호 --></td>
+								<td class="ta_c">5879</td>
+							</tr>
+							<tr class="globalFacilities globalCd06">
+								<td class="ta_c" scope="row" rowspan="3">6</td>
+								<td class="ta_c" scope="row" rowspan="3" data-i18n="[html]introduction_3.txt53"><!-- 바이오나노대학<br>College of BioNano -->
+								</td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt54"><!-- 생명과학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt55"><!-- 305-A호 --></td>
+								<td class="ta_c">8573</td>
+							</tr>
+							<tr class="globalFacilities globalCd06">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt56"><!-- 물리학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt57"><!-- 304-A호 --></td>
+								<td class="ta_c">5404</td>
+							</tr>
+							<tr class="globalFacilities globalCd06">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt58"><!-- 화학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt59"><!-- 202-B호 --></td>
+								<td class="ta_c">8796</td>
+							</tr>
+							<tr class="globalFacilities globalCd07">
+								<td class="ta_c" scope="row" rowspan="4">7</td>
+								<td class="ta_c" scope="row" rowspan="4" data-i18n="[html]introduction_3.txt60"><!-- IT 대학 College of IT --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt61"><!-- 화공생명공학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt62"><!-- 6-2호 --></td>
+								<td class="ta_c">8838</td>
+							</tr>
+							<tr class="globalFacilities globalCd07">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt63"><!-- AI&middot;소프트웨어학부<br>&#40;소프트웨어전공, 인공지능전공&#41; --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt64"><!-- 420-C호 --></td>
+								<td class="ta_c">8659</td>
+							</tr>
+							<tr class="globalFacilities globalCd07">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt65"><!-- 컴퓨터공학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt66"><!-- 420-C호 --></td>
+								<td class="ta_c">5768</td>
+							</tr>
+							<tr class="globalFacilities globalCd07">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt67"><!-- 전자공학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt68"><!-- 420-A호 --></td>
+								<td class="ta_c">5354</td>
+							</tr>
+							<tr class="globalFacilities globalCd08">
+								<td class="ta_c" scope="row">8</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt69"><!-- 한의과대학<br>College of Korean Medicine -->
+								</td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt70"><!-- 한의예과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt71"><!-- 305-1호 --></td>
+								<td class="ta_c">5424</td>
+							</tr>
+							<tr class="globalFacilities globalCd09">
+								<td class="ta_c" scope="row" rowspan="3">9</td>
+								<td class="ta_c" scope="row" rowspan="3" data-i18n="[html]introduction_3.txt72"><!-- 예술&middot;체육대학 1<br>College of Arts &#38; physical Education 1 -->
+								</td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt73"><!-- 미술&middot;디자인학부 &#40;회화전공&#41; --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt74"><!-- 203-D호 --></td>
+								<td class="ta_c">5864</td>
+							</tr>
+							<tr class="globalFacilities globalCd09">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt75"><!-- 미술&middot;디자인학부 &#40;조소전공&#41; --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt76"><!-- 203-D호 --></td>
+								<td class="ta_c">5939</td>
+							</tr>
+							<tr class="globalFacilities globalCd09">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt77"><!-- 미술&middot;디자인학부 &#40;디자인전공&#41; --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt78"><!-- 203-C호 --></td>
+								<td class="ta_c">5874<br>5533
+								</td>
+							</tr>
+							<tr class="globalFacilities globalCd10">
+								<td class="ta_c" scope="row" rowspan="2">10</td>
+								<td class="ta_c" scope="row" rowspan="2" data-i18n="[html]introduction_3.txt79"><!-- 예술&middot;체육대학 2<br>College of Arts &#38; physical Education 2 -->
+								</td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt80"><!-- 음악학부<br> &#40;성악전공, 기악전공, 작곡전공&#41; -->
+								</td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt81"><!-- 211호 --></td>
+								<td class="ta_c">5904<br>5914<br>5924<br>5934
+								</td>
+							</tr>
+							<tr class="globalFacilities globalCd10">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt82"><!-- 식품생물공학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt83"><!-- 422호 --></td>
+								<td class="ta_c">5384</td>
+							</tr>
+							<tr class="globalFacilities globalCd11">
+								<td class="ta_c" scope="row" rowspan="3">11</td>
+								<td class="ta_c" scope="row" rowspan="3" data-i18n="[html]introduction_3.txt84"><!-- 글로벌센터 Global Center --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt85"><!-- 국제교류협력팀 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt86"><!-- 613호 --></td>
+								<td class="ta_c">5692</td>
+							</tr>
+							<tr class="globalFacilities globalCd11">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt87"><!-- 국제어학원 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt88"><!-- 617호 --></td>
+								<td class="ta_c">5646</td>
+							</tr>
+							<tr class="globalFacilities globalCd11">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt89"><!-- 중국학생지원팀 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt90"><!-- 700호 --></td>
+								<td class="ta_c">2683</td>
+							</tr>
+							<tr class="globalFacilities globalCd12">
+								<td class="ta_c" scope="row">12</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt91"><!-- 중앙도서관 Centeral Library --></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+							<tr class="globalFacilities globalCd13">
+								<td class="ta_c" scope="row">13</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt92"><!-- 전자정보도서관<br> Electronic Information Library -->
+								</td>
+								<td class="ta_c"></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt93"><!-- 비전타워 B구역 --></td>
+								<td class="ta_c"></td>
+							</tr>
+							<tr class="globalFacilities globalCd14">
+								<td class="ta_c" scope="row">14</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt94"><!-- 대학원 Graduate School --></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+							<tr class="globalFacilities globalCd15">
+								<td class="ta_c" scope="row" rowspan="5">15</td>
+								<td class="ta_c" scope="row" rowspan="5" data-i18n="[html]introduction_3.txt95"><!-- 교육대학원<br>Graduate School of Education -->
+								</td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt96"><!-- 패션디자인전공 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt97"><!-- 506호 --></td>
+								<td class="ta_c">5954</td>
+							</tr>
+							<tr class="globalFacilities globalCd15">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt98"><!-- 체육학부&#40;체육전공, 태권도전공&#41; --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt99"><!-- 506호 --></td>
+								<td class="ta_c">5323<br>5235
+								</td>
+							</tr>
+							<tr class="globalFacilities globalCd15">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt100"><!-- 식품영약학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt101"><!-- 509호 --></td>
+								<td class="ta_c">5974</td>
+							</tr>
+							<tr class="globalFacilities globalCd15">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt102"><!-- 사회복지학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt103"><!-- 509호 --></td>
+								<td class="ta_c">5964</td>
+							</tr>
+							<tr class="globalFacilities globalCd15">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt104"><!-- 유아교육학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt105"><!-- 509호 --></td>
+								<td class="ta_c">8718</td>
+							</tr>
+							<tr class="globalFacilities globalCd16">
+								<td class="ta_c" scope="row">16</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt106"><!-- 산학협력관<br> Industry / Univ Coop. Hall -->
+								</td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt107"><!-- 연기예술학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt108"><!-- 413호 --></td>
+								<td class="ta_c">745-8701</td>
+							</tr>
+							<tr class="globalFacilities globalCd17">
+								<td class="ta_c" scope="row">17</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt109"><!-- 바이오나노연구원<br>BioNano Research Center -->
+								</td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt110"><!-- 바이오나노학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt111"><!-- 411호 --></td>
+								<td class="ta_c">8757</td>
+							</tr>
+							<tr class="globalFacilities globalCd18">
+								<td class="ta_c" scope="row">18</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt112"><!-- 학생회관 Student Hall --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt113"><!-- 학생지원팀 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt114"><!-- 306호 --></td>
+								<td class="ta_c">5202</td>
+							</tr>
+							<tr class="globalFacilities globalCd19">
+								<td class="ta_c" scope="row">19</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt115"><!-- 학생회관 &#40;기숙사&#41; Dormitory --></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+							<tr class="globalFacilities globalCd20">
+								<td class="ta_c" scope="row">20</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt116"><!-- 학군단 ROTC --></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+							<tr class="globalFacilities globalCd0A">
+								<td class="ta_c" scope="row">A</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt117"><!-- 대운동장 Sports Grounds --></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+							<tr class="globalFacilities globalCd0B">
+								<td class="ta_c" scope="row">B</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt118"><!-- 스타덤광장 Stardom Square --></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+							<tr class="globalFacilities globalCd0C">
+								<td class="ta_c" scope="row">C</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt119"><!-- 프리덤광장 Freedom Square --></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+							<tr class="globalFacilities globalCd0D">
+								<td class="ta_c" scope="row">D</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt120"><!-- 바람개비동산 Pinwheel Garden --></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+							<tr class="globalFacilities globalCd0E">
+								<td class="ta_c" scope="row">E</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt121"><!-- 잔디광장 Grass Square --></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="tap2">
+				<div class="img_wrap gallery_pop mg_b30">
+					<a href="//oia.gachon.ac.kr/contents/images/client/foreign_student/sub/bg_facilities2.jpg">
+						<img src="//oia.gachon.ac.kr/contents/images/client/foreign_student/sub/bg_facilities2.jpg" alt="글로벌 캠퍼스 이미지">
+					</a>
+				</div>
+				<ul class="fac_ul1 fac_ul tab_switch_js cf">
+					<li onclick="_chgFacilities('medicalCd01');"><a href="javascript:void(0);" class="on" data-i18n="[html]introduction_3.txt122"><!-- <span>1</span>보건과학대학 --></a></li>
+					<li onclick="_chgFacilities('medicalCd02');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt123"><!-- <span>2</span>약학대학 --></a></li>
+					<li onclick="_chgFacilities('medicalCd03');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt124"><!-- <span>3</span>간호대학 --></a></li>
+					<li onclick="_chgFacilities('medicalCd04');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt125"><!-- <span>4</span>학생회관 --></a></li>
+					<li onclick="_chgFacilities('medicalCd05');"><a href="javascript:void(0);" data-i18n="[html]introduction_3.txt126"><!-- <span>5</span>대운동장 --></a></li>
+					<!--  <li onclick="_chgFacilities('medicalCd06');"><a href="javascript:void(0);"><span>6</span>가천뇌과학연구원</a></li>
+                           <li onclick="_chgFacilities('medicalCd07');"><a href="javascript:void(0);"><span>7</span>이길여 암&middot;당뇨연구원</a></li>
+                           <li onclick="_chgFacilities('medicalCd08');"><a href="javascript:void(0);"><span>8</span>가천리더십센터</a></li>
+                           <li onclick="_chgFacilities('medicalCd09');"><a href="javascript:void(0);"><span>9</span>의과대학</a></li> -->
+				</ul>
+				<div class="tbl tbl_row mg_t20">
+					<span class="font_red fr" data-i18n="[html]introduction_3.txt174"><!-- ※ 메디컬 캠퍼스 내선번호 032-820-**** --></span>
+					<table>
+						<caption>보험 보상 내용</caption>
+						<colgroup>
+							<col style="width: 10%">
+							<col style="width: 25%">
+							<col style="width: 35%">
+							<col style="width: 15%">
+							<col style="width: 15%">
+						</colgroup>
+						<thead data-i18n="[html]introduction_3.txt127">
+							<!-- <th scope="col">건물번호</th>
+							<th scope="col">건물이름</th>
+							<th scope="col">학과</th>
+							<th scope="col">위치</th>
+							<th scope="col">내선번호</th> -->
+						</thead>
+						<tbody>
+							<tr class="medicalFacilities medicalCd01">
+								<td class="ta_c" scope="row">1</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt128"><!-- 보건과학대학 --></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+							<tr class="medicalFacilities medicalCd02">
+								<td class="ta_c" scope="row" rowspan="2">2</td>
+								<td class="ta_c" scope="row" rowspan="2" data-i18n="[html]introduction_3.txt129"><!-- 약학대학 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt130"><!-- 의예과 --></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+							<tr class="medicalFacilities medicalCd02">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt131"><!-- 약학과 --></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+							<tr class="medicalFacilities medicalCd03">
+								<td class="ta_c" scope="row">3</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt132"><!-- 간호대학 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt133"><!-- 간호학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt134"><!-- 421호 --></td>
+								<td class="ta_c">8858</td>
+							</tr>
+							<tr class="medicalFacilities medicalCd04">
+								<td class="ta_c" scope="row" rowspan="6">4</td>
+								<td class="ta_c" scope="row" rowspan="6" data-i18n="[html]introduction_3.txt135"><!-- 학생회관 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt136"><!-- 치위생학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt172"><!-- 203호 --></td>
+								<td class="ta_c">4370</td>
+							</tr>
+							<tr class="medicalFacilities medicalCd04">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt137"><!-- 응급구조학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt173"><!-- 204호 --></td>
+								<td class="ta_c">4340</td>
+							</tr>
+							<tr class="medicalFacilities medicalCd04">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt138"><!-- 방사선학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt139"><!-- 203호 --></td>
+								<td class="ta_c">4360</td>
+							</tr>
+							<tr class="medicalFacilities medicalCd04">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt140"><!-- 물리치료학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt141"><!-- 204호 --></td>
+								<td class="ta_c">4420</td>
+							</tr>
+							<tr class="medicalFacilities medicalCd04">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt142"><!-- 의용생체공학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt143"><!-- 205호 --></td>
+								<td class="ta_c">4430</td>
+							</tr>
+							<tr class="medicalFacilities medicalCd04">
+								<td class="ta_c" data-i18n="[html]introduction_3.txt144"><!-- 운동재활복지학과 --></td>
+								<td class="ta_c" data-i18n="[html]introduction_3.txt145"><!-- 205호 --></td>
+								<td class="ta_c">4441</td>
+							</tr>
+							<tr class="medicalFacilities medicalCd05">
+								<td class="ta_c" scope="row">5</td>
+								<td class="ta_c" scope="row" data-i18n="[html]introduction_3.txt146"><!-- 대운동장 --></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+							<!-- <tr>
+								<td class="ta_c" scope="row">6</td>
+								<td class="ta_c" scope="row">가천뇌과학연구원</td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+							<tr>
+								<td class="ta_c" scope="row">7</td>
+								<td class="ta_c" scope="row">이길려 암&middot;당뇨연구원</td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+							<tr>
+								<td class="ta_c" scope="row">8</td>
+								<td class="ta_c" scope="row">가천리더십센터</td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr>
+							<tr>
+								<td class="ta_c" scope="row">9</td>
+								<td class="ta_c" scope="row">의과대학</td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+								<td class="ta_c"></td>
+							</tr> -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	</main>
+	<!-- [pp] subpage contents -->
+</div>
+<!-- [pp] //메인컨텐츠 영역 -->
+<script type="text/javascript">
+
+$( document ).ready( function() {
+	chgFacilities('globalCd01');
+} );
+
+ 
+ function chgFacilities(_trClass) {
+
+	
+	$(".globalFacilities").addClass('hidden');
+	// 클릭한것만 보이기
+	$("."+_trClass).removeClass('hidden');
+
+}
+
+ 
+ $(document).ready(function(){
+	 _chgFacilities('medicalCd01');
+ })
+
+
+  
+ function _chgFacilities(_trClass) {
+
+	
+	$(".medicalFacilities").addClass('hidden');
+	// 클릭한것만 보이기
+	$("."+_trClass).removeClass('hidden');
+
+}
+
+</script>
+
+       <!-- [pp] //메인컨텐츠 영역 -->
+   </div>
+   <!-- [pp] //푸터를 제외한 전체페이지 -->
+   <!-- [pp] footer -->
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- [pp] footer -->
+<footer class="footer_wrap">
+	<div class="footer_inner">
+		<h2 class="footer_logo"><a target="_blank" href="https://www.gachon.ac.kr"><img src="//oia.gachon.ac.kr/contents/images/client/common/footer_logo.svg" alt="가천대학교 로고 이미지"></a></h2>
+		<div class="footer_infolink">
+			<ul>
+				<li><a href="mailto:giet@gachon.ac.kr" class="mail">mail</a></li>
+				<li><a href="https://www.facebook.com/gachoninternational" target="_blank" class="facebook">Facebook</a></li>
+				<li><a href="javascript:void(0);" class="wechat">WeChat</a></li>
+				<li><a href="https://www.youtube.com/user/GachonUniversitypr" target="_blank" class="youtube">Youtube</a></li>
+			</ul>
+			<ul>
+				<li><a href="https://www.instagram.com/gachon_international/" target="_blank" class="instagram">Instagram</a></li>
+				<li><a href="https://weibo.com/u/7467634605?refer_flag=1001030103_" target="_blank" class="weibo">Weibo</a></li>
+				<li><a href="https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2" target="_blank" class="youku">Youku</a></li>
+				<li><a href="https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2" target="_blank" class="bilibili">bilibili</a></li>
+			</ul>
+		</div>
+		<strong>Office of International affairs, Gachon University</strong>
+		<ul class="footer_infotxt">
+			<li>1342, Seongnam-daero, Sujeong-gu, Seongnam-si, Gyeonggi-do, Republic of Korea</li>
+			
+		</ul>
+		<p class="copyright">COPYRIGHT 2020 BY GACHON UNIVERSITY ALL RIGHT RESERVED</p>
+	</div>
+</footer>
+<!-- [pp] //footer -->
+   <div id="layerPopup" class="white-popup mfp-hide"></div>
+   <!-- [pp] //footer -->
+</body>
+
+</html>

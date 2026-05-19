@@ -1,0 +1,44 @@
+[
+  {
+    "attachment_id": "attachment:b03147863a10bd14",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterRecruitment.do",
+    "target_url": "https://oia.gachon.ac.kr/sample/klecLecturerRecruitment.hwp",
+    "anchor_text": "지원서 다운로드"
+  },
+  {
+    "attachment_id": "attachment:debce8929e8a4b84",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepIntro.do",
+    "target_url": "https://oia.gachon.ac.kr/sample/gStepBrochure.pdf",
+    "anchor_text": "브로슈어 다운로드"
+  },
+  {
+    "attachment_id": "attachment:162edf7469f0eb6e",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApp.do",
+    "target_url": "https://oia.gachon.ac.kr/sample/IntegratedApplicationForm.pdf",
+    "anchor_text": "다운로드"
+  },
+  {
+    "attachment_id": "attachment:162edf7469f0eb6e",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationExtention.do",
+    "target_url": "https://oia.gachon.ac.kr/sample/IntegratedApplicationForm.pdf",
+    "anchor_text": "다운로드"
+  },
+  {
+    "attachment_id": "attachment:f9d6a0a2128b6834",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationExtention.do",
+    "target_url": "https://oia.gachon.ac.kr/sample/residence_confirmation_letter.pdf",
+    "anchor_text": "https://oia.gachon.ac.kr/sample/residence_confirmation_letter.pdf"
+  },
+  {
+    "attachment_id": "attachment:71db1962b6169cfb",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/supportGu.do",
+    "target_url": "https://oia.gachon.ac.kr/sample/supportGu_KO.pdf",
+    "anchor_text": "약정서 다운로드(한글)"
+  },
+  {
+    "attachment_id": "attachment:4c5a2a98e08c472d",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/supportGu.do",
+    "target_url": "https://oia.gachon.ac.kr/sample/supportGu_EN.pdf",
+    "anchor_text": "약정서 다운로드(영문)"
+  }
+]

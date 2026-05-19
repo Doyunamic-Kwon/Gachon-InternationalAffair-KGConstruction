@@ -1,0 +1,1334 @@
+[
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/clientMain/a/t/internationalMain.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/clientMain/a/t/internationalMain.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/clientMain/a/t/internationalMain.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/clientMain/a/t/internationalMain.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/clientMain/a/t/internationalMain.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/clientMain/a/t/internationalMain.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/clientMain/a/t/internationalMain.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/graduateInfo.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/graduateInfo.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/graduateInfo.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/graduateInfo.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/graduateInfo.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/graduateInfo.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/graduateInfo.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/klecInfo.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/klecInfo.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/klecInfo.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/klecInfo.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/klecInfo.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/klecInfo.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/klecInfo.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterApply.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterApply.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterApply.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterApply.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterApply.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterApply.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterApply.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterScholarship.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterScholarship.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterScholarship.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterScholarship.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterScholarship.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterScholarship.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterScholarship.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterRecruitment.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterRecruitment.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterRecruitment.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterRecruitment.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterRecruitment.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterRecruitment.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/krCenterRecruitment.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepIntro.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepIntro.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepIntro.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepIntro.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepIntro.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepIntro.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepIntro.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepSchedule.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepSchedule.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepSchedule.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepSchedule.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepSchedule.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepSchedule.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepSchedule.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepApply.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepApply.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepApply.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepApply.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepApply.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepApply.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepApply.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepTuition.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepTuition.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepTuition.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepTuition.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepTuition.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepTuition.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepTuition.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepPhotoAndVideo.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepPhotoAndVideo.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepPhotoAndVideo.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepPhotoAndVideo.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepPhotoAndVideo.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepPhotoAndVideo.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gStepPhotoAndVideo.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:068c77af85599188",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/exchangeStudent.do",
+    "target_url": "http://ace.gachon.ac.kr/dormitory",
+    "anchor_text": "http://ace.gachon.ac.kr/dormitory"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/exchangeStudent.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/exchangeStudent.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/exchangeStudent.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/exchangeStudent.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/exchangeStudent.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/exchangeStudent.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/exchangeStudent.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:f03ac546b47184d0",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideNewStudent.do",
+    "target_url": "https://apps.apple.com/kr/app/%EA%B0%80%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%BA%A0%ED%8D%BC%EC%8A%A4/id1062502051",
+    "anchor_text": "https://apps.apple.com/kr/app/%EA%B0%80%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%BA%A0%ED%8D%BC%EC%8A%A4/id1062502051"
+  },
+  {
+    "resource_id": "external:5778083513463c3f",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideNewStudent.do",
+    "target_url": "https://play.google.com/store/apps/details?id=com.sz.Atwee.gachon&hl=ko",
+    "anchor_text": "https://play.google.com/store/apps/details?id=com.sz.Atwee.gachon&hl=ko"
+  },
+  {
+    "resource_id": "external:bdb1f0d55e2a7939",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideNewStudent.do",
+    "target_url": "https://apps.apple.com/kr/app/%EA%B0%80%EC%B2%9C%EB%8C%80-%EC%88%98%EA%B0%95%EC%8B%A0%EC%B2%AD/id1409484631",
+    "anchor_text": "https://apps.apple.com/kr/app/%EA%B0%80%EC%B2%9C%EB%8C%80-%EC%88%98%EA%B0%95%EC%8B%A0%EC%B2%AD/id1409484631"
+  },
+  {
+    "resource_id": "external:9bc9505d99adfe95",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideNewStudent.do",
+    "target_url": "https://play.google.com/store/apps/details?id=kr.co.swit.gcuv&hl=ko",
+    "anchor_text": "https://play.google.com/store/apps/details?id=kr.co.swit.gcuv&hl=ko"
+  },
+  {
+    "resource_id": "external:0859844db8222c9b",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideNewStudent.do",
+    "target_url": "https://apps.apple.com/au/app/%EA%B0%80%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90-%EB%AA%A8%EB%B0%94%EC%9D%BC%EB%8F%84%EC%84%9C%EA%B4%80/id1529789086",
+    "anchor_text": "https://apps.apple.com/au/app/%EA%B0%80%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90-%EB%AA%A8%EB%B0%94%EC%9D%BC%EB%8F%84%EC%84%9C%EA%B4%80/id1529789086"
+  },
+  {
+    "resource_id": "external:f3d737a98dd81eb2",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideNewStudent.do",
+    "target_url": "https://play.google.com/store/apps/details?id=wiseneosco.android.gachon_univ&hl=ko",
+    "anchor_text": "https://play.google.com/store/apps/details?id=wiseneosco.android.gachon_univ&hl=ko"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideNewStudent.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideNewStudent.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideNewStudent.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideNewStudent.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideNewStudent.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideNewStudent.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideNewStudent.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideDomitory.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideDomitory.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideDomitory.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideDomitory.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideDomitory.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideDomitory.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideDomitory.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:5625fb19a46202b1",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideInsurance.do",
+    "target_url": "http://www.univ-safety.org/foreign/",
+    "anchor_text": "www.univ-safety.org/foreign"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideInsurance.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideInsurance.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideInsurance.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideInsurance.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideInsurance.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideInsurance.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideInsurance.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideFacilities.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideFacilities.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideFacilities.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideFacilities.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideFacilities.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideFacilities.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/guideFacilities.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:f340158539ecec96",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApply.do",
+    "target_url": "http://www.immigration.go.kr/immigration/2057/subview.do",
+    "anchor_text": "http://www.immigration.go.kr/immigration/2057/subview.do"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApply.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApply.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApply.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApply.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApply.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApply.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApply.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApp.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApp.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApp.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApp.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApp.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApp.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationApp.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationExtention.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationExtention.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationExtention.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationExtention.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationExtention.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationExtention.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationExtention.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:688c70bec8e90512",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationExtention.do",
+    "target_url": "https://www.hikorea.go.kr/cvlappl/CvlapplStep1.pt",
+    "anchor_text": "체류지 변경신고 / 거소 이전신고"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationSupport.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationSupport.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationSupport.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationSupport.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationSupport.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationSupport.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationSupport.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:feca1370b74a4a2f",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/immigrationSupport.do",
+    "target_url": "http://www.law.go.kr/lsInfoP.do?lsiSeq=208505",
+    "anchor_text": "국가법령정보센터 바로가기 [출입국관리법]"
+  },
+  {
+    "resource_id": "external:6018e897de9dae69",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/topikList.do",
+    "target_url": "http://www.topik.go.kr",
+    "anchor_text": "TOPIK 홈페이지"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/topikList.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/topikList.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/topikList.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/topikList.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/topikList.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/topikList.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/topikList.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/culturePro.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/culturePro.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/culturePro.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/culturePro.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/culturePro.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/culturePro.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/culturePro.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/counselingPro.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/counselingPro.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/counselingPro.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/counselingPro.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/counselingPro.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/counselingPro.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/counselingPro.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/overseasAlumni.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/overseasAlumni.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/overseasAlumni.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/overseasAlumni.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/overseasAlumni.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/overseasAlumni.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/overseasAlumni.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gachonArchives.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gachonArchives.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gachonArchives.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gachonArchives.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gachonArchives.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gachonArchives.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/gachonArchives.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/alumniStory.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/alumniStory.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/alumniStory.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/alumniStory.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/alumniStory.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/alumniStory.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/alumniStory.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/supportGu.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/supportGu.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/supportGu.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/supportGu.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/supportGu.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/supportGu.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/supportGu.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/findAlumni.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/findAlumni.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/findAlumni.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/findAlumni.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/findAlumni.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/findAlumni.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/findAlumni.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/foreignNoticeList.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/foreignNoticeList.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/foreignNoticeList.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/foreignNoticeList.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/foreignNoticeList.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/foreignNoticeList.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/foreignNoticeList.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  },
+  {
+    "resource_id": "external:6321e938bc7c06f4",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/enquiriesList.do",
+    "target_url": "https://www.gachon.ac.kr",
+    "anchor_text": "https://www.gachon.ac.kr"
+  },
+  {
+    "resource_id": "external:3c134c35708783dd",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/enquiriesList.do",
+    "target_url": "https://www.facebook.com/gachoninternational",
+    "anchor_text": "Facebook"
+  },
+  {
+    "resource_id": "external:eef00a762a2699dc",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/enquiriesList.do",
+    "target_url": "https://www.youtube.com/user/GachonUniversitypr",
+    "anchor_text": "Youtube"
+  },
+  {
+    "resource_id": "external:3094d74a5a43b644",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/enquiriesList.do",
+    "target_url": "https://www.instagram.com/gachon_international/",
+    "anchor_text": "Instagram"
+  },
+  {
+    "resource_id": "external:d89b69eb3db5e907",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/enquiriesList.do",
+    "target_url": "https://weibo.com/u/7467634605?refer_flag=1001030103_",
+    "anchor_text": "Weibo"
+  },
+  {
+    "resource_id": "external:84db0688417fb045",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/enquiriesList.do",
+    "target_url": "https://i.youku.com/i/UNzkzOTAyMzk4OA==?spm=a2hbt.13141534.1_1.d_2_2",
+    "anchor_text": "Youku"
+  },
+  {
+    "resource_id": "external:b71d28c9ce751b62",
+    "source_url": "https://oia.gachon.ac.kr/international/a/m/enquiriesList.do",
+    "target_url": "https://space.bilibili.com/602120340?spm_id_from=333.788.b_765f7570696e666f.2",
+    "anchor_text": "bilibili"
+  }
+]
