@@ -81,20 +81,21 @@ def run_deep_learning_pipeline():
             labels.append(rel)
             
     print(f"총 학습/평가 데이터: {len(labels)}건")
-    
-    # 단어 사전 구축
+
+    # 먼저 분리 → 단어 사전은 train에서만 구축 (test 어휘 누출 방지)
+    X_train, X_test, y_train, y_test = train_test_split(texts, labels, test_size=0.2, random_state=42)
+
+    # 단어 사전 구축 (train만 사용)
     word2idx = {'<PAD>': 0, '<UNK>': 1}
-    for text in texts:
+    for text in X_train:
         for word in str(text).split():
             if word not in word2idx:
                 word2idx[word] = len(word2idx)
-                
+
     # 라벨 사전 구축
     unique_labels = sorted(list(set(labels)))
     label2idx = {label: idx for idx, label in enumerate(unique_labels)}
     idx2label = {idx: label for label, idx in label2idx.items()}
-    
-    X_train, X_test, y_train, y_test = train_test_split(texts, labels, test_size=0.2, random_state=42)
     
     train_dataset = REDataset(X_train, y_train, word2idx, label2idx)
     test_dataset = REDataset(X_test, y_test, word2idx, label2idx)

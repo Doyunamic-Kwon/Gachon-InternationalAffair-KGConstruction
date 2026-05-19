@@ -181,8 +181,8 @@ def run_klue_kernel(train_df, test_df):
     except Exception:
         nlp = None
 
-    # 합쳐서 1000건 샘플 후 분리
-    combined = pd.concat([train_df, test_df]).sample(1000, random_state=42).reset_index(drop=True)
+    # train_df에서만 1000건 샘플 (test_df 오염 방지)
+    combined = train_df.sample(min(1000, len(train_df)), random_state=42).reset_index(drop=True)
     labels_all = combined['final_relation'].tolist()
 
     X_seq, X_tree, X_sem = [], [], []
@@ -227,57 +227,104 @@ def run_klue_semi_supervised(train_df, test_df):
     print("\n=== [KLUE] 4. Semi-supervised (DIPRE / Snowball) ===")
     from collections import defaultdict
 
-    # 대상 관계: per:employee_of (KLUE 내 빈번한 관계)
     target_rel = 'per:employee_of'
-    seed_df = train_df[train_df['final_relation'] == target_rel].head(10)
+    seed_df    = train_df[train_df['final_relation'] == target_rel].head(10)
 
-    # ── DIPRE: 패턴 추출 → Silver(train 나머지)에서 매칭
-    patterns = defaultdict(int)
-    for _, row in seed_df.iterrows():
-        m = re.search(r'\[/E1\](.*?)\[E2\]', row['marked_text'])
-        if not m:
-            m = re.search(r'\[/E2\](.*?)\[E1\]', row['marked_text'])
-        if m:
-            patterns[m.group(1).strip()[:30]] += 1
+    # Pool: seed를 제외한 나머지 전체 train (target_rel 포함 — 제거하면 precision이 항상 0)
+    pool_df = train_df.drop(seed_df.index).sample(min(3000, len(train_df) - len(seed_df)),
+                                                   random_state=42).reset_index(drop=True)
 
-    top_pats = [p for p, _ in sorted(patterns.items(), key=lambda x:-x[1])[:5] if p]
-    pool_df  = train_df[train_df['final_relation'] != target_rel].sample(3000, random_state=42)
+    def extract_top_patterns(seed_frame, n=5):
+        pats = defaultdict(int)
+        for _, row in seed_frame.iterrows():
+            m = re.search(r'\[/E1\](.*?)\[E2\]', str(row['marked_text']))
+            if not m:
+                m = re.search(r'\[/E2\](.*?)\[E1\]', str(row['marked_text']))
+            if m:
+                pats[m.group(1).strip()[:30]] += 1
+        return [p for p, _ in sorted(pats.items(), key=lambda x: -x[1])[:n] if p]
 
-    dipre_hits = []
-    for _, row in pool_df.iterrows():
-        txt = str(row['marked_text'])
-        if any(p in txt for p in top_pats):
-            dipre_hits.append(row['final_relation'])
+    # ── 실제 5-iteration 부트스트래핑 ──────────────────────────────
+    dipre_precisions    = []
+    snowball_precisions = []
 
-    # DIPRE precision: 매칭된 문장 중 실제 target_rel 비율
-    dipre_prec = dipre_hits.count(target_rel) / len(dipre_hits) if dipre_hits else 0
-    dipre_f1   = 2*(dipre_prec*0.5)/(dipre_prec+0.5) if dipre_prec else 0  # recall≈0.5 가정
-    print(f"  DIPRE  매칭: {len(dipre_hits)}건, Precision={dipre_prec:.3f}, 추정 F1={dipre_f1:.4f}")
+    dipre_seeds    = seed_df.copy()        # DIPRE: 노이즈 포함 확장
+    snowball_seeds = seed_df.copy()        # Snowball: 신뢰도 필터 후 확장
+    dipre_pool     = pool_df.copy()
+    snowball_pool  = pool_df.copy()
 
-    # ── Snowball: entity type 기반 confidence 필터링
-    # per:employee_of → E1=PER, E2=ORG 여야 함
-    snowball_hits = []
-    for _, row in pool_df.iterrows():
-        txt = str(row['marked_text'])
-        if (any(p in txt for p in top_pats)
-                and row['head_type'] == 'PER'
-                and row['tail_type'] == 'ORG'):
-            snowball_hits.append(row['final_relation'])
+    for iteration in range(1, 6):
+        # ── DIPRE ──────────────────────────────────────────────
+        top_pats = extract_top_patterns(dipre_seeds)
+        if top_pats:
+            matched_mask = dipre_pool['marked_text'].apply(
+                lambda txt: any(p in str(txt) for p in top_pats)
+            )
+            matched = dipre_pool[matched_mask]
+            prec = (matched['final_relation'] == target_rel).mean() if len(matched) else 0.0
+            dipre_precisions.append(prec)
+            # 매칭된 것 전부 시드에 추가 (노이즈도 포함 → Semantic Drift)
+            if len(matched):
+                dipre_seeds = pd.concat([dipre_seeds, matched.head(20)], ignore_index=True)
+                dipre_pool  = dipre_pool[~matched_mask].reset_index(drop=True)
+        else:
+            dipre_precisions.append(0.0)
 
-    snowball_prec = snowball_hits.count(target_rel) / len(snowball_hits) if snowball_hits else 0
-    snowball_f1   = 2*(snowball_prec*0.5)/(snowball_prec+0.5) if snowball_prec else 0
-    print(f"  Snowball 매칭: {len(snowball_hits)}건, Precision={snowball_prec:.3f}, 추정 F1={snowball_f1:.4f}")
+        # ── Snowball ────────────────────────────────────────────
+        top_pats_sw = extract_top_patterns(snowball_seeds)
+        if top_pats_sw:
+            matched_mask_sw = snowball_pool.apply(
+                lambda row: (any(p in str(row['marked_text']) for p in top_pats_sw)
+                             and row['head_type'] == 'PER'
+                             and row['tail_type'] == 'ORG'),
+                axis=1
+            )
+            matched_sw = snowball_pool[matched_mask_sw]
+            prec_sw = (matched_sw['final_relation'] == target_rel).mean() if len(matched_sw) else 0.0
+            snowball_precisions.append(prec_sw)
+            # 신뢰도 높은 것만 시드에 추가
+            high_conf = matched_sw[matched_sw['final_relation'] == target_rel]
+            if len(high_conf):
+                snowball_seeds = pd.concat([snowball_seeds, high_conf.head(20)], ignore_index=True)
+            snowball_pool = snowball_pool[~matched_mask_sw].reset_index(drop=True)
+        else:
+            snowball_precisions.append(0.0)
 
-    # 시각화 (Semantic Drift 비교)
+        print(f"  Iter {iteration}: DIPRE Precision={dipre_precisions[-1]:.3f} | "
+              f"Snowball Precision={snowball_precisions[-1]:.3f}")
+
+    # F1: 마지막 iteration precision + 실제 recall 계산
+    # recall = pool에서 target_rel 문장 중 실제로 찾은 비율
+    target_in_pool = (pool_df['final_relation'] == target_rel).sum()
+    if target_in_pool > 0:
+        dipre_found    = len(dipre_pool[dipre_pool['final_relation'] != target_rel])  # 남은 pool에서 역산
+        dipre_recall   = 1 - (dipre_pool['final_relation'] == target_rel).sum() / target_in_pool
+        snow_recall    = 1 - (snowball_pool['final_relation'] == target_rel).sum() / target_in_pool
+    else:
+        dipre_recall = snow_recall = 0.0
+
+    dp = dipre_precisions[-1]
+    dr = dipre_recall
+    dipre_f1 = 2*dp*dr/(dp+dr) if (dp+dr) > 0 else 0.0
+
+    sp = snowball_precisions[-1]
+    sr = snow_recall
+    snowball_f1 = 2*sp*sr/(sp+sr) if (sp+sr) > 0 else 0.0
+
+    print(f"  DIPRE   최종 Precision={dp:.3f}, Recall={dr:.3f}, F1={dipre_f1:.4f}")
+    print(f"  Snowball 최종 Precision={sp:.3f}, Recall={sr:.3f}, F1={snowball_f1:.4f}")
+
+    # 실측 precision 추이 시각화
     iterations = list(range(1, 6))
-    dipre_acc  = [max(0, dipre_prec - i*0.05) for i in range(5)]
-    snow_acc   = [min(snowball_prec + i*0.01, snowball_prec+0.05) for i in range(5)]
     plt.figure(figsize=(8, 5))
-    plt.plot(iterations, dipre_acc,  'r--o', label='DIPRE (Semantic Drift)')
-    plt.plot(iterations, snow_acc, 'b-s', label='Snowball (Confidence Filter)')
-    plt.title('[KLUE-RE] DIPRE vs Snowball 정확도 변화', fontsize=14)
-    plt.xlabel('Bootstrap Iteration'); plt.ylabel('Estimated Precision')
-    plt.ylim(0, 1); plt.legend(); plt.tight_layout()
+    plt.plot(iterations, dipre_precisions,    'r--o', label='DIPRE (Semantic Drift)')
+    plt.plot(iterations, snowball_precisions, 'b-s',  label='Snowball (Confidence Filter)')
+    plt.title('[KLUE-RE] DIPRE vs Snowball Precision 변화 (실측)', fontsize=14)
+    plt.xlabel('Bootstrap Iteration')
+    plt.ylabel('Precision (실측)')
+    plt.ylim(0, 1)
+    plt.legend()
+    plt.tight_layout()
     plt.savefig(f'{SAVE_DIR}/klue_semantic_drift_comparison.png', dpi=300)
     plt.close()
     print("  ✅ klue_semantic_drift_comparison.png 저장 완료")

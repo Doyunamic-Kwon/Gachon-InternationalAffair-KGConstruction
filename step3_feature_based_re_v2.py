@@ -110,24 +110,43 @@ def run_advanced_feature_based_re():
     print(f"4) Dependency Path (구문 의존 경로): {features_dep[0]}")
     print("-" * 50)
             
-    # TF-IDF Vectorization
+    # 먼저 인덱스 기준으로 train/test 분리 후 vectorizer를 train에만 fit
+    n = len(labels)
+    idx_all = list(range(n))
+    idx_train, idx_test, y_train, y_test = train_test_split(
+        idx_all, labels, test_size=0.2, random_state=42
+    )
+
+    ctx_tr  = [features_context[i]  for i in idx_train]
+    ctx_te  = [features_context[i]  for i in idx_test]
+    btw_tr  = [features_between[i]  for i in idx_train]
+    btw_te  = [features_between[i]  for i in idx_test]
+    sem_tr  = [features_semantic[i] for i in idx_train]
+    sem_te  = [features_semantic[i] for i in idx_test]
+    dep_tr  = [features_dep[i]      for i in idx_train]
+    dep_te  = [features_dep[i]      for i in idx_test]
+
+    # Vectorizer를 train에만 fit → test는 transform만
     vec_context = TfidfVectorizer(max_features=500)
-    X_ctx = vec_context.fit_transform(features_context)
-    
+    X_ctx_tr = vec_context.fit_transform(ctx_tr)
+    X_ctx_te = vec_context.transform(ctx_te)
+
     vec_between = TfidfVectorizer(max_features=500)
-    X_btw = vec_between.fit_transform(features_between)
-    
+    X_btw_tr = vec_between.fit_transform(btw_tr)
+    X_btw_te = vec_between.transform(btw_te)
+
     vec_sem = CountVectorizer()
-    X_sem = vec_sem.fit_transform(features_semantic)
-    
+    X_sem_tr = vec_sem.fit_transform(sem_tr)
+    X_sem_te = vec_sem.transform(sem_te)
+
     vec_dep = TfidfVectorizer(max_features=500)
-    X_dep = vec_dep.fit_transform(features_dep)
-    
-    X_combined = hstack([X_ctx, X_btw, X_sem, X_dep])
-    
-    X_train, X_test, y_train, y_test = train_test_split(X_combined, labels, test_size=0.2, random_state=42)
-    
-    print(f"\nRandom Forest 학습 중... (학습 셋: {X_train.shape[0]}건, 테스트 셋: {X_test.shape[0]}건, 총 피처 수: {X_combined.shape[1]})")
+    X_dep_tr = vec_dep.fit_transform(dep_tr)
+    X_dep_te = vec_dep.transform(dep_te)
+
+    X_train = hstack([X_ctx_tr, X_btw_tr, X_sem_tr, X_dep_tr])
+    X_test  = hstack([X_ctx_te, X_btw_te, X_sem_te, X_dep_te])
+
+    print(f"\nRandom Forest 학습 중... (학습 셋: {X_train.shape[0]}건, 테스트 셋: {X_test.shape[0]}건, 총 피처 수: {X_train.shape[1]})")
     clf = RandomForestClassifier(n_estimators=100, random_state=42)
     clf.fit(X_train, y_train)
     
