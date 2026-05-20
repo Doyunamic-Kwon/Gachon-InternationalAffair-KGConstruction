@@ -4,23 +4,18 @@ import numpy as np
 
 from step3b_semi_supervised import run_dipre_and_snowball
 
-# Mac 한글 폰트 설정
-plt.rc('font', family='AppleGothic')
+plt.rc('font', family='DejaVu Sans')
 plt.rcParams['axes.unicode_minus'] = False
 
 
 def create_final_summary_chart(
-    # Unsupervised: step2_unsupervised_re_v2.py 실행 결과
-    unsup_pattern=0.2325,
-    unsup_embed=0.3695,
-    # Supervised: step3_feature_based_re_v2.py / visualize_kernel_ml.py 실행 결과
+    unsup_pattern=0.4597,
+    unsup_embed=0.2671,
     sup_rf=0.7300,
     sup_kernel=0.8627,
-    # Deep Learning: 10 epochs, Macro F1 실측값
-    dl_bilstm=0.5418,
-    # Semi-supervised: 10-seed + HTML 정제 후 실측값 (2026-05-19)
-    semi_dipre=0.1215,
-    semi_snowball=0.3010,
+    dl_bilstm=0.3624,
+    semi_dipre=0.4010,
+    semi_snowball=0.4787,
 ):
     if semi_dipre is None or semi_snowball is None:
         print("Semi-supervised F1 실측 계산 중 (step3b)...")
@@ -59,8 +54,8 @@ def create_final_summary_chart(
     rects2 = ax.bar(x + width / 2, bar2_scores, width, color='#dd8452')
 
     ax.set_ylabel('Performance Score (0 ~ 1)', fontsize=12, fontweight='bold')
-    ax.set_title('Relation Extraction 파이프라인 방법론별 최종 성능 비교',
-                 fontsize=16, fontweight='bold', pad=20)
+    ax.set_title('Relation Extraction Pipeline — Final Performance Comparison',
+                 fontsize=14, fontweight='bold', pad=20)
     ax.set_xticks(x)
     ax.set_xticklabels(categories, fontsize=12, fontweight='bold')
     ax.set_ylim(0, 1.0)

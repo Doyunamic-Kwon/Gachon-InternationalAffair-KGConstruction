@@ -13,8 +13,7 @@ from step1_data_loader import load_gold_standard, load_silver_standard
 from step3c_kernel_based_re import extract_sequence_and_tree
 from step3_feature_based_re_v2 import parse_entity_type
 
-# Mac 한글 폰트 설정
-plt.rc('font', family='AppleGothic')
+plt.rc('font', family='DejaVu Sans')
 plt.rcParams['axes.unicode_minus'] = False
 
 def compute_improved_composite_kernel(X_seq, X_tree, X_sem, alpha=0.3, beta=0.3, gamma=0.4):
@@ -121,7 +120,7 @@ def run_kernel_visualizations():
         idx = [i for i, l in enumerate(labels) if l == label]
         plt.scatter(embedding_2d[idx, 0], embedding_2d[idx, 1], label=label, alpha=0.7)
         
-    plt.title("Kernel Matrix 2D 시각화 (t-SNE 투영)", fontsize=16)
+    plt.title("Kernel Matrix Visualization (t-SNE Projection)", fontsize=14)
     plt.xlabel("Dimension 1")
     plt.ylabel("Dimension 2")
     plt.legend(title='Relations', bbox_to_anchor=(1.05, 1), loc='upper left')
@@ -142,9 +141,9 @@ def run_kernel_visualizations():
     
     plt.figure(figsize=(10, 8))
     sns.heatmap(cm, annot=True, fmt='d', cmap='Purples', xticklabels=test_top_labels, yticklabels=test_top_labels)
-    plt.title("Kernel SVM 예측 오차 행렬 (Confusion Matrix)", fontsize=16)
-    plt.xlabel("예측된 관계 (Predicted)")
-    plt.ylabel("실제 관계 (Actual)")
+    plt.title("Kernel SVM Confusion Matrix", fontsize=14)
+    plt.xlabel("Predicted Relation")
+    plt.ylabel("True Relation")
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     plt.savefig('kernel_confusion_matrix.png', dpi=300)

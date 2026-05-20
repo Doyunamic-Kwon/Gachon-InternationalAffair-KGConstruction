@@ -14,8 +14,7 @@ from step3_feature_based_re_v2 import extract_all_features
 from step1_data_loader import load_gold_standard, load_silver_standard
 import matplotlib.font_manager as fm
 
-# Mac 한글 폰트 설정
-plt.rc('font', family='AppleGothic')
+plt.rc('font', family='DejaVu Sans')
 plt.rcParams['axes.unicode_minus'] = False
 
 def parse_entity_type(ent):
@@ -116,8 +115,8 @@ def run_ml_visualizations():
     plt.figure(figsize=(10, 6))
     colors = sns.color_palette('pastel')
     bars = plt.bar(groups, imp_scores, color=colors)
-    plt.title("Linguistic Features 중요도 분석 (Gold + Silver 1400건 학습)", fontsize=16)
-    plt.ylabel("Importance Score 합계", fontsize=12)
+    plt.title("Linguistic Feature Importance (Gold + Silver ~1400 samples)", fontsize=14)
+    plt.ylabel("Total Importance Score", fontsize=12)
     
     for bar in bars:
         yval = bar.get_height()
@@ -141,9 +140,9 @@ def run_ml_visualizations():
     
     plt.figure(figsize=(12, 10))
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=unique_labels, yticklabels=unique_labels)
-    plt.title(f"관계 추출 분류 오차 행렬 (Test Set = {len(y_test_filtered)}건)", fontsize=16)
-    plt.xlabel("예측된 관계 (Predicted)", fontsize=12)
-    plt.ylabel("실제 관계 (Actual)", fontsize=12)
+    plt.title(f"Relation Extraction Confusion Matrix (Test Set = {len(y_test_filtered)} samples)", fontsize=13)
+    plt.xlabel("Predicted Relation", fontsize=12)
+    plt.ylabel("True Relation", fontsize=12)
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     plt.savefig('confusion_matrix.png', dpi=300)
