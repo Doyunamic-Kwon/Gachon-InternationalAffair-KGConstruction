@@ -1,9 +1,23 @@
 {
-  "unsup_pattern": 0.4597,
-  "unsup_embed": 0.2671,
+  "supervised_rf": 0.73,
+  "supervised_svm": 0.8627,
   "semi_dipre": 0.401,
   "semi_snowball": 0.4787,
-  "sup_rf": 0.73,
-  "sup_kernel": 0.8627,
-  "dl_bilstm": 0.3624
+  "unsup_pattern": 0.4597,
+  "unsup_embed": 0.2671,
+  "dl_bilstm": 0.3624,
+  "unsup_metrics": {
+    "pattern_based": {
+      "homogeneity": 0.5062,
+      "completeness": 0.4211,
+      "v_measure": 0.4597
+    },
+    "embedding_based": {
+      "homogeneity": 0.2937,
+      "completeness": 0.2449,
+      "v_measure": 0.2671
+    },
+    "corpus_size": 1730,
+    "n_relations": 12
+  }
 }

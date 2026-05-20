@@ -1,0 +1,14 @@
+{
+  "pattern": {
+    "homogeneity": 0.5061854279241151,
+    "completeness": 0.4211011992971029,
+    "v_measure": 0.45973981400836217
+  },
+  "embedding": {
+    "homogeneity": 0.29372974473288593,
+    "completeness": 0.24489322888749837,
+    "v_measure": 0.2670975028207182
+  },
+  "corpus_size": 1730,
+  "n_relations": 12
+}

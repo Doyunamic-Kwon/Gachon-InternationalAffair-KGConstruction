@@ -20,7 +20,7 @@ from pathlib import Path
 from collections import Counter
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
-from sklearn.metrics.cluster import v_measure_score
+from sklearn.metrics.cluster import v_measure_score, homogeneity_score, completeness_score
 
 from step1_data_loader import load_gold_standard
 
@@ -200,12 +200,21 @@ def run_unsupervised_re():
 
     kmeans_pattern = KMeans(n_clusters=k, random_state=42, n_init=10)
     labels_pattern = kmeans_pattern.fit_predict(X_pattern)
+
+    # Calculate homogeneity, completeness, and V-Measure
+    h_pattern = homogeneity_score(true_rels, labels_pattern)
+    c_pattern = completeness_score(true_rels, labels_pattern)
     v_score_pattern = v_measure_score(true_rels, labels_pattern)
-    print(f"Pattern-based V-Measure Score: {v_score_pattern:.4f}")
+
+    print(f"Pattern-based Homogeneity:  {h_pattern:.4f}")
+    print(f"Pattern-based Completeness: {c_pattern:.4f}")
+    print(f"Pattern-based V-Measure:    {v_score_pattern:.4f}")
     print(f"(Gold-only 대비 데이터 {len(corpus)/len(gold_df):.1f}배 증가)")
 
     # ── 3. Embedding-based Clustering ────────────────
     print("\n▶ 3. Embedding-based Clustering (SBERT Distributional)")
+    h_embed = c_embed = v_score_embed = 0.0
+    embed_available = False
     try:
         from sentence_transformers import SentenceTransformer
         print("  Sentence-BERT 임베딩 중...")
@@ -217,54 +226,108 @@ def run_unsupervised_re():
 
         kmeans_embed = KMeans(n_clusters=k, random_state=42, n_init=10)
         labels_embed = kmeans_embed.fit_predict(X_embed)
+
+        # Calculate homogeneity, completeness, and V-Measure
+        h_embed = homogeneity_score(true_rels, labels_embed)
+        c_embed = completeness_score(true_rels, labels_embed)
         v_score_embed = v_measure_score(true_rels, labels_embed)
-        print(f"Embedding-based V-Measure Score: {v_score_embed:.4f}")
+
+        print(f"Embedding-based Homogeneity:  {h_embed:.4f}")
+        print(f"Embedding-based Completeness: {c_embed:.4f}")
+        print(f"Embedding-based V-Measure:    {v_score_embed:.4f}")
         embed_available = True
     except Exception as e:
         print(f"  SBERT 실패: {e}")
-        v_score_embed  = 0.0
         embed_available = False
 
-    # ── 시각화 ────────────────────────────────────────
+    # ── 시각화 1: V-Measure 분해 (Homogeneity × Completeness) ──────
     if embed_available:
-        methods = [
-            "Pattern-based\n(TF-IDF + Type)",
-            "Embedding-based\n(SBERT)",
-        ]
-        scores = [v_score_pattern, v_score_embed]
+        methods = ["Pattern-based\n(TF-IDF)", "Embedding-based\n(SBERT)"]
+        h_scores = [h_pattern, h_embed]
+        c_scores = [c_pattern, c_embed]
+        v_scores = [v_score_pattern, v_score_embed]
     else:
-        methods = ["Pattern-based\n(TF-IDF + Type)"]
-        scores  = [v_score_pattern]
+        methods = ["Pattern-based\n(TF-IDF)"]
+        h_scores = [h_pattern]
+        c_scores = [c_pattern]
+        v_scores = [v_score_pattern]
 
-    plt.figure(figsize=(9, 6))
-    colors = ["#ffb3b3", "#99ccff", "#b3d9b3"]
-    bars = plt.bar(methods, scores, color=colors[:len(scores)], width=0.5)
-    plt.title(
-        f"Unsupervised RE 방법론별 군집화 성능 비교\n(V-Measure, 전체 코퍼스 {len(corpus)}건)",
-        fontsize=13,
-    )
-    plt.ylabel("V-Measure Score (0~1)", fontsize=12)
-    plt.ylim(0, 1.0)
+    fig, axes = plt.subplots(1, 2, figsize=(13, 5))
 
-    for bar in bars:
-        yval = bar.get_height()
-        plt.text(
-            bar.get_x() + bar.get_width() / 2, yval + 0.02,
-            f"{yval:.4f}", ha="center", fontsize=13, fontweight="bold",
-        )
+    # Left: V-Measure decomposition (stacked bar)
+    x = np.arange(len(methods))
+    width = 0.5
+    axes[0].bar(x, h_scores, width, label="Homogeneity", color="#99ccff", alpha=0.8)
+    axes[0].bar(x, c_scores, width, bottom=h_scores, label="Completeness", color="#ffb3b3", alpha=0.8)
+    axes[0].set_ylabel("Score", fontsize=11)
+    axes[0].set_title("V-Measure Decomposition", fontsize=12, fontweight="bold")
+    axes[0].set_xticks(x)
+    axes[0].set_xticklabels(methods, fontsize=10)
+    axes[0].set_ylim(0, 1.0)
+    axes[0].legend(fontsize=10)
+    axes[0].axhline(y=0.5, color="gray", linestyle="--", linewidth=0.8, alpha=0.5)
 
+    # Add value labels on stacked bars
+    for i, (h, c) in enumerate(zip(h_scores, c_scores)):
+        axes[0].text(i, h/2, f"{h:.3f}", ha="center", va="center", fontsize=9, fontweight="bold")
+        axes[0].text(i, h + c/2, f"{c:.3f}", ha="center", va="center", fontsize=9, fontweight="bold")
+
+    # Right: V-Measure overall
+    axes[1].bar(x, v_scores, width, color="#b3d9b3", alpha=0.8)
+    axes[1].set_ylabel("V-Measure Score", fontsize=11)
+    axes[1].set_title("Overall V-Measure", fontsize=12, fontweight="bold")
+    axes[1].set_xticks(x)
+    axes[1].set_xticklabels(methods, fontsize=10)
+    axes[1].set_ylim(0, 1.0)
+    axes[1].axhline(y=0.5, color="gray", linestyle="--", linewidth=0.8, alpha=0.5)
+
+    # Add value labels
+    for i, v in enumerate(v_scores):
+        axes[1].text(i, v + 0.02, f"{v:.4f}", ha="center", fontsize=10, fontweight="bold")
+
+    fig.suptitle(f"Unsupervised Clustering Quality (Corpus {len(corpus)} items)",
+                 fontsize=13, fontweight="bold", y=1.02)
     plt.tight_layout()
     out_path = "unsupervised_comparison.png"
-    plt.savefig(out_path, dpi=300)
+    plt.savefig(out_path, dpi=300, bbox_inches="tight")
     print(f"\n✅ {out_path} 저장 완료")
 
     print(f"\n요약:")
     print(f"  데이터: Gold 257건 → Full Corpus {len(corpus)}건 ({len(corpus)/257*100:.0f}% 증가)")
-    print(f"  Pattern V-Measure: {v_score_pattern:.4f}")
+    print(f"\n  Pattern-based (TF-IDF):")
+    print(f"    Homogeneity:  {h_pattern:.4f}")
+    print(f"    Completeness: {c_pattern:.4f}")
+    print(f"    V-Measure:    {v_score_pattern:.4f}")
     if embed_available:
-        print(f"  SBERT V-Measure:   {v_score_embed:.4f}")
-    print(f"  Open IE 트리플:    {len(structured_triples)}건 추출")
+        print(f"\n  Embedding-based (SBERT):")
+        print(f"    Homogeneity:  {h_embed:.4f}")
+        print(f"    Completeness: {c_embed:.4f}")
+        print(f"    V-Measure:    {v_score_embed:.4f}")
+    print(f"\n  Open IE 트리플: {len(structured_triples)}건 추출")
+
+    # Return results as dictionary for later visualization
+    return {
+        "pattern": {
+            "homogeneity": h_pattern,
+            "completeness": c_pattern,
+            "v_measure": v_score_pattern,
+        },
+        "embedding": {
+            "homogeneity": h_embed,
+            "completeness": c_embed,
+            "v_measure": v_score_embed,
+        } if embed_available else None,
+        "corpus_size": len(corpus),
+        "n_relations": k,
+    }
 
 
 if __name__ == "__main__":
-    run_unsupervised_re()
+    results = run_unsupervised_re()
+
+    # Save results as JSON for visualization
+    if results:
+        out_json = "unsupervised_metrics.json"
+        with open(out_json, "w") as f:
+            json.dump(results, f, indent=2)
+        print(f"✅ {out_json} 저장 완료")
