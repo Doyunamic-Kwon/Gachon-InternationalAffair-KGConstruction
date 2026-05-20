@@ -8,3 +8,5 @@ venv/
 .idea/
 *.png
 !docs/*.png
+.claude/
+klue_roberta_best.pt

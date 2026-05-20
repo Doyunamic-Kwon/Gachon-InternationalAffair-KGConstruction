@@ -181,7 +181,12 @@ def step2_semi_supervised(gold_df, silver_valid):
     print("  STEP 2. Semi-supervised RE (DIPRE & Snowball)")
     print("="*60)
     from step3b_semi_supervised import (
-        run_dipre_and_snowball, extract_pattern, _extract_context_before_e1, _parse_silver_types
+        run_dipre_and_snowball,
+        extract_text_pattern as extract_pattern,
+        _extract_context_before_e1,
+        _parse_type,
+        load_corpus_unlabeled,
+        norm_rel,
     )
     from collections import defaultdict
 
@@ -189,8 +194,12 @@ def step2_semi_supervised(gold_df, silver_valid):
 
     # ── Per-iteration precision simulation for HAS_FEE ────────
     target_rel = 'HAS_FEE'
-    if target_rel in gold_df['final_relation'].values:
-        seeds = gold_df[gold_df['final_relation'] == target_rel].head(10)
+    # Normalize gold relation labels first
+    gold_df_norm = gold_df.copy()
+    gold_df_norm['final_relation'] = gold_df_norm['final_relation'].apply(norm_rel)
+
+    if target_rel in gold_df_norm['final_relation'].values:
+        seeds = gold_df_norm[gold_df_norm['final_relation'] == target_rel].head(10)
 
         def build_patterns(seed_df):
             pats = set()
@@ -204,8 +213,9 @@ def step2_semi_supervised(gold_df, silver_valid):
         seed_head_types = set(seeds['head_type'].dropna())
         seed_tail_types = set(seeds['tail_type'].dropna())
 
-        dipre_pool     = silver_valid.copy().reset_index(drop=True)
-        snowball_pool  = silver_valid.copy().reset_index(drop=True)
+        # Use rebuilt corpus as the unlabeled pool
+        corpus_rows = load_corpus_unlabeled()
+        corpus_pool  = corpus_rows[:]  # working copy (list of dicts)
         dipre_seeds    = seeds.copy()
         snowball_seeds = seeds.copy()
         dipre_precs    = []
@@ -213,44 +223,43 @@ def step2_semi_supervised(gold_df, silver_valid):
         dipre_sizes    = []
         snowball_sizes = []
 
+        remaining_dipre    = corpus_pool[:]
+        remaining_snowball = corpus_pool[:]
+
         for it in range(1, 6):
             dipre_pats    = build_patterns(dipre_seeds)
             snowball_pats = build_patterns(snowball_seeds)
 
             # DIPRE
             if dipre_pats:
-                d_mask = dipre_pool['marked_text'].apply(
-                    lambda t: any(p in str(t) for p in dipre_pats))
-                d_match = dipre_pool[d_mask]
-                dp = (d_match['relation'] == target_rel).mean() if len(d_match) else 0.0
+                d_match = [r for r in remaining_dipre
+                           if any(p in str(r.get('marked_text','')) for p in dipre_pats)]
+                dp = (sum(1 for r in d_match if norm_rel(r.get('true_relation','')) == target_rel)
+                      / max(len(d_match), 1))
                 dipre_precs.append(dp)
                 dipre_sizes.append(len(d_match))
                 # Add ALL matched (noisy) → Semantic Drift
-                if len(d_match):
-                    dipre_seeds = pd.concat([dipre_seeds, d_match.rename(
-                        columns={'relation':'final_relation'})], ignore_index=True)
-                    dipre_pool  = dipre_pool[~d_mask].reset_index(drop=True)
+                match_ids = {r.get('id') for r in d_match}
+                remaining_dipre = [r for r in remaining_dipre if r.get('id') not in match_ids]
             else:
                 dipre_precs.append(0.0); dipre_sizes.append(0)
 
             # Snowball (entity type filter)
             if snowball_pats:
                 def sw_filter(row):
-                    txt = str(row.get('marked_text',''))
-                    h_t, t_t = _parse_silver_types(row)
+                    txt   = str(row.get('marked_text',''))
+                    h_t   = _parse_type(row.get('head', {}))
+                    t_t   = _parse_type(row.get('tail', {}))
                     return (any(p in txt for p in snowball_pats)
                             and h_t in seed_head_types
                             and t_t in seed_tail_types)
-                sw_mask  = snowball_pool.apply(sw_filter, axis=1)
-                sw_match = snowball_pool[sw_mask]
-                sp = (sw_match['relation'] == target_rel).mean() if len(sw_match) else 0.0
+                sw_match = [r for r in remaining_snowball if sw_filter(r)]
+                sp = (sum(1 for r in sw_match if norm_rel(r.get('true_relation','')) == target_rel)
+                      / max(len(sw_match), 1))
                 snowball_precs.append(sp)
                 snowball_sizes.append(len(sw_match))
-                high_conf = sw_match[sw_match['relation'] == target_rel]
-                if len(high_conf):
-                    snowball_seeds = pd.concat([snowball_seeds, high_conf.rename(
-                        columns={'relation':'final_relation'})], ignore_index=True)
-                snowball_pool = snowball_pool[~sw_mask].reset_index(drop=True)
+                match_ids = {r.get('id') for r in sw_match}
+                remaining_snowball = [r for r in remaining_snowball if r.get('id') not in match_ids]
             else:
                 snowball_precs.append(0.0); snowball_sizes.append(0)
 
@@ -693,6 +702,12 @@ def step6_final_comparison():
 # ─────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     import time; t0 = time.time()
+
+    # 코퍼스 파일이 없으면 자동 생성 (step0_rebuild_corpus.py)
+    if not os.path.exists("data/re_fixed_v6/corpus_unlabeled.jsonl"):
+        print("corpus_unlabeled.jsonl 없음 → step0_rebuild_corpus.py 실행 중...")
+        from step0_rebuild_corpus import rebuild_corpus
+        rebuild_corpus(use_openai=False)
 
     gold_df, silver_df, silver_valid = step0_data_overview()
     step1_unsupervised(gold_df, silver_valid)

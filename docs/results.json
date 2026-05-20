@@ -1,8 +1,8 @@
 {
-  "unsup_pattern": 0.2466,
-  "unsup_embed": 0.3534,
-  "semi_dipre": 0.1215,
-  "semi_snowball": 0.301,
+  "unsup_pattern": 0.4785,
+  "unsup_embed": 0.3034,
+  "semi_dipre": 0.4010,
+  "semi_snowball": 0.4787,
   "sup_rf": 0.73,
   "sup_kernel": 0.8627,
   "dl_bilstm": 0.5418
