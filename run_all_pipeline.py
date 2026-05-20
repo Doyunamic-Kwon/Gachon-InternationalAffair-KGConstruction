@@ -12,7 +12,7 @@ import seaborn as sns
 warnings.filterwarnings('ignore')
 
 os.makedirs("docs", exist_ok=True)
-plt.rc('font', family='AppleGothic')
+plt.rc('font', family='DejaVu Sans')
 plt.rcParams['axes.unicode_minus'] = False
 RESULTS = {}
 
