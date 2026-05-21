@@ -168,8 +168,8 @@ Data leakage 방지: TF-IDF는 Train에서만 `.fit()`, Test는 `.transform()` o
 
 ### 4.3 결과 — Macro F1: 0.7300
 
-![Feature-based RF](docs/step3_feature_based.png)
 ![Feature Importance](docs/feature_importance.png)
+![RF Confusion Matrix](docs/confusion_matrix.png)
 
 **Feature Importance 1위: Semantic Feature(개체 타입 쌍)**  
 OIA에서는 `Page → Email = HAS_CONTACT_EMAIL`, `Notice → Fee = HAS_FEE`로 타입 쌍이 관계를 거의 결정합니다.
