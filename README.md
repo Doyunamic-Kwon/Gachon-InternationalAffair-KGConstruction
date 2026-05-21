@@ -356,6 +356,9 @@ K = 12
 
 ![Unsupervised V-Measure Decomposition](docs/unsupervised_comparison_v2.png)
 ![Unsupervised Comparison](docs/step1_unsupervised_comparison.png)
+
+> **t-SNE 클러스터 시각화** — 전체 1,730개 데이터 포인트에 대해 실제 관계 레이블(왼쪽)과 KMeans 클러스터 배정(오른쪽)을 나란히 비교한다. 왼쪽의 같은 색상이 오른쪽에서 여러 클러스터로 흩어져 있을수록 V-Measure가 낮다.
+
 ![Unsupervised t-SNE](docs/step1_unsupervised_tsne.png)
 
 | 방법 | Homogeneity | Completeness | V-Measure |
