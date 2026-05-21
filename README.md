@@ -205,7 +205,6 @@ K_composite = 0.3·K_seq + 0.3·K_tree + 0.4·K_semantic
 
 ### 5.3 결과 — Macro F1: 0.8627 (전체 최고)
 
-![Kernel SVM](docs/step4_kernel_svm.png)
 ![Kernel t-SNE](docs/kernel_tsne.png)
 ![Kernel Confusion Matrix](docs/kernel_confusion_matrix.png)
 
