@@ -11,8 +11,7 @@ from step1_data_loader import load_gold_standard, load_silver_standard
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, f1_score
 
-# Mac 한글 폰트 설정
-plt.rc('font', family='AppleGothic')
+plt.rc('font', family='DejaVu Sans')
 plt.rcParams['axes.unicode_minus'] = False
 
 class REDataset(Dataset):
@@ -169,7 +168,7 @@ def run_deep_learning_pipeline():
     
     plt.figure(figsize=(14, 4))
     sns.heatmap([attn_weights], xticklabels=words, yticklabels=['Attention Weight'], cmap='Reds', annot=True, fmt=".2f", cbar=False)
-    plt.title(f"Attention Heatmap (정답: {sample_label} | 예측: {pred_label})", fontsize=14)
+    plt.title(f"Attention Heatmap  |  True: {sample_label}  |  Pred: {pred_label}", fontsize=14)
     plt.xticks(rotation=45, ha='right', fontsize=10)
     plt.tight_layout()
     plt.savefig('attention_heatmap.png', dpi=300)

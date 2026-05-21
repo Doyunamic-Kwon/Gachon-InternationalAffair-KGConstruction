@@ -21,8 +21,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 from collections import Counter
 
-# Mac 폰트
-plt.rc('font', family='AppleGothic')
+plt.rc('font', family='DejaVu Sans')
 plt.rcParams['axes.unicode_minus'] = False
 
 # ═══════════════════════════════════════════════════

@@ -24,8 +24,7 @@ from sklearn.metrics.cluster import v_measure_score, homogeneity_score, complete
 
 from step1_data_loader import load_gold_standard
 
-# Mac 한글 폰트 설정
-plt.rc('font', family='AppleGothic')
+plt.rc('font', family='DejaVu Sans')
 plt.rcParams['axes.unicode_minus'] = False
 
 # ── 관계 정규화 ─────────────────────────────────────────
