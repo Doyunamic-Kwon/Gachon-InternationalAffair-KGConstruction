@@ -19,5 +19,8 @@
     },
     "corpus_size": 1730,
     "n_relations": 12
-  }
+  },
+  "dl_roberta_oia": 0.6988,
+  "dl_roberta_oia_v2": 0.8807,
+  "dl_roberta_oia_v3": 0.9002
 }

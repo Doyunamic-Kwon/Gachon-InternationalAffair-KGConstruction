@@ -10,3 +10,5 @@ venv/
 !docs/*.png
 .claude/
 klue_roberta_best.pt
+oia_roberta_best.pt
+*.pt
